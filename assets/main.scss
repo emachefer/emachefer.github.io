@@ -1,0 +1,41 @@
+---
+---
+
+@import "minima";
+$font-stack:    Helvetica, sans-serif;
+$bg-color: #333;
+$fg-color: #eee;
+
+// reset colors
+*{
+  background-color: $bg-color;
+  color: $fg-color;    
+}
+pre, code{
+    background-color: #333;
+}
+
+.site-title {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 54px;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+    float: left; }
+.site-title, .site-title:visited { color: $fg-color; }
+
+a, a:visited {
+    color: #bee;
+}
+.site-nav .page-link { color: #eee; line-height: 1.5; }
+
+
+body {
+  font: 100% $font-stack;
+}
+
+.highlight {
+    .nf { color: #F85; }
+    .nb { color: #39F; }
+    .s2 { color: #5E8; }
+}
