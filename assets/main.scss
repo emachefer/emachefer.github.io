@@ -5,37 +5,78 @@
 $font-stack:    Helvetica, sans-serif;
 $bg-color: #333;
 $fg-color: #eee;
+$fg-lnk-c: #bee;
 
-// reset colors
+// Reset colors
 *{
   background-color: $bg-color;
-  color: $fg-color;    
-}
-pre, code{
-    background-color: #333;
+  color: $fg-color;
+  font-family: $font-stack;
 }
 
-.site-title {
-    font-size: 26px;
-    font-weight: 300;
-    line-height: 54px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left; }
 .site-title, .site-title:visited { color: $fg-color; }
+.site-nav .page-link {
+    color: $fg-color;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+// Link behaviour
+%lnk-tr-base {
+    border-radius: 5px;
+    text-decoration: underline;
+    background-color: $fg-color;
+    color: $bg-color;
+}
 
 a, a:visited {
-    color: #bee;
+    transition: all 800ms ease;
+    color: $fg-lnk-c;
 }
-.site-nav .page-link { color: #eee; line-height: 1.5; }
 
 
-body {
-  font: 100% $font-stack;
+
+a:hover {
+    @extend %lnk-tr-base;
+    padding: 5px;
+    color: $bg-color;
+}
+.site-title:hover, .page-link:hover {
+    @extend %lnk-tr-base;
+    color: $bg-color;
+}
+header.site-header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+    header.post-header{
+	position: sticky;
+	margin-top: 0px;
+	top: 62px;
+    }
+}
+
+.social-media-list a, .contact-list a {
+    all: unset;
+    cursor: pointer;
+    color: $fg-lnk-c;
+}   
+
+// Coding style
+pre, code{
+    background-color: $bg-color;
+    font-family: sans-serif;
 }
 
 .highlight {
+    .mi { color: #FA3; }
     .nf { color: #F85; }
     .nb { color: #39F; }
-    .s2 { color: #5E8; }
+    .s, .s2 { color: #5E8; }
+    .se, .sc { color: #2E3; }
+    .kt { color: #39F; }
+    .k { color: #5FA; }
 }

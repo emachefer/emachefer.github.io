@@ -20,7 +20,7 @@
 
 title: "e{machefer}"
 author: "Evan Machefer"
-email: user@example.com
+email: evan.machefer@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Développeur C/C++, Python.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -28,6 +28,8 @@ url: "https://emachefer.github.io" # the base hostname & protocol for your site,
 #twitter_username: jekyllrb
 github_username:  emachefer
 linkedin_username: "evan-machefer-b1b9501b9"
+
+git_origin: "https://github.com/emachefer/emachefer.github.io"
 
 # Build settings
 theme: minima
