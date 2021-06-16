@@ -159,7 +159,7 @@ int main()
 Sur 10 000 itérations, les résultats sont les suivants :
 ![Comparaison sur 10000 itérations]({{site.url}}/examples/CPP/2021-06_fill_comparison/comp_10000.png "Premier test")
 
-Vous pouvez faire le calcul en réutilisant le [code]({{site.git_origin}}/examples/CPP/2021-06_fill_comparison/) ou à partir du [fichier csv]({{site.git_origin}}/exemples/CPP/2021-06_fill_comparison/results.csv).
+Vous pouvez faire le calcul en réutilisant le [code]({{site.git_origin}}/tree/main/examples/CPP/2021-06_fill_comparison/) ou à partir du [fichier csv]({{site.git_origin}}/exemples/CPP/2021-06_fill_comparison/results.csv).
 
 ### Pourquoi ces différences ?
 * Les deux premières versions semblent similaires, mais la seconde version n'est pas optimisée, la boucle ne vas pas à deux adresses consécutives, mais doit faire un saut à chaque itération.
@@ -172,4 +172,4 @@ La librairie standard permet d'être plus explicite sur ces intentions dans le c
 
 Une réécriture d'une ancienne librairie en utilisant la librairie standard peut permettre un gain en performance significatif des méthodes utilisées.
 
-Vous pouvez trouver le code sur la page [github du site]({{site.git_origin}}/examples/CPP/2021-06_fill_comparison/)
+Vous pouvez trouver le code sur la page [github du site]({{site.git_origin}}/tree/main/examples/CPP/2021-06_fill_comparison/)
