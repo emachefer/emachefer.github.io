@@ -157,6 +157,7 @@ int main()
 
 ### Les résultats
 Sur 10 000 itérations, les résultats sont les suivants :
+
 ![Comparaison sur 10000 itérations]({{site.url}}/examples/CPP/2021-06_fill_comparison/comp_10000.png "Premier test")
 
 Vous pouvez faire le calcul en réutilisant le [code]({{site.git_origin}}/tree/main/examples/CPP/2021-06_fill_comparison/) ou à partir du [fichier csv]({{site.git_origin}}/exemples/CPP/2021-06_fill_comparison/results.csv).

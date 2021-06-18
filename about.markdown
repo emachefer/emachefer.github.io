@@ -8,6 +8,9 @@ permalink: /about/
 
 Développeur freelance spécialisé en C/C++ et python, je m'intéresse aux techniques de méta-programation, à la sécurité et à la qualité du code en général.
 
+## Mes expériences
+Diplomé d'un master en physique des particules, j'ai poursuivi pendant un temps ma carrière en temps qu'enseignant de sciences physique et chimique et de mathématiques avant de me rediriger vers un parcours de développeur.
+
 ## Me contacter
 
 Vous pouvez me retrouver sur :

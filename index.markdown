@@ -1,7 +1,6 @@
 ---
-# layout: default
-# layout: home
 layout: page
+home: true
 ---
 
 Intégration continue, déploiement continu, automatisation, sécurité sont des notions rencontrées régulièrement, mais comment les mettre en place ?

@@ -5,13 +5,21 @@
 $font-stack:    Helvetica, sans-serif;
 $bg-color: #333;
 $fg-color: #eee;
-$fg-lnk-c: #bee;
+// $fg-lnk-c: #bee;
+$fg-lnk-c: #00A170;
 
 // Reset colors
-*{
-  background-color: $bg-color;
-  color: $fg-color;
-  font-family: $font-stack;
+// *{
+//   background-color: $bg-color;
+//   color: $fg-color;
+//   font-family: $font-stack;
+// }
+img{
+    display: block;
+    margin: auto;
+}
+.wrapper{
+    max-width: 90%;
 }
 
 .site-title, .site-title:visited { color: $fg-color; }
@@ -25,30 +33,37 @@ $fg-lnk-c: #bee;
 %lnk-tr-base {
     border-radius: 5px;
     text-decoration: underline;
-    background-color: $fg-color;
-    color: $bg-color;
+    // background-color: $fg-color;
+    // color: $bg-color;
+    background-color: #00A170;
+    color: white;
 }
 
-a, a:visited {
-    transition: all 800ms ease;
-    color: $fg-lnk-c;
+a, a:visited{
+	transition: all 800ms ease;
+	color: $fg-lnk-c;
 }
-
-
-
 a:hover {
     @extend %lnk-tr-base;
     padding: 5px;
-    color: $bg-color;
+    // color: $bg-color;
+    color:white;
 }
+
+
+
+
 .site-title:hover, .page-link:hover {
     @extend %lnk-tr-base;
-    color: $bg-color;
+    color:white;
+    // color: $bg-color;
 }
 header.site-header{
     position: sticky;
     top: 0;
     width: 100%;
+    // background-color: $bg-color;
+    background-image: linear-gradient(to bottom right, #0072B5, #6B5B95);
 }
 
 @media only screen and (min-width: 700px) {
@@ -56,19 +71,32 @@ header.site-header{
 	position: sticky;
 	margin-top: 0px;
 	top: 62px;
+	background-color: white;
     }
 }
 
 .social-media-list a, .contact-list a {
     all: unset;
+    
     cursor: pointer;
     color: $fg-lnk-c;
-}   
+}
+
+.social-media-list {
+    li {
+	display: inline-block;
+	padding: 5px;
+    }
+    .username{
+	font-size: 30px;
+    }
+}
 
 // Coding style
 pre, code{
     background-color: $bg-color;
     font-family: sans-serif;
+    color: $fg-color;
 }
 
 .highlight {
