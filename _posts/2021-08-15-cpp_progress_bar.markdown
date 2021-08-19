@@ -33,7 +33,7 @@ Améliorons la ligne `(1)`.
 
 ### Implémentation d'une barre de progression
 
-Une première amélioration simple est de ne pas changer de ligne à chaque fois, mais de réécrire sur la ligne actuelle (`r`) et de faire un `flush` pour éviter d'avoir des clignotements à l'écran (visible en `(4)`).
+Une première amélioration simple est de ne pas changer de ligne à chaque fois, mais de réécrire sur la ligne actuelle (`\r`) et de faire un `flush` pour éviter d'avoir des clignotements à l'écran (visible en `(4)`).
 
 Afin d'avoir une information plus visuelle, créons une barre de progression.
 
@@ -54,7 +54,7 @@ En `(3)` on créer une autre chaîne dont la taille correspond au maximum de la 
 Le résultat est le suivant
 ![Barre de progression]({{site.url}}/examples/CPP/2021-08_progress_bar/progress_bar.png "Barre de progression")
 
-Mais on peut facilement faire mieux.
+Il est possible d'apporter de la couleur grâce aux séquences ANSI.
 
 ### Les séquences ANSI
 [Les séquences de contrôle ANSI](https://en.wikipedia.org/wiki/ANSI_escape_code) permettent de gérer non seulement la couleur des caractères mais également de déplacer le curseur dans le terminal.
@@ -63,7 +63,7 @@ Le saut de ligne (`\n`) ou la tabulation (`\t`) font parti de ces codes mais il 
 Il est possible de tester les 8 couleurs compatibles avec la plupart des terminaux avec un shell *bash*.
 
 {% highlight bash %}
-for sdr in "\x1b[40m" "\x1b[41m" "\x1b[42m" "\x1b[43m" "\x1b[44m" "\x1b[45m" "\x1b[46m" "\x1b[47m]; do echo -e $sdr"\tHello world\t\x1b[0m"; done
+for sdr in "\x1b[40m" "\x1b[41m" "\x1b[42m" "\x1b[43m" "\x1b[44m" "\x1b[45m" "\x1b[46m" "\x1b[47m]"; do echo -e $sdr"\tHello world\t\x1b[0m"; done
 {% endhighlight %}
 
 Ici, la chaîne `\x1b[` permet au terminal de savoir que ce qui se trouve avant `m` ne doit pas être affiché mais converti en une couleur.  Ce qui devrait donner le résultat suivant
@@ -92,6 +92,9 @@ Connaissant les séquences précédentes, on peut rapidement améliorer la boucl
 
 En `(5)` on change la couleur du fond du terminal, les chaînes suivantes auront donc un arrière plan vert.
 En `(6)` on change la couleur en noir, puis on réinitialise en `(7)` afin de reprendre le défaut du terminal.
+
+Le résultat est le suivant.
+![ANSI progress bar]({{site.url}}/examples/CPP/2021-08_progress_bar/ANSI_progress_bar.gif "Barre de progression en couleur")
 
 ### Conclusion
 Vous pouvez essayer par vous même le code disponible sur la page [github du site]({{site.git_origin}}/tree/main/examples/CPP/2021-08_progress_bar/) où plusieurs implémentations sont possible : avec ou sans *C++20* et avec ou sans *ANSI*.
