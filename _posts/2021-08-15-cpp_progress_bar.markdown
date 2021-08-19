@@ -98,3 +98,5 @@ Le résultat est le suivant.
 
 ### Conclusion
 Vous pouvez essayer par vous même le code disponible sur la page [github du site]({{site.git_origin}}/tree/main/examples/CPP/2021-08_progress_bar/) où plusieurs implémentations sont possible : avec ou sans *C++20* et avec ou sans *ANSI*.
+
+Vous voulez réagir sur l'article ? Ouvrez une [issue sur github]({{site.git_origin}}/issues).
