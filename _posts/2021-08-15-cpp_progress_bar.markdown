@@ -1,9 +1,11 @@
 ---
 layout: post
 title: Implémentation d'une barre de progression dans un terminal
-tags: C++ ANSI TUI progress-bar tutoriel
+tags: [C++, ANSI, TUI, progress-bar, tutoriel]
+excerpt_separator: <!--more-->
 ---
 Il peut arriver régulièrement que le traitement des données dans une boucle prenne beaucoup de temps. Ne rien afficher peut donner l'impression que le traitement est bloqué, mais doit-on pour autant afficher tout le traitement en cours à l'utilisateur ?
+<!--more-->
 
 Cet article propose une solution pour implémenter une barre de progression pour indiquer le traitement en cours des données.
 

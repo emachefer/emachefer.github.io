@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Importance du choix d'une implémentation
+tags: C++ performance
 ---
 En *C++* un problème peut avoir plusieurs solutions possible, mais se valent-elles toutes ?
 

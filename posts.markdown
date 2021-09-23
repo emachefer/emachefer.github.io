@@ -1,6 +1,6 @@
 ---
-layout: home
-title: Blog
+layout: blog
+title: Articles
 permalink: /posts/
 ---
 
