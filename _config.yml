@@ -31,6 +31,8 @@ linkedin_username: "evan-machefer-b1b9501b9"
 
 git_origin: "https://github.com/emachefer/emachefer.github.io"
 
+show_excerpts: true
+
 # Build settings
 theme: minima
 # theme: jekyll-theme-minimal
