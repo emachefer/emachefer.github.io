@@ -647,14 +647,14 @@ textarea {
     margin: auto;
     font-size: 1.5rem;
     font-family: Comfortaa, Helvetica, Arial, sans-serif;
-    width: 80vi;
+    width: 100%;
     resize: vertical;
 }
 
 /***** LISTS *****/
 dl {
   display: grid;
-  grid-template-columns: max-content auto;
+  grid-template-columns: auto auto;
   & dt {
       font-weight: bold;
       grid-column-start: 1;
