@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch06 T2 Mouvement d'un système</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Ch06 T2 Mouvement d'un système</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org94b982a">Introduction</a></li>
+<li><a href="#org8c75562">Vecteur vitesse</a></li>
+<li><a href="#org7f8adfe">Variation du vecteur vitesse</a></li>
+<li><a href="#org0583167">Effet d'une force sur le mouvement</a>
+<ul>
+<li><a href="#org595df92">Résultante d'une force</a></li>
+<li><a href="#org7e64cda">Expresion approchée de la seconde loi de Newton</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org94b982a" class="outline-2">
+<h2 id="org94b982a">Introduction</h2>
+<div class="outline-text-2" id="text-org94b982a">
+<ul class="org-ul">
+<li>Faire le <a href="https://mesmanuels.fr/acces-libre/9782017102120">Flash test p 214</a></li>
+<li>Regarder la vidéo <a href="https://www.youtube.com/watch?v=NsYxAZPmWho">Flânerie infinitésimales (Voyage au pays des maths)</a></li>
+</ul>
+</div>
+</section>
+
+<section id="outline-container-org8c75562" class="outline-2">
+<h2 id="org8c75562">Vecteur vitesse</h2>
+<div class="outline-text-2" id="text-org8c75562">
+<div class="definition">
+<p>
+Dans un référentiel, un point \(M\) est caractérisé à
+l'instant \(t_i\) par :
+</p>
+<ul class="org-ul">
+<li>sa position : \(M_i(x_i ; y_i ; z_i)\)</li>
+<li>sa vitesse : \(\vec{v}_i = \dfrac{\overrightarrow{M_i M_{i+1}}}{\Delta t}\)
+avec \(\Delta t = t_{i+1} - t_i\) et \(\overrightarrow{M_i M_{i+1}}\)
+le vecteur entre les points \(M_i\) et \(M_{i+1}\)</li>
+</ul>
+
+</div>
+
+<p>
+Pour \(\Delta t\) suffisamment petit<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+le vecteur vitesse est <b>tangent</b> à la trajectoire.
+</p>
+
+<div class="exercice">
+<p>
+<a href="https://mesmanuels.fr/acces-libre/9782017102120">3 p 224</a>
+</p>
+
+</div>
+</div>
+</section>
+
+<section id="outline-container-org7f8adfe" class="outline-2">
+<h2 id="org7f8adfe">Variation du vecteur vitesse</h2>
+<div class="outline-text-2" id="text-org7f8adfe">
+<div class="definition">
+<p>
+Le vecteur <b>variation de vitesse</b> \(\Delta \vec{v}\) est défini par
+</p>
+<div class="org-center">
+<p>
+\(\Delta \vec{v} = \vec{v}_j - \vec{v}_i\)
+</p>
+</div>
+<p>
+avec \(\vec{v}_k\) (k = i ou j) vecteur vitesse du système
+à l'instant \(t_k\).
+</p>
+
+</div>
+
+<div class="org-center">
+<a href="https://upload.wikimedia.org/wikipedia/commons/4/41/Determination_graphique_acceleration_moyenne.svg">
+<img src="./assets/Determination_graphique_acceleration_moyenne.svg" width="25%" />
+</a>
+</div>
+
+<div class="exercice">
+<p>
+<a href="https://mesmanuels.fr/acces-libre/9782017102120">4 p 234</a>
+</p>
+
+</div>
+
+<div class="remark">
+<ul class="org-ul">
+<li>Pour des valeurs de \(\Delta t\) importantes, le calcul
+de la vitesse donne de meilleurs résultats avec les points
+\(M_{i-1}\) et  \(M_{i+1}\).</li>
+<li>Pour un intervalle de temps infinitésimal \(dt\), le vecteur
+variation de vitesse correspond au vecteur accélération</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<section id="outline-container-org0583167" class="outline-2">
+<h2 id="org0583167">Effet d'une force sur le mouvement</h2>
+<div class="outline-text-2" id="text-org0583167">
+</div>
+<div id="outline-container-org595df92" class="outline-3">
+<h3 id="org595df92">Résultante d'une force</h3>
+<div class="outline-text-3" id="text-org595df92">
+<div class="definition">
+<p>
+La <b>résultante des forces</b> correspond à la somme des forces
+qui s'appliquent à un système :
+</p>
+<div class="org-center">
+<p>
+\(\vec{F}_{tot} = \sum \vec{F}_i\)
+</p>
+</div>
+
+</div>
+<p>
+Pour construire graphiquement la résultante, on additionne les
+vecteurs force qui s'appliquent au système.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7e64cda" class="outline-3">
+<h3 id="org7e64cda">Expresion approchée de la seconde loi de Newton</h3>
+<div class="outline-text-3" id="text-org7e64cda">
+<p>
+Le principe d'inertie stipule que lorsque la résultante des forces
+qui s'applique au système est nulle<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, le
+système poursuit dans son mouvement rectiligne uniforme.
+</p>
+
+<p>
+Dans le cas général, ce principe d'inertie devient la seconde loi
+de Newton.
+</p>
+
+<div class="definition">
+<p>
+Dans un référentiel <b>R</b> galliléen, si un système de mase \(m\) est
+soumis à une résultante des forces non nulle, alors la résultante
+et la variation de vitesse sont reliés par :
+</p>
+<div class="org-center">
+<p>
+\(\vec{F}_{tot} = m \dfrac{\Delta \vec{v}}{\Delta t}\)
+</p>
+</div>
+
+</div>
+
+<div class="remark">
+<p>
+Les deux vecteurs \(\vec{F}_{tot}\) et \(\Delta\vec{v}\) sont
+colinéaire et ont le même sens.
+</p>
+
+</div>
+
+<div class="remark">
+<p>
+Plus la masse d'un système est grande, plus il est difficile de
+modifier le vecteur vitesse \(\vec{v}\), c'est <b>l'inertie</b> du
+système.
+</p>
+
+</div>
+
+
+<div class="exercice">
+<p>
+17, 16, 22 et 25 p 227-231
+</p>
+
+</div>
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">infinitésimal \(\Delta t \to 0 = dt\)</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">dans un référentiel</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ch06 T2 Mouvement d'un système</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

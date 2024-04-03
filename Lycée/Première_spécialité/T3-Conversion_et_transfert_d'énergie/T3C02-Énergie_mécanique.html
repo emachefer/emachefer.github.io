@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T3C02 - Énergie mécanique</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">T3C02 - Énergie mécanique</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc6e55a1">Travail d'une force</a>
+<ul>
+<li><a href="#orgc885c9c">Définition</a></li>
+</ul>
+</li>
+<li><a href="#orgcf24550">Énergie cinétique</a>
+<ul>
+<li><a href="#orgc4fbb11">Définition</a></li>
+<li><a href="#org556c1c3">Théorème de l'énergie cinétique</a></li>
+</ul>
+</li>
+<li><a href="#orga1662d6">Énergie potentielle</a>
+<ul>
+<li><a href="#org27e144c">Force conservative</a></li>
+<li><a href="#org22518b8">Énergie potentielle</a></li>
+</ul>
+</li>
+<li><a href="#orge93427e">Énergie mécanique</a>
+<ul>
+<li><a href="#orga48be33">Définition</a></li>
+<li><a href="#orgad08037">Conséquence</a></li>
+<li><a href="#org35f77c5">Exercices</a></li>
+</ul>
+</li>
+<li><a href="#orgdd602aa">Résumé</a>
+<ul>
+<li><a href="#org84985d5">Carte mentale</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-orgc6e55a1" class="outline-2">
+<h2 id="orgc6e55a1">Travail d'une force</h2>
+<div class="outline-text-2" id="text-orgc6e55a1">
+</div>
+<div id="outline-container-orgc885c9c" class="outline-3">
+<h3 id="orgc885c9c">Définition</h3>
+<div class="outline-text-3" id="text-orgc885c9c">
+<p>
+Soit un système modélisé par un point <i>M</i> dans un référentiel galiléen soumis à une force \(\vec{F}\).
+</p>
+
+<p>
+Le <b>travail</b> d'une force correspond à l'énergie fournie par une force pour effectuer un déplacement entre deux points <i>A</i> et <i>B</i>
+\[W_{A \to B} (\vec{F}) = \vec{F} \cdot \vec{AB} = F \times AB \times \cos \alpha\]
+où &alpha; est l'angle entre \(\vec{F}\) et \(\vec{AB}\), <i>F</i> est la force en newton (N) et AB est la distance en mètre (m).
+</p>
+
+<p>
+Le travail est homogène à une énergie, il s'exprime donc en joules (J).
+</p>
+
+<div class="remark">
+<ul class="org-ul">
+<li>Si &alpha; &isin; [0; 90[ : W &gt; 0, le travail est <b>moteur</b></li>
+<li>Si &alpha; = 90 : W = 0, le travail est nul</li>
+<li>Si &alpha; &isin; ]90; 180] : W &lt; 0, le travail est <b>résistant</b></li>
+</ul>
+
+</div>
+
+<div class="exercice">
+<p>
+6, 7 p 268
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orgcf24550" class="outline-2">
+<h2 id="orgcf24550">Énergie cinétique</h2>
+<div class="outline-text-2" id="text-orgcf24550">
+</div>
+<div id="outline-container-orgc4fbb11" class="outline-3">
+<h3 id="orgc4fbb11">Définition</h3>
+<div class="outline-text-3" id="text-orgc4fbb11">
+<div class="definition">
+<p>
+Soit un système de masse <i>m</i> se déplaçant à la vitesse <i>v</i> dans le référentiel <b>R</b>, son énergie cinétique est
+\[E_c = \dfrac{1}{2} \times m \times v^2\]
+où E<sub>c</sub> est l'énergie cinétique en joules (J), <i>m</i> en kg, <i>v</i> en m &sdot; s<sup>-1</sup>.
+</p>
+
+</div>
+
+<div class="exercice">
+<p>
+3, 5 p 268
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org556c1c3" class="outline-3">
+<h3 id="org556c1c3">Théorème de l'énergie cinétique</h3>
+<div class="outline-text-3" id="text-org556c1c3">
+<div class="definition">
+<p>
+Dans un référentiel galiléen, la variation d'énergie cinétique entre deux points A et B est égale au travail de la force résultante :
+\[W_{A \to B} (\vec{F}) = E_C(B) - E_c(A)\]
+</p>
+
+</div>
+
+<div class="exercice">
+<p>
+8 et 9 p 268
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section id="outline-container-orga1662d6" class="outline-2">
+<h2 id="orga1662d6">Énergie potentielle</h2>
+<div class="outline-text-2" id="text-orga1662d6">
+</div>
+<div id="outline-container-org27e144c" class="outline-3">
+<h3 id="org27e144c">Force conservative</h3>
+<div class="outline-text-3" id="text-org27e144c">
+<p>
+Si le travail d'une force ne dépend que de sa position de départ et de sa position d'arrivée, alors la force est <b>conservative</b>.
+</p>
+
+<div class="exemple">
+<ul class="org-ul">
+<li>Le poids est une force conservative, son travail ne dépend que des altitudes de départ et d'arrivée</li>
+<li>La force électrostatique est une force conservative</li>
+<li>La force de frottement n'est pas conservative, elle dépend de la longueur du trajet</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org22518b8" class="outline-3">
+<h3 id="org22518b8">Énergie potentielle</h3>
+<div class="outline-text-3" id="text-org22518b8">
+<p>
+Si une force est conservative, alors elle <b>dérive</b> d'une énergie potentielle <i>E<sub>p</sub></i><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<div class="definition">
+<p>
+L'énergie potentielle indique la quantité d'énergie qu'un système peut potentiellement utiliser pour se mettre en mouvement ou pour subir une transformation.
+</p>
+
+</div>
+
+<div class="remark">
+<p>
+La seule énergie potentielle à connaître en première est l'<b>énergie potentielle de pesanteur</b> :
+\[E_{pp} = m \times g \times z\]
+où <i>g</i> est l'intensité de la pesanteur terrestre (en m/s<sup>2</sup>), <i>m</i> la masse du système (en kg) et <i>z</i> son altitude (en m)
+</p>
+
+</div>
+
+<div class="exemple">
+<p>
+Le poids dérive de l'énergie potentielle de pesanteur E<sub>pp</sub> = m &times; g &times; z, preuve
+\[-\dfrac{\partial E_p}{\partial z} = -m \times g\]
+soit
+\(\vec{P} = -m \times g \times \vec{e}_z\)
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orge93427e" class="outline-2">
+<h2 id="orge93427e">Énergie mécanique</h2>
+<div class="outline-text-2" id="text-orge93427e">
+</div>
+<div id="outline-container-orga48be33" class="outline-3">
+<h3 id="orga48be33">Définition</h3>
+<div class="outline-text-3" id="text-orga48be33">
+<div class="definition">
+<p>
+L'énergie mécanique correspond à la somme de l'énergie cinétique et de l'énergie potentielle
+\[E_m = E_c + E_m\]
+</p>
+
+</div>
+
+<div class="remark">
+<ul class="org-ul">
+<li>Si il n'y a pas de forces non conservatives, alors, la variation de l'énergie mécanique est nulle
+\[\Delta E_m = 0\]
+soit \(E_m(A) = E_m(B\))</li>
+<li>Si il y a des forces non conservatives<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, alors la variation de l'énergie mécanique est
+\[\Delta E_m = \sum_i W_{A \to B} (\vec{F}_{NC,i})\]</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgad08037" class="outline-3">
+<h3 id="orgad08037">Conséquence</h3>
+<div class="outline-text-3" id="text-orgad08037">
+<div class="definition">
+<p>
+La variation d'énergie potentielle d'un système est
+\[\Delta E_p = -W_{A \to B}(\vec{F}_{C})\]
+</p>
+
+</div>
+<p>
+Preuve :
+\[\Delta E_m   = \Delta E_c + \Delta E_p,\]
+\[W(F_{NC}) = W(F_{NC}) + W(F_{C}) + \Delta E_p,\]
+soit \(\Delta E_p = -W(F_C)\quad \blacksquare\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org35f77c5" class="outline-3">
+<h3 id="org35f77c5">Exercices</h3>
+<div class="outline-text-3" id="text-org35f77c5">
+<div class="exercice">
+<p>
+Un balle est lâchée depuis une altitude z<sub>A</sub> = 1,0 m sans vitesse initiale, elle arrive quelques instant plus tard a une altitude z<sub>B</sub> = 0 m juste avant de toucher le sol. On fait l'hypothèse qu'elle n'est soumise qu'a son poids.
+</p>
+<ol class="org-ol">
+<li>Déterminer la valeur de l'énergie cinétique au point A.</li>
+<li>Exprimer puis calculer l'énergie potentielle de pesanteur au point A.</li>
+<li>Déterminer la valeur de l'énergie potentielle au point B.</li>
+<li>Exprimer puis calculer la vitesse de la balle au point <i>B</i>.</li>
+</ol>
+
+</div>
+
+<div class="exercice">
+<p>
+15, 17, 24, 25, 26, 27 p 269-273<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup>
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section id="outline-container-orgdd602aa" class="outline-2">
+<h2 id="orgdd602aa">Résumé</h2>
+<div class="outline-text-2" id="text-orgdd602aa">
+</div>
+<div id="outline-container-org84985d5" class="outline-3">
+<h3 id="org84985d5">Carte mentale</h3>
+<div class="outline-text-3" id="text-org84985d5">
+
+<figure>
+<img src="T3C02-CM-Em.png" alt="T3C02-CM-Em.png">
+
+</figure>
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">\[\vec{F} = - \dfrac{\partial E_p}{\partial x} \times \vec{e}_x - \dfrac{\partial E_p}{\partial y} \times \vec{e}_y - \dfrac{\partial E_p}{\partial z} \times \vec{e}_z\]</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">exemple frottements</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">u(v) = \(\dfrac{\sigma}{\sqrt{N}}\)</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">T3C02 - Énergie mécanique</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

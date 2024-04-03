@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T1C02 - Les solutions aqueuses</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">T1C02 - Les solutions aqueuses</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7742127">Notion de concentration</a>
+<ul>
+<li><a href="#org5824111">Solution, solvant et soluté&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></a>
+<ul>
+<li><a href="#org8483ec2">Définitions</a></li>
+<li><a href="#org8491afa">Remarque</a></li>
+<li><a href="#orgb14e7d3">Exemple</a></li>
+</ul>
+</li>
+<li><a href="#org5b1deb8">Concentration massique, concentration molaire&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></a>
+<ul>
+<li><a href="#org8eeb87d">Définition</a></li>
+<li><a href="#org5393e8c">Remarque</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org917d448">Préparation de solution par dissolution</a>
+<ul>
+<li><a href="#orgebf074c">Définition</a></li>
+<li><a href="#org5f44ad7">Protocole</a></li>
+</ul>
+</li>
+<li><a href="#orgb4bfc6a">Préparation de solution par dilution</a>
+<ul>
+<li><a href="#org99da0ec">Définition</a></li>
+<li><a href="#orgcabd580">Protocole</a>
+<ul>
+<li><a href="#orgd19cd8f">Étapes de préparation d'une solution aqueuse par dilution</a></li>
+<li><a href="#org81e73ce">Remarque</a></li>
+</ul>
+</li>
+<li><a href="#org1be45c0">Facteur de dilution</a>
+<ul>
+<li><a href="#orgdbaed44">Définition</a></li>
+<li><a href="#orge84331b">Exemple :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orge4d1461">Exercices</a>
+<ul>
+<li><a href="#org2d3c07c">Exercice :</a></li>
+<li><a href="#org2dbce14">Exercices du manuel&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a>
+<ul>
+<li><a href="#orgb63aedd">Application du cours</a></li>
+<li><a href="#orgc6d9a13">S'entraîner</a></li>
+<li><a href="#org6013fe9">Préparation au DS</a></li>
+</ul>
+</li>
+<li><a href="#org5806d1b">Corrections&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#org0e26822">ex 21 p 44</a></li>
+<li><a href="#org6dc9dde">ex 23 p 44&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#org26b4e2c">ex 30 p 46&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#org348fb06">ex 31 p 46&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#org283e18e">ex 37 p 48&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org7742127" class="outline-2">
+<h2 id="org7742127">Notion de concentration</h2>
+<div class="outline-text-2" id="text-org7742127">
+</div>
+<div id="outline-container-org5824111" class="outline-3">
+<h3 id="org5824111">Solution, solvant et soluté&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></h3>
+<div class="outline-text-3" id="text-org5824111">
+</div>
+<div id="outline-container-org8483ec2" class="outline-4">
+<h4 id="org8483ec2">Définitions</h4>
+<div class="outline-text-4" id="text-org8483ec2">
+<p>
+Une <b>solution</b> est un mélange liquide homogène composé :
+</p>
+<ul class="org-ul">
+<li>d'un <b>solvant</b> : composant majoritaire du mélange</li>
+<li>d'un <b>soluté</b> : espèce dispersée dans le solvant</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8491afa" class="outline-4">
+<h4 id="org8491afa">Remarque</h4>
+<div class="outline-text-4" id="text-org8491afa">
+<p>
+On parle de solution aqueuse lorsque le solvant est de l'eau.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb14e7d3" class="outline-4">
+<h4 id="orgb14e7d3">Exemple</h4>
+<div class="outline-text-4" id="text-orgb14e7d3">
+<p>
+Une limonade est une solution aqueuse ayant pour principaux solutés le sucre,
+le dioxyde de carbone et l'acide citrique.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b1deb8" class="outline-3">
+<h3 id="org5b1deb8">Concentration massique, concentration molaire&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></h3>
+<div class="outline-text-3" id="text-org5b1deb8">
+</div>
+<div id="outline-container-org8eeb87d" class="outline-4">
+<h4 id="org8eeb87d">Définition</h4>
+<div class="outline-text-4" id="text-org8eeb87d">
+<p>
+La <b>concentration en masse</b>, ou titre massique, d’un soluté
+est définie par le rapport de la masse <i>m<sub>S</sub></i> de soluté dissous dans le volume <i>V</i>
+de solution
+</p>
+
+<div class="displaymath">
+<p>
+c<sub>m</sub> = \dfrac{m_S}{V}
+</p>
+
+</div>
+
+<p>
+où m<sub>S</sub> s’exprime en g, V en L, et c<sub>m</sub> en g · L<sup>-1</sup> selon les unités usuelles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5393e8c" class="outline-4">
+<h4 id="org5393e8c">Remarque</h4>
+<div class="outline-text-4" id="text-org5393e8c">
+<p>
+La concentration en masse de soluté et la masse volumique s’expriment
+dans la même unité mais ne représentent pas la même chose :
+</p>
+<ul class="org-ul">
+<li><b>masse volumique</b> masse de l’ensemble d’une substance</li>
+<li><b>concentration en masse</b> masse de soluté dans l’ensemble</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org917d448" class="outline-2">
+<h2 id="org917d448">Préparation de solution par dissolution</h2>
+<div class="outline-text-2" id="text-org917d448">
+</div>
+<div id="outline-container-orgebf074c" class="outline-3">
+<h3 id="orgebf074c">Définition</h3>
+<div class="outline-text-3" id="text-orgebf074c">
+<p>
+La dissolution d’un soluté dans un solvant
+est la mise en solution d’une espèce chimique pure solide,
+liquide ou gazeuse dans un solvant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5f44ad7" class="outline-3">
+<h3 id="org5f44ad7">Protocole</h3>
+<div class="outline-text-3" id="text-org5f44ad7">
+<p>
+Pour préparer une solution de volume V contenant un soluté en
+concentration en masse c<sub>m</sub>
+</p>
+<ol class="org-ol">
+<li>Peser avec une balance du soluté de masse m = c<sub>m</sub> × V</li>
+<li>Verser à l'aide d'un entonnoir le soluté dans une fiole jaugée
+de volume V</li>
+<li>Rincer à l'aide de solvant l'entonnoir et la coupelle</li>
+<li>Remplir jusqu'aux deux tiers de solvant la fiole jaugée</li>
+<li>Agiter lattéralement</li>
+<li>Remplir la fiole jusqu'au trait de jauge, boucher puis homogénéiser
+la solution</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="outline-container-orgb4bfc6a" class="outline-2">
+<h2 id="orgb4bfc6a">Préparation de solution par dilution</h2>
+<div class="outline-text-2" id="text-orgb4bfc6a">
+</div>
+<div id="outline-container-org99da0ec" class="outline-3">
+<h3 id="org99da0ec">Définition</h3>
+<div class="outline-text-3" id="text-org99da0ec">
+<p>
+La dilution d'une solution correspond à l'ajout
+de solvant dans la solution.
+</p>
+
+<p>
+La solution obtenue, appelée solution fille,
+a une concentration en masse plus faible que
+la solution initiale, appelée solution mère.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcabd580" class="outline-3">
+<h3 id="orgcabd580">Protocole</h3>
+<div class="outline-text-3" id="text-orgcabd580">
+</div>
+<div id="outline-container-orgd19cd8f" class="outline-4">
+<h4 id="orgd19cd8f">Étapes de préparation d'une solution aqueuse par dilution</h4>
+<div class="outline-text-4" id="text-orgd19cd8f">
+<ol class="org-ol">
+<li>Verser de la solution mère dans un bécher</li>
+<li>Conditionner la pipette jaugée en aspirant de la solution mère au delà du trait de jauge</li>
+<li>Ajuster le bas du ménisque au trait de jauge</li>
+<li>Introduire le prélèvement dans une fiole jaugé du volume souhaité V<sub>1</sub></li>
+<li>Remplir d'eau distillée aux deux tiers puis agiter latéralement</li>
+<li>Compléter jusqu'au trait de jauge avec l'eau distillée et mélanger pour homogénéiser la solution</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org81e73ce" class="outline-4">
+<h4 id="org81e73ce">Remarque</h4>
+<div class="outline-text-4" id="text-org81e73ce">
+<p>
+La masse de soluté reste la même avant et après la dilution.
+Soit une solution mère S<sub>0</sub> de concentration c<sub>m</sub><sup>0</sup>
+et une solution fille S<sub>1</sub> de concentration c<sub>m</sub><sup>1</sup>
+</p>
+<div class="org-center">
+<p>
+c<sub>m</sub><sup>0</sup> × V<sub>0</sub> = c<sub>m</sub><sup>1</sup> × V<sub>1</sub>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org1be45c0" class="outline-3">
+<h3 id="org1be45c0">Facteur de dilution</h3>
+<div class="outline-text-3" id="text-org1be45c0">
+</div>
+<div id="outline-container-orgdbaed44" class="outline-4">
+<h4 id="orgdbaed44">Définition</h4>
+<div class="outline-text-4" id="text-orgdbaed44">
+<p>
+On appelle <b>facteur de dilution</b> (F) le rapport entre la concentration en masse
+de la solution mère et de la solution fille
+</p>
+<div class="org-center">
+<p>
+F = t<sub>m</sub> / t<sub>f</sub>
+</p>
+</div>
+
+<p>
+ce facteur de dilution est toujours supérieur à 1.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge84331b" class="outline-4">
+<h4 id="orge84331b">Exemple :</h4>
+<div class="outline-text-4" id="text-orge84331b">
+<p>
+Pour diluer 5 fois une solution mère de concentration
+en masse c<sub>m</sub><sup>0</sup> = 10.0 g/L et obtenir un volume V<sub>f</sub> = 100.0 mL
+de solution fille, la concentration de la solution fille est
+</p>
+
+<p>
+c<sub>m</sub><sup>1</sup> = c<sub>m</sub><sup>0</sup>/F = 10.0 / 5 = 2.0 g/L,
+</p>
+
+<p>
+le volume de solution mère à prélever est donc
+</p>
+
+<p>
+soit 20 mL.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orge4d1461" class="outline-2">
+<h2 id="orge4d1461">Exercices</h2>
+<div class="outline-text-2" id="text-orge4d1461">
+</div>
+<div id="outline-container-org2d3c07c" class="outline-3">
+<h3 id="org2d3c07c">Exercice :</h3>
+<div class="outline-text-3" id="text-org2d3c07c">
+<p>
+prouver que le facteur de dilution peut s'écrire F = V<sub>f</sub>/V<sub>m</sub>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2dbce14" class="outline-3">
+<h3 id="org2dbce14">Exercices du manuel&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h3>
+<div class="outline-text-3" id="text-org2dbce14">
+</div>
+<div id="outline-container-orgb63aedd" class="outline-4">
+<h4 id="orgb63aedd">Application du cours</h4>
+<div class="outline-text-4" id="text-orgb63aedd">
+<ul class="org-ul">
+<li>12 et 17 p 43</li>
+<li>21 et 23 p. 44</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc6d9a13" class="outline-4">
+<h4 id="orgc6d9a13">S'entraîner</h4>
+<div class="outline-text-4" id="text-orgc6d9a13">
+<ul class="org-ul">
+<li>30 et 31 p 46</li>
+<li>33 p 47</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6013fe9" class="outline-4">
+<h4 id="org6013fe9">Préparation au DS</h4>
+<div class="outline-text-4" id="text-org6013fe9">
+<ul class="org-ul">
+<li>36 et 37 p 48</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5806d1b" class="outline-3">
+<h3 id="org5806d1b">Corrections&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h3>
+<div class="outline-text-3" id="text-org5806d1b">
+</div>
+<div id="outline-container-org0e26822" class="outline-4">
+<h4 id="org0e26822">ex 21 p 44</h4>
+<div class="outline-text-4" id="text-org0e26822">
+<ol class="org-ol">
+<li>La formule V<sub>m</sub> =  F/V<sub>f</sub> est fausse</li>
+<li>V<sub>f</sub> = F &times; V<sub>m</sub></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6dc9dde" class="outline-4">
+<h4 id="org6dc9dde">ex 23 p 44&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org6dc9dde">
+<p>
+V<sub>m</sub> = x
+</p>
+
+<p>
+V<sub>f</sub> = x + 7x = 8x
+</p>
+
+<p>
+F = V<sub>f</sub>/V<sub>m</sub> = 8
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26b4e2c" class="outline-4">
+<h4 id="org26b4e2c">ex 30 p 46&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org26b4e2c">
+<ol class="org-ol">
+<li>c<sub>m</sub> = m/V = 0.23 / 0.150 = 1.53 g/L</li>
+<li>c<sub>m</sub> &lt; 1.8 g/L donc le lait est frais.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org348fb06" class="outline-4">
+<h4 id="org348fb06">ex 31 p 46&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org348fb06">
+<ol class="org-ol">
+<li>S<sub>1</sub> : m<sub>1</sub> = 6 g, V<sub>1</sub> = 0.75 L, t<sub>m</sub> = 60 g / L</li>
+<li>S<sub>m</sub> : V<sub>m</sub> = 1/3 * 0.75 = 0.25 L</li>
+<li>S<sub>f</sub> : t<sub>f</sub> = t<sub>m</sub> / F = t<sub>m</sub> * V<sub>m</sub> / V<sub>f</sub> = 60 * 0.25 / 0.75 = 20 g/L</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org283e18e" class="outline-4">
+<h4 id="org283e18e">ex 37 p 48&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org283e18e">
+<p>
+t<sub>m</sub> = 12.0 mg/L
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Solution fille</th>
+<th scope="col" class="org-right">S<sub>1</sub></th>
+<th scope="col" class="org-right">S<sub>2</sub></th>
+<th scope="col" class="org-left">S<sub>3</sub></th>
+<th scope="col" class="org-right">S<sub>4</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">V<sub>m</sub> (mL)</td>
+<td class="org-right">13.3</td>
+<td class="org-right">10.0</td>
+<td class="org-left"><b>5.0</b></td>
+<td class="org-right">2.5</td>
+</tr>
+
+<tr>
+<td class="org-left">V<sub>f</sub> (mL)</td>
+<td class="org-right">20.0</td>
+<td class="org-right">20.0</td>
+<td class="org-left">20.0</td>
+<td class="org-right">20.0</td>
+</tr>
+
+<tr>
+<td class="org-left">F</td>
+<td class="org-right">1.5</td>
+<td class="org-right">2.0</td>
+<td class="org-left"><b>4.0</b></td>
+<td class="org-right">8.0</td>
+</tr>
+
+<tr>
+<td class="org-left">t<sub>f</sub> (mg/L)</td>
+<td class="org-right">8.0</td>
+<td class="org-right">6.0</td>
+<td class="org-left">3.0</td>
+<td class="org-right">1.5</td>
+</tr>
+</tbody>
+</table>
+<ol class="org-ol">
+<li><p>
+t<sub>f</sub> = 3.0 mg/L = m<sub>3</sub> / V<sub>f</sub> = t<sub>m</sub> * V<sub>m</sub> / V<sub>f</sub>
+</p>
+
+<p>
+V<sub>m</sub> = t<sub>f</sub> * V<sub>f</sub> / t<sub>m</sub> = 5.0 mL
+</p>
+
+<p>
+F = V<sub>f</sub> / V<sub>m</sub> = 20.0 / 5.0 = 4
+</p></li>
+
+<li>Pipette jaugée, fiole jaugée, bécher</li>
+
+<li><p>
+t<sub>1</sub> &gt; t<sub>E131</sub>/10 &gt; t<sub>2</sub>
+</p>
+
+<p>
+10 * t<sub>1</sub> &gt; t<sub>E131</sub> &gt; 10 * t<sub>2</sub>
+</p>
+
+<p>
+80.0 &gt; t<sub>E131</sub> &gt; 60.0
+</p></li>
+
+<li>En augmentant le nombre de solutions pour faire l'échelle de teinte</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">T1C02 - Les solutions aqueuses</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

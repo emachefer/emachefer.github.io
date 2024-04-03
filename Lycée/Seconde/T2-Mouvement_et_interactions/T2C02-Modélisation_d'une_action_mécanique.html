@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T2C02 - Modélisation d'une action mécanique</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">T2C02 - Modélisation d'une action mécanique</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orga68143e">Notion de force</a>
+<ul>
+<li><a href="#org9da4ad6">Action mécanique</a></li>
+<li><a href="#orgc18ea65">Modélisation d'une action</a></li>
+<li><a href="#orgcde548d">Quelques exemples de force</a>
+<ul>
+<li><a href="#org148a40f">Force d'interaction gravitationnelle</a></li>
+<li><a href="#org18b787b">Poids</a></li>
+<li><a href="#orgffee2fa">Réaction du support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org2271b77">Principe des actions réciproques</a>
+<ul>
+<li><a href="#org9546748">Définition</a></li>
+<li><a href="#org6e9f5fe">Exercice</a></li>
+</ul>
+</li>
+<li><a href="#org77a9906">Bilan du chapitre</a>
+<ul>
+<li><a href="#orgb0a2c22">Carte mentale</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-orga68143e" class="outline-2">
+<h2 id="orga68143e">Notion de force</h2>
+<div class="outline-text-2" id="text-orga68143e">
+</div>
+<div id="outline-container-org9da4ad6" class="outline-3">
+<h3 id="org9da4ad6">Action mécanique</h3>
+<div class="outline-text-3" id="text-org9da4ad6">
+<div class="definition">
+<p>
+Une <b>action mécanique</b> est un phénomène provoquant une déformation d'un
+objet ou une modification de son mouvement<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>
+</p>
+
+</div>
+
+<p>
+Une action mécanique peut être soit :
+</p>
+<ul class="org-ul">
+<li>de <b>contact</b> si il y a un contact entre le système étudié et le phénomène
+provoquant l'action
+<ul class="org-ul">
+<li><i>Exemple :</i> action de la main pour pousser une bille</li>
+</ul></li>
+<li>à <b>distance</b> si il n'y a pas de contact entre le système et le phénomène
+provoquant l'action
+<ul class="org-ul">
+<li><i>Exemple :</i> action du Soleil sur la Terre</li>
+</ul></li>
+</ul>
+
+<p>
+Afin de faire un bilan des interactions sur un système, on utilise
+un <b>diagramme objets-interactions</b>, où les interactions de contact sont
+représentées par une double flèche en trait plein alors que les interactions
+à distances sont représentées par une double flèche en pointillé.
+</p>
+
+<figure>
+<img src="doi.png" alt="doi.png">
+
+</figure>
+
+
+<div class="exercice" id="doi-pomme">
+<p>
+Faire le diagramme objets-interactions d'une pomme en chute libre, soumises
+aux interactions dues à la Terre et à l'air.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc18ea65" class="outline-3">
+<h3 id="orgc18ea65">Modélisation d'une action</h3>
+<div class="outline-text-3" id="text-orgc18ea65">
+<div class="definition">
+<p>
+Une <b>force</b> modélise une action mécanique. Elle est représentée par un
+vecteur appliquée à un point.
+</p>
+
+<p>
+Les caractéristiques d'une force sont :
+</p>
+<ul class="org-ul">
+<li>son point d'application</li>
+<li>sa direction</li>
+<li>son sens</li>
+<li>sa valeur, qui s'exprime en <b>newton (N)</b></li>
+</ul>
+
+</div>
+
+<div class="remark">
+<p>
+En seconde, le système étudié est toujours modélisé par un point.
+</p>
+
+</div>
+
+<div class="exercice">
+<p>
+Même situation que dans l'exercice <a href="#org40a2777">diagramme objets-interactions</a>.
+</p>
+<ol class="org-ol">
+<li>Quelles sont les caractéristiques de la force qu'exerce la
+Terre sur la pomme ?</li>
+<li>Même question pour la force qu'exerce l'air sur la pomme ?</li>
+<li>Représenter la situation par un schéma.</li>
+</ol>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgcde548d" class="outline-3">
+<h3 id="orgcde548d">Quelques exemples de force</h3>
+<div class="outline-text-3" id="text-orgcde548d">
+</div>
+<div id="outline-container-org148a40f" class="outline-4">
+<h4 id="org148a40f">Force d'interaction gravitationnelle</h4>
+<div class="outline-text-4" id="text-org148a40f">
+<div class="exercice">
+<p>
+La masse de la Terre est m<sub>T</sub> = 5,97 &times; 10<sup>24</sup> kg, celle du Soleil est
+m<sub>S</sub> = 2,0 &times; 10<sup>30</sup> kg, la distance entre la Terre et le Soleil
+est d = 1,50 &times; 10<sup>11</sup> m.
+</p>
+<ol class="org-ol">
+<li>Faire le diagramme objets-interactions appliqué au système Terre.</li>
+<li>Calculer la valeur de la force gravitationnelle exercée
+par le Soleil sur la Terre.</li>
+<li>Déterminer les caractéristique de direction et de sens
+de la force.</li>
+</ol>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org18b787b" class="outline-4">
+<h4 id="org18b787b">Poids</h4>
+<div class="outline-text-4" id="text-org18b787b">
+<p>
+Le poids \(\vec{P}\) d'un objet correspond à la force d'interaction
+gravitationnelle à la surface d'un astre, on a
+</p>
+<div class="org-center">
+<p>
+\(\vec{P}_A = m \times \vec{g}_A\)
+</p>
+</div>
+<p>
+avec m la masse de l'objet (en kg), \(\vec{g}_A\) le champ de pesanteur
+de l'astre A. La valeur de g<sub>A</sub> est
+</p>
+<div class="org-center">
+<p>
+\(g_A = G \times \dfrac{m_A}{R_A^2}\)
+</p>
+</div>
+<p>
+avec m<sub>A</sub> la masse de l'astre A en kg et R<sub>A</sub> le rayon de cet
+astre en m.
+</p>
+
+<div class="exercice">
+<p>
+La masse de la Terre est m<sub>T</sub> = 5,97 &times; 10<sup>24</sup> kg, son rayon est
+R<sub>T</sub> = 6371 km, la constante de gravitation universelle
+G = 6,67 &times; 10<sup>-11</sup> N·m<sup>2</sup>·kg<sup>-2</sup>
+</p>
+<ul class="org-ul">
+<li>Calculer la valeur du champ de pesanteur de la Terre.</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgffee2fa" class="outline-4">
+<h4 id="orgffee2fa">Réaction du support</h4>
+<div class="outline-text-4" id="text-orgffee2fa">
+<p>
+Lorsqu'un objet est posé sur un support, le support génère une
+action de contact modélisé par une force perpendiculaire à la
+surface du support.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org2271b77" class="outline-2">
+<h2 id="org2271b77">Principe des actions réciproques</h2>
+<div class="outline-text-2" id="text-org2271b77">
+</div>
+<div id="outline-container-org9546748" class="outline-3">
+<h3 id="org9546748">Définition</h3>
+<div class="outline-text-3" id="text-org9546748">
+<div class="definition">
+<p>
+Lorsque deux systèmes A et B sont en interaction, ils exercent
+l'un sur l'autre une force :
+</p>
+<ul class="org-ul">
+<li>de même direction</li>
+<li>de même valeur</li>
+<li>de sens opposé</li>
+</ul>
+
+<p>
+Mathématiquement, on a
+</p>
+<div class="org-center">
+<p>
+\(\vec{F}_{A/B} = - \vec{F}_{B/A}\)
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org6e9f5fe" class="outline-3">
+<h3 id="org6e9f5fe">Exercice</h3>
+<div class="outline-text-3" id="text-org6e9f5fe">
+<div class="exercice">
+<p>
+Le télescope spatial <i>Hubble</i> est un satellite lancé le 24
+avril 1990, en orbite autour de la Terre a une orbite basse
+située à 539 km de la surface de la Terre.
+</p>
+
+<p>
+La masse du télescope est m<sub>H</sub> = 11 &times; 10<sup>3</sup> kg.
+</p>
+
+<ol class="org-ol">
+<li>Calculer la valeur de la force qu'exerce la Terre sur Hubble.</li>
+<li>Que peut-on dire de la valeur de la force qu'exerce Hubble
+sur la Terre ?</li>
+<li>Représenter par un schéma les deux forces.</li>
+</ol>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org77a9906" class="outline-2">
+<h2 id="org77a9906">Bilan du chapitre</h2>
+<div class="outline-text-2" id="text-org77a9906">
+</div>
+<div id="outline-container-orgb0a2c22" class="outline-3">
+<h3 id="orgb0a2c22">Carte mentale</h3>
+<div class="outline-text-3" id="text-orgb0a2c22">
+
+<figure>
+<img src="T2C02-bilan_actions_mecaniques.png" alt="T2C02-bilan_actions_mecaniques.png">
+
+</figure>
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">Changement de valeur de vitesse ou changement de direction</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">T2C02 - Modélisation d'une action mécanique</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

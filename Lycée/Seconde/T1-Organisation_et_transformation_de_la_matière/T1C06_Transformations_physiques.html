@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch05 Transformations physiques</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Ch05 Transformations physiques</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org20dfde5">Modélisation des transformations physiques</a>
+<ul>
+<li><a href="#orgd9a5651">Changement d'état</a></li>
+<li><a href="#orgfc5cf43">Modélisation microscopique</a></li>
+</ul>
+</li>
+<li><a href="#orgb5201a4">Échanges d'énergie</a>
+<ul>
+<li><a href="#org681d221">Transfert endothermique et exothermique</a></li>
+<li><a href="#org3a6f7c3">Énergie de changement d'état</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org20dfde5" class="outline-2">
+<h2 id="org20dfde5">Modélisation des transformations physiques</h2>
+<div class="outline-text-2" id="text-org20dfde5">
+</div>
+<div id="outline-container-orgd9a5651" class="outline-3">
+<h3 id="orgd9a5651">Changement d'état</h3>
+<div class="outline-text-3" id="text-orgd9a5651">
+<p>
+<b>Compléter le schéma ci-dessous</b>
+</p>
+
+<figure>
+<img src="changement_etat.png" alt="changement_etat.png">
+
+</figure>
+
+<div class="remark">
+<ul class="org-ul">
+<li>Les changements d'état d'un <b>corps pur</b> s'effectuent à
+température constante
+Lors du changement d'état, les deux états coexistent.</li>
+<li><p>
+Au cours d'un changement d'état physique, les espèces chimiques
+ne sont pas modifiées. Le changement d'état est noté
+</p>
+<div class="org-center">
+<p>
+A(état 1) \(\to\) A(état 2)
+</p>
+</div></li>
+</ul>
+
+</div>
+
+<div class="exemple">
+<p>
+\(H_{2}O(s) \to H_{2}O(l)\) pour la fusion de l'eau.
+</p>
+
+</div>
+
+<div class="exercice">
+<ol class="org-ol">
+<li>La paraffine<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> à une température
+de fusion de 52°C.
+Quel est son état à -10°C, 45°C et 60°C ?</li>
+<li>Exercices 4 et 6 p 104</li>
+</ol>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfc5cf43" class="outline-3">
+<h3 id="orgfc5cf43">Modélisation microscopique</h3>
+<div class="outline-text-3" id="text-orgfc5cf43">
+<div class="remark">
+<p>
+Plus la température est élevée,
+plus les espèces chimiques sont agitées.
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li>Un <b>solide</b> est composé d'espèces chimiques fortement liées entre elles
+les particules sont quasiment immobiles.</li>
+<li>Un <b>liquide</b> est composé d'espèces chimiques très proches en mouvement
+les unes par rapport aux autres.</li>
+<li>Un <b>gaz</b> est composé d'espèces chimiques en
+constante agitation, les particules sont espacées entre elles
+et s'entrechoquent sans cesse.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgb5201a4" class="outline-2">
+<h2 id="orgb5201a4">Échanges d'énergie</h2>
+<div class="outline-text-2" id="text-orgb5201a4">
+</div>
+<div id="outline-container-org681d221" class="outline-3">
+<h3 id="org681d221">Transfert endothermique et exothermique</h3>
+<div class="outline-text-3" id="text-org681d221">
+<div class="definition">
+<ul class="org-ul">
+<li><b>Transformation endothermique</b> : transformation qui
+<b>capte l'énergie</b> du milieu extérieur, le système
+<b>gagne</b> de l'énergie.
+<ul class="org-ul">
+<li><i>Fusion, vaporisation ou sublimation</i></li>
+</ul></li>
+<li><b>Transformation exothermique</b> : transformation qui
+<b>cède l'énergie</b>
+vers le milieu extérieur, le système <b>perd</b> de l'énergie.
+<ul class="org-ul">
+<li><i>Solidification, condensation ou liquéfaction</i></li>
+</ul></li>
+</ul>
+
+</div>
+
+<div class="remark">
+<p>
+Pour passer d'un état 1 où les particules sont peu agitées à un
+état 2 où les particules sont plus agitées, il faut que les
+particules gagnent en énergie la transformation doit être endothermique.
+</p>
+
+<p>
+Dans le cas contraire, les particules doivent perdre de l'énergie, la
+transformation est exothermique.
+</p>
+
+</div>
+
+<div class="exercice">
+<p>
+10 p 105
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org3a6f7c3" class="outline-3">
+<h3 id="org3a6f7c3">Énergie de changement d'état</h3>
+<div class="outline-text-3" id="text-org3a6f7c3">
+<div class="definition">
+<p>
+L'énergie acquise ou perdue lors d'un changement d'état (&Delta; U)
+correspond au transfert thermique avec un autre système
+</p>
+<div class="org-center">
+<p>
+\(\Delta U = Q\)
+</p>
+</div>
+<p>
+cette quantité d'énergie est proportionnelle
+à la masse du système
+</p>
+<div class="org-center">
+<p>
+Q = m &times; L
+</p>
+</div>
+<p>
+avec <i>Q</i> la chaleur échangée (en joule J), <i>m</i> la masse du système
+(en kg) et <i>L</i> l'énergie massique de changement d'état<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> (en J/kg).
+</p>
+
+</div>
+
+<div class="exercice">
+<p>
+On réalise la fusion de 10 kg de chlorure de sodium, d'énergie massique
+ de changement d'état L<sub>fusion</sub>(NaCl) = 481 &times; 10<sup>3</sup> J/kg.
+</p>
+<ol class="org-ol">
+<li>Cette réaction est-elle endothermique ou exothermique ?</li>
+<li>Calculer l'énergie nécessaire à cette fusion.</li>
+</ol>
+
+</div>
+
+<div class="exercice">
+<p>
+12, 16 p 105
+</p>
+
+</div>
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">Sert à la fabrication des bougies</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">ou chaleur
+latente de changement d'état ou enthalpie de changement d'état</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ch05 Transformations physiques</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

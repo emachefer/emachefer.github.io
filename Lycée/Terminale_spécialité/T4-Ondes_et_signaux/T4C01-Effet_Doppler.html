@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T4C01 - Effet Doppler</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">T4C01 - Effet Doppler</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org76f4d0e">Niveau d'intensité sonore</a>
+<ul>
+<li><a href="#orgf55fa54">Intensité acoustique</a>
+<ul>
+<li><a href="#orgb37d88b">Rappel :&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rappel">rappel</span></span></a></li>
+</ul>
+</li>
+<li><a href="#orgf468439">Niveau d'intensité sonore</a>
+<ul>
+<li><a href="#org12c9e52">Remarque&#xa0;&#xa0;&#xa0;<span class="tag"><span class="remarque">remarque</span></span></a></li>
+<li><a href="#org9afc17a">Exercice : preuve&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#org48a8296">Ex 3 p 358&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org462efb4">Atténuation géométrique</a>
+<ul>
+<li><a href="#org2f58390">Preuve&#xa0;&#xa0;&#xa0;<span class="tag"><span class="preuve">preuve</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org3eefe68">Atténuation par absorption</a>
+<ul>
+<li><a href="#org7a66e2b">Ex 16 p 360&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#orga7739d4"><span class="todo TODO">TODO</span> Ex 21 p 360&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga6dbac7">Effet Doppler</a>
+<ul>
+<li><a href="#orga9224bd">Présentation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></a>
+<ul>
+<li><a href="#orgfc32b62">Émetteur immobile</a></li>
+<li><a href="#orgf8e108c">Émetteur se rapproche du récepteur</a></li>
+<li><a href="#org3fd972f">Émetteur s'éloigne du récepteur</a></li>
+</ul>
+</li>
+<li><a href="#org5d98ee2">Expression du décalage Doppler</a>
+<ul>
+<li><a href="#org210a1ee">Démonstration</a></li>
+</ul>
+</li>
+<li><a href="#org82d23a4">Radar Doppler</a></li>
+<li><a href="#orgc974553">Redshift, blueshift</a>
+<ul>
+<li><a href="#orgadcaee7">Ex 8 p 358</a></li>
+<li><a href="#orgb85eeec">Ex 10 p 359</a></li>
+<li><a href="#orgce6b371">Ex 22 p 361</a></li>
+<li><a href="#orgc1c85b7">Ex 26 p 363</a></li>
+<li><a href="#org26368e6">Ex 27 p 363</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org76f4d0e" class="outline-2">
+<h2 id="org76f4d0e">Niveau d'intensité sonore</h2>
+<div class="outline-text-2" id="text-org76f4d0e">
+</div>
+<div id="outline-container-orgf55fa54" class="outline-3">
+<h3 id="orgf55fa54">Intensité acoustique</h3>
+<div class="outline-text-3" id="text-orgf55fa54">
+<p>
+Elle est définie comme étant la puissance transportée par les ondes sonores par
+unité de surface dans une direction perpandiculaire à ce transfert.
+L'unité SI de l'intensité est le W/m<sup>2</sup>
+</p>
+
+<p>
+Pour une onde sonore sphérique, elle est définit par
+\[I = \dfrac{P}{S},\]
+avec P la puissance sonore en watt (W) et S la surface en m<sup>2</sup>.
+</p>
+</div>
+
+<div id="outline-container-orgb37d88b" class="outline-4">
+<h4 id="orgb37d88b">Rappel :&#xa0;&#xa0;&#xa0;<span class="tag"><span class="rappel">rappel</span></span></h4>
+<div class="outline-text-4" id="text-orgb37d88b">
+<p>
+la célérité du son dans des condition normales de température,
+de pression et d'humidité dans l'atmosphère est c<sub>s</sub> = 340 m/s
+</p>
+
+<p>
+L'oreille humaine perçoit les son dont l'intensité est comprise entre
+le <i>seuil d'audibilité</i> (10<sup>-12</sup> W/m<sup>2</sup>) et le <i>seuil de douleur</i> (10 W/m<sup>2</sup>).
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf468439" class="outline-3">
+<h3 id="orgf468439">Niveau d'intensité sonore</h3>
+<div class="outline-text-3" id="text-orgf468439">
+<p>
+L'intensité acoustique est peu pratique a utilisé étant donné la différence
+de l'ordre de 10<sup>14</sup> W/m<sup>2</sup> entre les deux extrémités, on lui préfère
+le niveau d'intensité sonore définit à partir du logarithme de l'intensité sonore.
+</p>
+
+<p>
+Il est noté L (<i>level</i>), et s'exprime en dB
+</p>
+<div class="org-center">
+<p>
+L = 10 log(I/I<sub>0</sub>),
+</p>
+</div>
+<p>
+avec  I<sub>0</sub> = 1.0 &times; 10<sup>-12</sup> W/m<sup>2</sup> correspond à l'intensité sonore de référence à 1kHz.
+</p>
+
+
+<p>
+<a href="./data/echelle_intensite.pdf">./data/echelle_intensite.pdf</a>
+</p>
+</div>
+
+
+<div id="outline-container-org12c9e52" class="outline-4">
+<h4 id="org12c9e52">Remarque&#xa0;&#xa0;&#xa0;<span class="tag"><span class="remarque">remarque</span></span></h4>
+<div class="outline-text-4" id="text-org12c9e52">
+<div class="remark">
+<p>
+Lorsque plusieurs instruments jouent ensemblent, les intensités sonores s'ajoutent,
+les niveaux d'intensité ne s'ajoutent pas.
+</p>
+
+<p>
+Pour passer du niveau d'intensité à l'intensité acoustique
+</p>
+<div class="org-center">
+<p>
+I = I<sub>0</sub> &times; 10<sup>L/10</sup>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org9afc17a" class="outline-4">
+<h4 id="org9afc17a">Exercice : preuve&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+</div>
+
+<div id="outline-container-org48a8296" class="outline-4">
+<h4 id="org48a8296">Ex 3 p 358&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org48a8296">
+<p>
+Calculer le niveau d'intensité sonore correspondant à chacune des intensité sonores suivantes.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Intensité (W/m<sup>2</sup>)</th>
+<th scope="col" class="org-right">1.2e-7</th>
+<th scope="col" class="org-right">7.3e-5</th>
+<th scope="col" class="org-right">2.3e-3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Niveau (dB)</td>
+<td class="org-right">50.791812</td>
+<td class="org-right">78.633229</td>
+<td class="org-right">93.617278</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org462efb4" class="outline-3">
+<h3 id="org462efb4">Atténuation géométrique</h3>
+<div class="outline-text-3" id="text-org462efb4">
+<p>
+L'atténuation géométrique A (dB) correspond à la diminution du niveau d'intensité lorsque la distance par rapport à la source sonore augmente
+</p>
+<div class="org-center">
+<p>
+A = L<sub>proche</sub> - L<sub>loin</sub>
+</p>
+</div>
+
+<p>
+Lorsque la distance est multipliée par 2, le niveau est réduit de 6 dB
+</p>
+</div>
+
+<div id="outline-container-org2f58390" class="outline-4">
+<h4 id="org2f58390">Preuve&#xa0;&#xa0;&#xa0;<span class="tag"><span class="preuve">preuve</span></span></h4>
+<div class="outline-text-4" id="text-org2f58390">
+<div class="proof">
+<p>
+Soit r<sub>2</sub> = 2 * r<sub>1</sub>
+</p>
+
+<p>
+S<sub>2</sub> = 4&pi; r<sub>2</sub><sup>2</sup> = 4&pi; r<sub>1</sub><sup>2</sup> * 2<sup>2</sup>
+</p>
+
+<p>
+I<sub>2</sub> = I<sub>1</sub> / 2<sup>2</sup>
+</p>
+
+<p>
+L<sub>2</sub> = 10 log(I<sub>1</sub>/2<sup>2</sup> I<sub>0</sub>) = L<sub>1</sub> - 10 log(2<sup>2</sup>) = L<sub>1</sub> - 6
+</p>
+
+<p>
+A = L<sub>1</sub> - L<sub>2</sub> = 6 dB
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org3eefe68" class="outline-3">
+<h3 id="org3eefe68">Atténuation par absorption</h3>
+<div class="outline-text-3" id="text-org3eefe68">
+<p>
+L'atténuation par absorption A (dB) évalue l'efficacité d'un matériau à lutter contre la transmission de bruit
+</p>
+<div class="org-center">
+<p>
+A = L<sub>incident</sub> - L<sub>transmis</sub>
+</p>
+</div>
+</div>
+<div id="outline-container-org7a66e2b" class="outline-4">
+<h4 id="org7a66e2b">Ex 16 p 360&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+</div>
+<div id="outline-container-orga7739d4" class="outline-4">
+<h4 id="orga7739d4"><span class="todo TODO">TODO</span> Ex 21 p 360&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-orga7739d4">
+<ol class="org-ol">
+<li><p>
+I = P/S = P/(4&pi; r<sup>2</sup>/2) = P/(2&pi; r<sup>2</sup>)
+</p>
+
+<p>
+Soit r = 1.0 m
+</p>
+
+<p>
+I = 0.12/(2*&pi;*1.0) = 0.01909 = 1.9e-2 W/m<sup>2</sup>
+</p></li>
+
+<li>L = 10 log(I/I<sub>0</sub>) = 103 dB</li>
+
+<li>L' = L - 6 = 97 dB</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="outline-container-orga6dbac7" class="outline-2">
+<h2 id="orga6dbac7">Effet Doppler</h2>
+<div class="outline-text-2" id="text-orga6dbac7">
+</div>
+<div id="outline-container-orga9224bd" class="outline-3">
+<h3 id="orga9224bd">Présentation&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></h3>
+<div class="outline-text-3" id="text-orga9224bd">
+<div class="definition">
+<p>
+<b>Effet Doppler</b> correspond au décalage entre la <i>fréquence d'émission</i> (f<sub>E</sub>) d'une onde et la fréquence de réception lorsque la distance entre l'émetteur et le receveur varie.
+</p>
+
+<p>
+Le décalage est &Delta; f = f<sub>R</sub> - f<sub>E</sub>
+</p>
+
+</div>
+
+<p>
+<a href="./data/doppler.pdf">./data/doppler.pdf</a>
+</p>
+</div>
+
+<div id="outline-container-orgfc32b62" class="outline-4">
+<h4 id="orgfc32b62">Émetteur immobile</h4>
+<div class="outline-text-4" id="text-orgfc32b62">
+<p>
+&Delta; f = 0
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf8e108c" class="outline-4">
+<h4 id="orgf8e108c">Émetteur se rapproche du récepteur</h4>
+<div class="outline-text-4" id="text-orgf8e108c">
+<p>
+&lambda;<sub>R</sub> &lt; &lambda;<sub>E</sub>, donc
+</p>
+
+<p>
+&Delta; f &gt; 0
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3fd972f" class="outline-4">
+<h4 id="org3fd972f">Émetteur s'éloigne du récepteur</h4>
+<div class="outline-text-4" id="text-org3fd972f">
+<p>
+&lambda;<sub>R</sub> &gt; &lambda;<sub>E</sub>, donc
+</p>
+
+<p>
+&Delta; f &lt; 0
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org5d98ee2" class="outline-3">
+<h3 id="org5d98ee2">Expression du décalage Doppler</h3>
+<div class="outline-text-3" id="text-org5d98ee2">
+<p>
+f<sub>R</sub> = f<sub>E</sub> &times; c<sub>onde</sub>/(c<sub>onde</sub> - v<sub>E</sub>),
+</p>
+
+<p>
+le décalage Doppler est donc &Delta; f = f<sub>E</sub> v<sub>E</sub> / (c<sub>s</sub> - v<sub>E</sub>).
+</p>
+
+<p>
+Pour v<sub>E</sub> &lt;&lt; c<sub>onde</sub>, &Delta; f = f<sub>E</sub> v<sub>E</sub>/c<sub>onde</sub>
+</p>
+</div>
+
+<div id="outline-container-org210a1ee" class="outline-4">
+<h4 id="org210a1ee">Démonstration</h4>
+<div class="outline-text-4" id="text-org210a1ee">
+<p>
+Soit un émetteur (E) mobile par rapport à un récepteur (R),
+de vitesse v<sub>E</sub> dans le référentiel propre à R.
+</p>
+
+<p>
+À t<sub>1</sub>, la distance entre l'émetteur et le récepteur est D,
+l'onde transmise est reçue en R à t<sub>2</sub> = D/c<sub>onde</sub>.
+</p>
+
+<p>
+À t<sub>3</sub> = T<sub>E</sub>, la distance [ER] est D' = D - v<sub>E</sub> * T<sub>E</sub>,
+l'onde transmise est reçue en R à t<sub>4</sub> = T<sub>E</sub> + (D-v<sub>E</sub> T<sub>E</sub>)/c<sub>onde</sub>}.
+</p>
+
+<p>
+La période de l'émetteur est T<sub>E</sub> = t<sub>3</sub> - t<sub>1</sub>,
+celle reçue par le récepteur est
+</p>
+
+<p>
+T<sub>R</sub> = t<sub>4</sub> - t<sub>2</sub> = T<sub>E</sub>(1 - v<sub>E</sub>/c<sub>onde</sub>)
+</p>
+
+<p>
+D'où f<sub>R</sub> = f<sub>E</sub> * c<sub>onde</sub> / (c<sub>onde</sub> - v<sub>E</sub>)
+</p>
+
+<p>
+Donc, &Delta; f = f<sub>E</sub> v<sub>E</sub> / (c<sub>s</sub> - v<sub>E</sub>)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org82d23a4" class="outline-3">
+<h3 id="org82d23a4">Radar Doppler</h3>
+<div class="outline-text-3" id="text-org82d23a4">
+<p>
+Un radar Doppler émet une radiation micro-onde d'une fréquence connue f<sub>E</sub>,
+cette onde est réfléchie par la cible puis reçue avec une fréquence f<sub>R</sub>.
+</p>
+
+<p>
+f<sub>R</sub> = f<sub>t</sub> (c + v)/(c - v)
+</p>
+
+<p>
+Soit &Delta; f = 2vf<sub>t</sub>/(c-v), avec v &lt;&lt; c,
+</p>
+
+<p>
+&Delta; f = 2vf<sub>E</sub>/c, l'effet Doppler est une méthode permettant de mesurer les vitesses.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc974553" class="outline-3">
+<h3 id="orgc974553">Redshift, blueshift</h3>
+<div class="outline-text-3" id="text-orgc974553">
+<p>
+Connaissant le spectre d'émission d'une galaxie,
+on peut déterminer si cette galaxie s'éloigne ou se rapproche avec le spectre reçu.
+</p>
+
+<p>
+Si son spectre est décalé vers le rouge, alors la galaxie s'éloigne.
+Si son spectre est décalé vers le bleu, alors la galaxie se rapproche.
+</p>
+
+<p>
+1 + z = &lambda;<sub>R</sub> / &lambda;<sub>E</sub>
+</p>
+
+<div class="remark">
+<p>
+L'Univers est en expansion, la plupart des galaxies visible s'éloignent
+par rapport à la Terre.
+</p>
+
+<p>
+Le décalage de la fréquence induit un décalage de l'énergie, &Delta; E = h &Delta;&nu;.
+</p>
+
+<p>
+D'après le modèle de Friedmann-Lemaître,
+la différence d'énergie mesurée correspond à l'énergie nécessaire pour l'expansion
+de l'Univers (diminution locale de l'énergie gravitationnelle et travail de l'expansion se compensent localement).
+</p>
+
+</div>
+</div>
+
+<div id="outline-container-orgadcaee7" class="outline-4">
+<h4 id="orgadcaee7">Ex 8 p 358</h4>
+<div class="outline-text-4" id="text-orgadcaee7">
+<p>
+La situation est la <i>c</i> : modification de la fréquence de la sirène.
+La situation <i>b</i> correspond à l'atténuation géométrique.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb85eeec" class="outline-4">
+<h4 id="orgb85eeec">Ex 10 p 359</h4>
+<div class="outline-text-4" id="text-orgb85eeec">
+<p>
+Décalage vers le rouge, l'étoile s'éloigne.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce6b371" class="outline-4">
+<h4 id="orgce6b371">Ex 22 p 361</h4>
+</div>
+<div id="outline-container-orgc1c85b7" class="outline-4">
+<h4 id="orgc1c85b7">Ex 26 p 363</h4>
+</div>
+<div id="outline-container-org26368e6" class="outline-4">
+<h4 id="org26368e6">Ex 27 p 363</h4>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">T4C01 - Effet Doppler</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

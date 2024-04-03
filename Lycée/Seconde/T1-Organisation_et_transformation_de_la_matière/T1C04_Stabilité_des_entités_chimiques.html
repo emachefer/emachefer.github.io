@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T1C04 - Stabilité des entités chimiques</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">T1C04 - Stabilité des entités chimiques</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org00aa42b">Configuration électronique</a></li>
+<li><a href="#orgdf449a7">Tableau périodique</a>
+<ul>
+<li><a href="#org379e85a">TP histoire de famille&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></a>
+<ul>
+<li><a href="#org122fe1e">Expérience 1</a></li>
+<li><a href="#org506ee47">Expérience 2</a></li>
+<li><a href="#org9519e9a">Analyse</a></li>
+</ul>
+</li>
+<li><a href="#org1f8ad0f">Structure du tableau</a></li>
+</ul>
+</li>
+<li><a href="#org2dbd2b3">Entités stables chimiquement</a>
+<ul>
+<li><a href="#org32f7360">Cas des gaz nobles</a></li>
+<li><a href="#orgf43ed88">Ions monoatomiques</a></li>
+<li><a href="#org6d7925d">Molécules</a></li>
+<li><a href="#orgb1c0dec">Schéma de Lewis</a></li>
+</ul>
+</li>
+<li><a href="#org3cefc99">S'entrainer pour l'évaluation</a></li>
+</ul>
+</div>
+</nav>
+
+
+<section id="outline-container-org00aa42b" class="outline-2">
+<h2 id="org00aa42b">Configuration électronique</h2>
+<div class="outline-text-2" id="text-org00aa42b">
+<div class="definition">
+<p>
+Dans un atome, les électrons sont répartis
+en différentes <b>couches et sous-couches électroniques</b>.
+Chaque couche
+est caractérisée par un nombre entier \(n > 0\) et chaque sous-couche
+par un nombre \(l\) tel que \(0 \leq l < n\).
+</p>
+
+<p>
+Pour \(l = 0\), on parle de la sous-couche <b>s</b>, pour \(l = 1\), on parle
+de la sous-couche <b>p</b>.
+</p>
+
+<p>
+La répartition des électrons en sous-couche se nomme
+<b>configuration électronique de l'atome</b>.
+</p>
+
+</div>
+
+<div class="remark">
+<p>
+<b>Hors programme : explication des couches et sous couches</b>
+</p>
+
+<p>
+Une couche <i>n</i> peut contenir jusqu'à \(2n^2\) électrons.
+Une sous-couche de type <i>s</i> (l = 0) peut contenir deux
+électrons, une sous-couche de type <i>p</i> (l = 1) peut contenir
+jusqu'à six électrons.
+</p>
+
+<p>
+On remplit toujours les couches du plus petit <i>n</i> vers le plus grand
+en remplissant les sous-couche du plus petit <i>l</i> vers le plus grand.
+</p>
+
+</div>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+
+<colgroup>
+<col  class="org-right">
+</colgroup>
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><b>Couche</b></td>
+<td class="org-right">1</td>
+<td class="org-right">2</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-right">3</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Sous-couche</b></td>
+<td class="org-right">1s</td>
+<td class="org-right">2s</td>
+<td class="org-left">2p</td>
+<td class="org-right">3s</td>
+<td class="org-left">3p</td>
+</tr>
+
+<tr>
+<td class="org-left"><b>Nombre-maximal-d'électron</b></td>
+<td class="org-right">2</td>
+<td class="org-right">2</td>
+<td class="org-left">6</td>
+<td class="org-right">2</td>
+<td class="org-left">6</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="exemple">
+<p>
+L'atome de carbone (C) a 6 protons, donc 6 électrons.
+Il sont répartis de la manière suivante :
+</p>
+<ul class="org-ul">
+<li>2 électrons sur la couche 1 dont :
+<ul class="org-ul">
+<li>2 sur la sous-couche <b>1s</b></li>
+</ul></li>
+<li>4 électron sur la couche 2 dont :
+<ul class="org-ul">
+<li>2 sur la sous-couche <b>2s</b></li>
+<li>2 sur la sous-couche <b>2p</b></li>
+</ul></li>
+</ul>
+
+<p>
+Sa configuration électronique est donc :
+</p>
+<div class="org-center">
+<p>
+1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>2</sup>
+</p>
+</div>
+
+</div>
+
+<div class="remark">
+<p>
+On appelle <b>couche de valence</b> la dernière couche électronique qui
+contient des électrons, ces derniers sont appelés
+<b>électrons de valence</b>, et sont responsables de la réactivité
+chimique d'un élément.
+</p>
+
+</div>
+
+<div class="exercice">
+<ul class="org-ul">
+<li>Donner la configuration électronique des trois premiers éléments
+du tableau périodique (Z = 1, 2 et 3) :
+H, He et Li</li>
+<li>4, <b>5</b>, 9 et <b>13</b> p 78-79</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orgdf449a7" class="outline-2">
+<h2 id="orgdf449a7">Tableau périodique</h2>
+<div class="outline-text-2" id="text-orgdf449a7">
+</div>
+<div id="outline-container-org379e85a" class="outline-3">
+<h3 id="org379e85a">TP histoire de famille&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></h3>
+<div class="outline-text-3" id="text-org379e85a">
+</div>
+<div id="outline-container-org122fe1e" class="outline-4">
+<h4 id="org122fe1e">Expérience 1</h4>
+<div class="outline-text-4" id="text-org122fe1e">
+<div class="doc">
+<ul class="org-ul">
+<li>Préparer 5 tubes à essai contenant respectivement :
+<ol class="org-ol">
+<li>1mL d’eau distillée (tube témoin)</li>
+<li>1mL de solution de chlorure de sodium    (Na<sup>+</sup> + Cl<sup>-</sup>)</li>
+<li>1mL de solution de chlorure de potassium (K<sup>+</sup> + Cl<sup>-</sup>)</li>
+<li>1mL de solution de chlorure de baryum    (Ba<sup>2+</sup> +2 Cl<sup>-</sup>)</li>
+<li>1mL de solution de chlorure de calcium   (Ca<sup>2+</sup> +2Cl<sup>-</sup>)</li>
+</ol></li>
+<li>Ajouter dans chacun des tubes un peu de solution d’eau savonneuse et agiter.</li>
+</ul>
+
+</div>
+<ol class="org-ol">
+<li>Faire un schéma de l'expérience.</li>
+<li>Est-ce que l’ion chlorure intervient dans les différentes expériences ? Justifier.</li>
+<li>À partir des résultats observés, classer les éléments étudiés en deux familles <b>A</b> et <b>B</b>.</li>
+<li>L’ion lithium Li<sup>+</sup> ne donne pas de précipité avec la solution d’eau savonneuse. À quelle famille appartient-il ?</li>
+<li>L’ion magnésium Mg<sup>2+</sup> donne un précipité avec la solution d’eau savonneuse. À quelle famille appartient-il ?</li>
+<li>Quelles sont les particularités des éléments qui appartiennent à une même famille ?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org506ee47" class="outline-4">
+<h4 id="org506ee47">Expérience 2</h4>
+<div class="outline-text-4" id="text-org506ee47">
+<div class="doc">
+<ul class="org-ul">
+<li>Préparer trois tubes à essais contenant respectivement
+<ol class="org-ol">
+<li>1 mL de solution de chlorure de potassium (K<sup>+</sup> + Cl<sup>-</sup>)</li>
+<li>1 mL de solution de bromure de potassium (K<sup>+</sup> + Br<sup>-</sup>)</li>
+<li>1 mL de solution d'iodure de potassium (K<sup>+</sup> + I<sup>-</sup>)</li>
+</ol></li>
+<li>Ajouter dans chaque tube à essais quelques gouttes d'une solution de nitrate d'argent (Ag<sup>+</sup> + NO<sub>3</sub><sup>-</sup>)</li>
+</ul>
+
+</div>
+
+<div class="doc">
+<p>
+Un précipité  est un cristal solide en suspension dans un liquide.
+La charge électrique totale de ce précipité est nulle.
+</p>
+
+</div>
+
+<ol class="org-ol">
+<li>Est-ce que l’ion potassium K<sup>+</sup> intervient dans les différentes expériences ? Justifier.</li>
+<li><ol class="org-ol">
+<li>Quelles sont alors les ions monoatomiques qui ont réagit avec
+le nitrate d'argent ?</li>
+<li>La formule chimique du nitrate d'argent est Ag<sup>+</sup> + NO<sub>3</sub><sup>-</sup>.
+En déduire la formule chimique des précipités obtenus.</li>
+<li>En vous inspirant des noms des espèces chimiques précédentes,
+quel est le nom des précipités ?</li>
+</ol></li>
+<li>À partir des résultats de l'expérience 1, que peut-on dire sur
+les éléments chlore, brome et iode ?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9519e9a" class="outline-4">
+<h4 id="org9519e9a">Analyse</h4>
+<div class="outline-text-4" id="text-org9519e9a">
+<ol class="org-ol">
+<li>Où se trouvent les éléments appartenant à une même famille dans le tableau périodique ?</li>
+<li>Quel est l’intérêt de classer les éléments par famille ?</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org1f8ad0f" class="outline-3">
+<h3 id="org1f8ad0f">Structure du tableau</h3>
+<div class="outline-text-3" id="text-org1f8ad0f">
+<div class="definition">
+<p>
+Dans le tableau périodique, les éléments sont classé par numéro
+atomique <i>Z</i> croissant :
+</p>
+<ul class="org-ul">
+<li>les éléments d'uune même ligne ont la même <b>couche de valence</b>.
+On appelle une ligne du tableau <b>période</b></li>
+<li>les éléments d'une même colonne appartiennent à une même <b>famille</b>.
+Ils ont les mêmes propriétés chimiques et le même nombre d'électrons
+de valence.</li>
+</ul>
+
+</div>
+
+<div class="remark">
+<p>
+Les élément de la colonne 18 appartiennent à la famille des
+<b>gaz nobles</b> (<i>ex: He, Ne, Ar</i>).
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org2dbd2b3" class="outline-2">
+<h2 id="org2dbd2b3">Entités stables chimiquement</h2>
+<div class="outline-text-2" id="text-org2dbd2b3">
+</div>
+<div id="outline-container-org32f7360" class="outline-3">
+<h3 id="org32f7360">Cas des gaz nobles</h3>
+<div class="outline-text-3" id="text-org32f7360">
+<p>
+Dans la nature, les atomes ont tendance à s’associer
+pour former des molécules. Seuls les gaz
+nobles ne se trouvent pas associés à d’autres atomes.
+Cette stabilité s’explique par leur configuration électronique
+</p>
+<ul class="org-ul">
+<li>He : 1s<sup>2</sup></li>
+<li>Ne : 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup></li>
+<li>Ar : 1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup></li>
+</ul>
+
+<div class="remark">
+<p>
+au cours d'une transformation chimique, un élément
+tend à obtenir la même configuration électronique
+que celle du gaz noble le plus proche de la classification
+périodique, en <b>saturant</b> sa couche de valence.
+</p>
+
+</div>
+
+<p>
+Pour obtenir une configuration électronique stable,
+les élément peuvent :
+</p>
+<ul class="org-ul">
+<li>s'associer avec d'autres éléments pour former une <b>molécule</b></li>
+<li>gagner ou perdre des électrons pour former un <b>ion monoatomique</b></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf43ed88" class="outline-3">
+<h3 id="orgf43ed88">Ions monoatomiques</h3>
+<div class="outline-text-3" id="text-orgf43ed88">
+<div class="definition">
+<p>
+Pour gagner en stabilité les atomes peuvent perdre ou gagner
+des électrons afin de <b>saturer</b> leur couche de valence.
+Ils deviennent alors des <b>ions monoatomiques</b>.
+</p>
+
+</div>
+
+
+<div class="exemple">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Élément</th>
+<th scope="col" class="org-left">Gaz noble le plus proche</th>
+<th scope="col" class="org-left">Configuration électronique</th>
+<th scope="col" class="org-left">Symbole de l'ion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">sodium</td>
+<td class="org-left">néon</td>
+<td class="org-left">1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup></td>
+<td class="org-left">Na<sup>+</sup></td>
+</tr>
+
+<tr>
+<td class="org-left">chlore</td>
+<td class="org-left">argon</td>
+<td class="org-left">1s<sup>2</sup> 2s<sup>2</sup> 2p<sup>6</sup> 3s<sup>2</sup> 3p<sup>6</sup></td>
+<td class="org-left">Cl<sup>-</sup></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6d7925d" class="outline-3">
+<h3 id="org6d7925d">Molécules</h3>
+<div class="outline-text-3" id="text-org6d7925d">
+<div class="definition">
+<p>
+Une molécule est un assemblage d’un nombre limité d’atomes.
+Deux atomes mettent en commun un électron chacun pour former une
+liaison covalente aussi appelé un doublet liant.
+</p>
+
+<p>
+Chaque atome possède alors une configuration électronique
+semblable à celle de l’atome de gaz noble le plus proche.
+</p>
+
+</div>
+
+<div class="exemple">
+<p>
+Formation de la molécule de dihydrogène H<sub>2</sub> avec deux
+atomes d'hydrogène.
+</p>
+<script>
+let liaison = false;
+
+function toogleLiaison() {
+    let H1 = document.getElementById("H1");
+    let H2 = document.getElementById("H2");
+    let text = document.getElementById("nbEl");
+
+    // Style to get right origin
+    H1.style.transformOrigin = "70px 100px";
+    H2.style.transformOrigin = "170px 100px";
+
+
+    if(liaison == false) {
+	H1.style.transform = "rotate(-0.25turn)";
+	H2.style.transform = "rotate(0.25turn) translateX(10px)";
+	text.textContent = "1 molécule : mise en commun des 2 électrons";
+	liaison = true;
+    } else {
+	H1.style.transform = "rotate(0turn)";
+	H2.style.transform = "rotate(0turn)";
+
+	text.textContent = "2 atomes avec 1 électron chacun";
+	liaison = false;
+    }
+}
+
+function ajusteElectrons() {
+    let nbEl = document.getElementById("inNbEl").value;
+    let text = document.getElementById("eCount");
+    text.textContent = nbEl;
+}
+</script>
+
+   <style>
+     .atoms {
+     transition: 1s ease-in-out;
+     }
+   </style>
+
+   <svg class="covalent" width="50vw" height="50vh">
+     <defs>
+       <g id="atom">
+	 <circle cx="0", cy="0" r="50" fill="white" stroke="black" opacity="0.3" />
+	 <circle cx="0", cy="0" r="10" fill="#F62217" opacity="0.8" />
+	 <circle cx="0", cy="50" r="10" fill="#1F45FC" opacity="0.8" />
+       </g>
+     </defs>
+
+     <text id="nbEl" x="20", y="250">2 atomes avec 1 électron chacun</text>
+
+     <use class="atoms" id="H1" x="50" y="100" xlink:href="#atom" />
+     <use class="atoms" id="H2" x="200" y="100" xlink:href="#atom" />
+   </svg>
+   <script>
+     let liaison = false;
+
+     function toogleLiaison() {
+     let H1 = document.getElementById("H1");
+     let H2 = document.getElementById("H2");
+     let text = document.getElementById("nbEl");
+
+     // Style to get right origin
+     H1.style.transformOrigin = "70px 100px";
+     H2.style.transformOrigin = "170px 100px";
+
+
+     if(liaison == false) {
+     H1.style.transform = "rotate(-0.25turn)";
+     H2.style.transform = "rotate(0.25turn) translateX(10px)";
+     text.textContent = "1 molécule : mise en commun des 2 électrons";
+     liaison = true;
+     } else {
+     H1.style.transform = "rotate(0turn)";
+     H2.style.transform = "rotate(0turn)";
+
+     text.textContent = "2 atomes avec 1 électron chacun";
+     liaison = false;
+     }
+     }
+
+     function ajusteElectrons() {
+     let nbEl = document.getElementById("inNbEl").value;
+     let text = document.getElementById("eCount");
+     text.textContent = nbEl;
+     }
+
+   </script>
+   <input type="button" value="Animation" onclick="toogleLiaison()" />
+
+</div>
+
+<div class="remark">
+<p>
+Les électrons des doublets liants appartiennent aux deux atomes
+qui les partagent.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb1c0dec" class="outline-3">
+<h3 id="orgb1c0dec">Schéma de Lewis</h3>
+<div class="outline-text-3" id="text-orgb1c0dec">
+<div class="definition">
+<p>
+Le <b>schéma de Lewis</b> d'une molécule est permet de représenter
+les <b>doublet liants</b> et les <b>doublets non-liant</b> entre les atomes
+dans une molécule.
+</p>
+
+<p>
+Les atomes sont représentés par leur symbole, les doublets par
+des tirets.
+</p>
+
+</div>
+
+<div class="exemple">
+<p>
+Représentation de Lewis de la molécule d'eau, en noir les doublets
+liants, en rouge les doublets non liants.
+</p>
+<svg width="100pt" height="100">
+<text id="svg/lewis/H1" x="0" y="50">H &mdash; O &mdash; H</text>
+<path d="M35 35 50 35" stroke-width="2" stroke="red"/>
+<path d="M35 55 50 55" stroke-width="2" stroke="red"/>
+</svg>
+
+</div>
+
+<p>
+Une liaison covalente peut être simple, double ou triple.
+</p>
+<div class="exercice">
+<p>
+22, 23 et 25 p 80
+</p>
+
+</div>
+
+<div class="definition">
+<p>
+L'énergie de liaison d'une liaison covalente A-B correspond à
+l'énergie nécessaire pour rompre cette liaison et reformer
+les atomes isolés A et B.
+</p>
+
+<p>
+Plus l'énergie de liaison est grande, plus la liaison est
+stable.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org3cefc99" class="outline-2">
+<h2 id="org3cefc99">S'entrainer pour l'évaluation</h2>
+<div class="outline-text-2" id="text-org3cefc99">
+<div class="exercice">
+<ul class="org-ul">
+<li>QCM p 75</li>
+<li>Lire <i>Les bons réflexes</i> p 76</li>
+<li><b>Application :</b> 7 p 78, 12 p 79, 20 p 80</li>
+<li><b>Entraînement :</b> 39 p 84</li>
+</ul>
+
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">T1C04 - Stabilité des entités chimiques</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

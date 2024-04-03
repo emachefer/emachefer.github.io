@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>T1C06 - Réactions nucléaires</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">T1C06 - Réactions nucléaires</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org5f00c22">Désintégration radioactive</a>
+<ul>
+<li><a href="#org5d5b31d">Interactions fondamentales&#xa0;&#xa0;&#xa0;<span class="tag"><span class="appart_">apparté</span></span></a></li>
+<li><a href="#org515d48c">Stabilité des noyaux</a></li>
+<li><a href="#org5244d2d">Équations de désintégration</a></li>
+<li><a href="#orgf31df04">Types de radioactivité</a>
+<ul>
+<li><a href="#org281152b">Exercice 6 p 122</a></li>
+<li><a href="#orge2cbbad">Exercice 8 p 122</a></li>
+<li><a href="#org6030a47">Exercice 10 p 122</a></li>
+</ul>
+</li>
+<li><a href="#org3d3ea7b">Diagramme (N, Z)</a>
+<ul>
+<li><a href="#org7c9559a">Activité 1 p 113</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org92c970e">Décroissance radioactive</a>
+<ul>
+<li><a href="#org0779145">Loi de décroissance et demie vie</a>
+<ul>
+<li><a href="#org4887766">Exercice : preuve</a></li>
+<li><a href="#org744e20d">Exercice 14 p 123</a></li>
+<li><a href="#orgd22bf77">Exercice 16 p 123</a></li>
+<li><a href="#orgf123b93">Exercice 18 p 124</a></li>
+<li><a href="#org854b11b">Exercice 23 p 125</a></li>
+</ul>
+</li>
+<li><a href="#orgedbe907">Activité radioactive</a>
+<ul>
+<li><a href="#org7c461a1">Exercice 31 p 127</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org6d44c9e">Datation et radioprotection</a>
+<ul>
+<li><a href="#orgbcb08b7">Radioatation</a>
+<ul>
+<li><a href="#org204f317">Exercice : datation au plomb 210</a></li>
+</ul>
+</li>
+<li><a href="#org50bc5f0">Médecine et radioprotection</a>
+<ul>
+<li><a href="#orgfcdda56">29 p 126&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+
+<section id="outline-container-org5f00c22" class="outline-2">
+<h2 id="org5f00c22">Désintégration radioactive</h2>
+<div class="outline-text-2" id="text-org5f00c22">
+</div>
+<div id="outline-container-org5d5b31d" class="outline-3">
+<h3 id="org5d5b31d">Interactions fondamentales&#xa0;&#xa0;&#xa0;<span class="tag"><span class="appart_">apparté</span></span></h3>
+<div class="outline-text-3" id="text-org5d5b31d">
+<table>
+<caption class="t-above"><span class="table-number">Tableau 1 :</span> Interactions fondamentales</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Interaction</th>
+<th scope="col" class="org-left">boson</th>
+<th scope="col" class="org-left">phénomènes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Gravitation</td>
+<td class="org-left">graviton (?)</td>
+<td class="org-left">orbite, chute libre</td>
+</tr>
+
+<tr>
+<td class="org-left">Électromagnétisme</td>
+<td class="org-left">photon</td>
+<td class="org-left">électricité, lumière, radiographie</td>
+</tr>
+
+<tr>
+<td class="org-left">Forte</td>
+<td class="org-left">8 gluons</td>
+<td class="org-left">cohésion proton, neutron</td>
+</tr>
+
+<tr>
+<td class="org-left">Faible</td>
+<td class="org-left">Z<sup>0</sup>, W<sup>+</sup>, W<sup>-</sup></td>
+<td class="org-left">désintégrations nucléaires</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org515d48c" class="outline-3">
+<h3 id="org515d48c">Stabilité des noyaux</h3>
+<div class="outline-text-3" id="text-org515d48c">
+<p>
+Les noyaux radioactifs (X) sont des noyaux instables qui se
+<b>désintègrent spontanément</b> en un autre noyau (Y)
+en émettant une autre particule.
+</p>
+
+<p>
+Le noyau qui se désintègre est appelé <b>noyau père</b>, le noyau formé
+est appelé <b>noyau fils</b>, ce dernier peut également être radioactif.
+</p>
+
+<table>
+<caption class="t-above"><span class="table-number">Tableau 2 :</span> Symbole des particules</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Particule</th>
+<th scope="col" class="org-left">symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">proton</td>
+<td class="org-left">\(^{ 1}_{ 1}\mathrm{p}\)</td>
+</tr>
+
+<tr>
+<td class="org-left">neutron</td>
+<td class="org-left">\(^{ 1}_{ 0}\mathrm{n}\)</td>
+</tr>
+
+<tr>
+<td class="org-left">électron</td>
+<td class="org-left">\(^{ 0}_{ -1}\mathrm{e}\)</td>
+</tr>
+
+<tr>
+<td class="org-left">positron</td>
+<td class="org-left">\(^{ 0}_{ 1}\mathrm{e}\)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Le nombre en bas à gauche est le <b>nombre de charge</b>, il correspond
+aux nombre de charges électriques élémentaires de la particule émise.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5244d2d" class="outline-3">
+<h3 id="org5244d2d">Équations de désintégration</h3>
+<div class="outline-text-3" id="text-org5244d2d">
+<div class="definition">
+<p>
+Afin de modéliser une désintégration, on utilise une équation
+de désintégration radioactive.
+</p>
+
+<p>
+Cette équation respecte la <b>conservation du nombre de charge</b> et
+la <b>conservation du nombre de masse</b>.
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li><p>
+<b>Exemple : désintégration du carbone 14</b>, le noyau \(^{ 14}_{ 6}\mathrm{C}\)
+est instable (il a un excédent de neutrons par rapport au nombre
+de protons), il se désintègre spontanément en azote \(^{ 14}_{ 7}\mathrm{N}\)
+</p>
+
+<p>
+\(^{ 14}_{ 6}\mathrm{C}\) \(\to\) \(^{ 14}_{ 7}\mathrm{N}\) + \(^{ 0}_{ -1}\mathrm{e}\) + \(\bar{\nu}_e\)
+</p></li>
+</ul>
+
+<div class="remark">
+<p>
+Lors d'une désintégration, le noyau fils est régulièrement instable
+il émet ensuite un rayonnement gamma.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf31df04" class="outline-3">
+<h3 id="orgf31df04">Types de radioactivité</h3>
+<div class="outline-text-3" id="text-orgf31df04">
+<table>
+<caption class="t-above"><span class="table-number">Tableau 3 :</span> Principaux rayonnements ionnisants</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Rayonnement</th>
+<th scope="col" class="org-left">particule émise</th>
+<th scope="col" class="org-left">exemple</th>
+<th scope="col" class="org-left">force</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">alpha (&alpha;)</td>
+<td class="org-left">\(^{ 2}_{ 4}\mathrm{He}\)</td>
+<td class="org-left">\(^{A}_{Z}\mathrm{X}\) \(\to\) \(^{ 2}_{ 4}\mathrm{He}\) + \(^{ A-4}_{ Z-2}\mathrm{Y}\)</td>
+<td class="org-left">S + EM</td>
+</tr>
+
+<tr>
+<td class="org-left">beta plus  (&beta;<sup>+</sup>)</td>
+<td class="org-left">\(^{ 0}_{ 1}\mathrm{e}\)</td>
+<td class="org-left">\(^{A}_{Z}\mathrm{X}\) \(\to\) \(^{ 0}_{ -1}\mathrm{e}\) + \(^{ A}_{ Z+1}\mathrm{Y}\) +  \(\bar{\nu}_e\)</td>
+<td class="org-left">WEAK</td>
+</tr>
+
+<tr>
+<td class="org-left">beta moins  (&beta;<sup>-</sup>)</td>
+<td class="org-left">\(^{ 0}_{ -1}\mathrm{e}\)</td>
+<td class="org-left">\(^{A}_{Z}\mathrm{X}\) \(\to\) \(^{ 0}_{ 1}\mathrm{e}\) + \(^{ A}_{ Z-1}\mathrm{Y}\) + \(\nu_e\)</td>
+<td class="org-left">WEAK</td>
+</tr>
+
+<tr>
+<td class="org-left">gamma</td>
+<td class="org-left">\(^{ 0}_{ 0}\mathrm{\gamma}\)</td>
+<td class="org-left">\(^{ A}_{ Z}\mathrm{X^{*}}\) \(\to\) \(^{A}_{Z}\mathrm{X}\) + \(^{ 0}_{ 0}\mathrm{\gamma}\)</td>
+<td class="org-left">EM</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org281152b" class="outline-4">
+<h4 id="org281152b">Exercice 6 p 122</h4>
+</div>
+<div id="outline-container-orge2cbbad" class="outline-4">
+<h4 id="orge2cbbad">Exercice 8 p 122</h4>
+</div>
+<div id="outline-container-org6030a47" class="outline-4">
+<h4 id="org6030a47">Exercice 10 p 122</h4>
+</div>
+</div>
+
+
+<div id="outline-container-org3d3ea7b" class="outline-3">
+<h3 id="org3d3ea7b">Diagramme (N, Z)</h3>
+<div class="outline-text-3" id="text-org3d3ea7b">
+<p>
+Afin de gagner en stabilité les noyaux subissent des désintégrations
+spécifique.
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Excès de&#x2026;</th>
+<th scope="col" class="org-left">rayonnement émis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">neutrons</td>
+<td class="org-left">\(^{ 0}_{ -1}\mathrm{e}\)</td>
+</tr>
+
+<tr>
+<td class="org-left">protons</td>
+<td class="org-left">\(^{ 0}_{ 1}\mathrm{e}\)</td>
+</tr>
+
+<tr>
+<td class="org-left">nucléons</td>
+<td class="org-left">\(^{ 2}_{ 4}\mathrm{He}\)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org7c9559a" class="outline-4">
+<h4 id="org7c9559a">Activité 1 p 113</h4>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org92c970e" class="outline-2">
+<h2 id="org92c970e">Décroissance radioactive</h2>
+<div class="outline-text-2" id="text-org92c970e">
+</div>
+<div id="outline-container-org0779145" class="outline-3">
+<h3 id="org0779145">Loi de décroissance et demie vie</h3>
+<div class="outline-text-3" id="text-org0779145">
+<p>
+Au cours d'un intervalle de temps &Delta; t, la variation &Delta; N(t)
+du nombre de noyau radioactifs est proportionnel au nombre de noyaux
+présents à l'instant <i>t</i>, et N(t+&Delta; t) &lt; N(t), donc la variation
+doit être négative, donc &Delta; N(t)/&Delta; t = -&lambda; N(t).
+</p>
+
+<p>
+Pour un intervalle &Delta; t \(\to\) dt, l'expression devient
+</p>
+
+<div class="org-center">
+<p>
+\(\dfrac{dN(t)}{dt} = -\lambda\times N(t)\).
+</p>
+</div>
+
+<p>
+La résolution de cette équation différentielle de degré 1 donne
+l'expression de l'évolution de noyaux radioactifs au cours du temps,
+la <b>loi de décroissance radioactive</b>
+</p>
+
+<div class="org-center">
+<p>
+N(t) = N<sub>0</sub> &times; e<sup>-&lambda; t</sup>,
+</p>
+</div>
+<p>
+avec &lambda; la <b>constante radioactive</b> caractéristique
+du noyau (en s<sup>-1</sup>), et N<sub>0</sub> le nombre initial de noyau radioactifs.
+</p>
+
+<div class="definition">
+<p>
+La <b>demi-vie</b> (t<sub>1/2</sub>) est la durée au bout de laquelle la
+moitié des noyaux initialement présent se sont désintégrés.
+</p>
+
+<p>
+N(t<sub>1/2</sub>) = N<sub>0</sub>/2, soit t<sub>1/2</sub> = ln(2)/&lambda;
+</p>
+
+</div>
+</div>
+
+
+
+<div id="outline-container-org4887766" class="outline-4">
+<h4 id="org4887766">Exercice : preuve</h4>
+</div>
+
+<div id="outline-container-org744e20d" class="outline-4">
+<h4 id="org744e20d">Exercice 14 p 123</h4>
+</div>
+
+<div id="outline-container-orgd22bf77" class="outline-4">
+<h4 id="orgd22bf77">Exercice 16 p 123</h4>
+</div>
+
+<div id="outline-container-orgf123b93" class="outline-4">
+<h4 id="orgf123b93">Exercice 18 p 124</h4>
+</div>
+
+<div id="outline-container-org854b11b" class="outline-4">
+<h4 id="org854b11b">Exercice 23 p 125</h4>
+</div>
+</div>
+
+<div id="outline-container-orgedbe907" class="outline-3">
+<h3 id="orgedbe907">Activité radioactive</h3>
+<div class="outline-text-3" id="text-orgedbe907">
+<div class="definition">
+<p>
+L'<b>activité</b> (<i>A</i>) d'un échantillon radioactif correspond au nombre
+de désintégrations par seconde dans l'échantillon, elle s'exprime
+en becqurel (1 Bq = 1 désintégration par seconde).
+</p>
+
+<p>
+L'activité d'un échantillon est modélisé par la loi de décroissance
+</p>
+<div class="org-center">
+<p>
+A(t) = A<sub>0</sub> e<sup>-&lambda; t</sup>,
+</p>
+</div>
+<p>
+avec A<sub>0</sub> l'activité de l'échantillon à l'état initial.
+</p>
+
+</div>
+
+<div class="remark">
+<p>
+L'activité correspond à la variation du nombre de noyaux radioactifs
+au cours du temps
+</p>
+<div class="displaymath">
+<p>
+A(t) = -\dfrac{dN}{dt}(t) = &lambda; N(t)
+</p>
+
+</div>
+
+</div>
+</div>
+
+<div id="outline-container-org7c461a1" class="outline-4">
+<h4 id="org7c461a1">Exercice 31 p 127</h4>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org6d44c9e" class="outline-2">
+<h2 id="org6d44c9e">Datation et radioprotection</h2>
+<div class="outline-text-2" id="text-org6d44c9e">
+</div>
+<div id="outline-container-orgbcb08b7" class="outline-3">
+<h3 id="orgbcb08b7">Radioatation</h3>
+<div class="outline-text-3" id="text-orgbcb08b7">
+<div class="definition">
+<p>
+Une <b>radiodatation</b> consiste à déterminer l'âge <i>t</i> d'un échantillon.
+Pour cette datation, il faut connaître la constante radioactive du noyau
+considéré et mesurer l'activité ou le nombre de noyaux à la date <i>t</i>.
+</p>
+
+</div>
+
+<div class="org-center">
+<p>
+\(A(t) = A_0 \times e^{-\lambda t}\)
+</p>
+
+<p>
+\(-\lambda t = ln\left(\dfrac{A(t)}{A_0}\right)\)
+</p>
+
+<p>
+\(t = -\dfrac{1}{\lambda} ln\left(\dfrac{A(t)}{A_0}\right)\)
+</p>
+
+<p>
+\(t = -\dfrac{t_{1/2}}{ln(2)} ln\left(\dfrac{A(t)}{A_0}\right)\)
+</p>
+
+<p>
+\(t = \dfrac{t_{1/2}}{ln(2)} ln\left(\dfrac{A_0}{A(t)}\right)\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org204f317" class="outline-4">
+<h4 id="org204f317">Exercice : datation au plomb 210</h4>
+<div class="outline-text-4" id="text-org204f317">
+<p>
+La désintégration du l'uranium 238 présent naturellement
+dans de nombreuses roches produit en permanence du radon 222,
+un gaz qui se répand dans l'atmosphère.
+</p>
+
+<p>
+Après plusieurs désintégration ce radon produit du plomb 210,
+de demi-vie t<sub>1/2</sub> = 22.2 ans. L'activité dans l'atmosphère de ce plomb
+est constante et mesurable, elle vaut A<sub>0</sub>.
+</p>
+
+<p>
+Sous l'action de la pluie, le plomb est ramené  au sol, son
+activité suis une loi de décroissance.
+</p>
+
+<ol class="org-ol">
+<li>Déterminer l'age d'un échantillon ayant pour activité
+A(t) = 0.27 A<sub>0</sub>
+<ul class="org-ul">
+<li><p>
+<b>Réponse</b>
+\(t = -\dfrac{t_{1/2}}{ln(2)} ln\left(\dfrac{A(t)}{A_0}\right)\)
+</p>
+
+<p>
+Soit \(t = -22.2\dfrac{ln(0.27)}{ln(2)} = 42\) ans
+</p></li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org50bc5f0" class="outline-3">
+<h3 id="org50bc5f0">Médecine et radioprotection</h3>
+<div class="outline-text-3" id="text-org50bc5f0">
+<table>
+<caption class="t-above"><span class="table-number">Tableau 4 :</span> Distances de pénétration et rayonnements en m</caption>
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Air</th>
+<th scope="col" class="org-left">Béton</th>
+<th scope="col" class="org-left">Plomb</th>
+<th scope="col" class="org-left">Risques</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&alpha;</td>
+<td class="org-left">10<sup>-2</sup></td>
+<td class="org-left">10<sup>-3</sup></td>
+<td class="org-left">10<sup>-4</sup></td>
+<td class="org-left">Aucun</td>
+</tr>
+
+<tr>
+<td class="org-left">&beta;</td>
+<td class="org-left">10<sup>1</sup></td>
+<td class="org-left">10<sup>-1</sup></td>
+<td class="org-left">10<sup>-2</sup></td>
+<td class="org-left">Lésions cutanées</td>
+</tr>
+
+<tr>
+<td class="org-left">&gamma;</td>
+<td class="org-left">10<sup>3</sup></td>
+<td class="org-left">10<sup>0</sup></td>
+<td class="org-left">10<sup>-1</sup></td>
+<td class="org-left">Tissus ou organes atteints</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>La meilleure protection est l'éloignement par rapport aux sources
+radioactives</li>
+<li>Pour toutes manipulation d'une source radioactive, il faut
+utiliser des écrans protecteurs et minimiser la durée d'exposition</li>
+</ul>
+
+<p>
+En Europe, la dose de radioactivité maximale pour le public est
+de 1 mSv pour 12 mois ( [Sv] = J/kg = m<sup>2</sup>/s<sup>2</sup>)
+</p>
+</div>
+
+<div id="outline-container-orgfcdda56" class="outline-4">
+<h4 id="orgfcdda56">29 p 126&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">T1C06 - Réactions nucléaires</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

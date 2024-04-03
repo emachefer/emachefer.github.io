@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch01 Mole et grandeur molaire</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Ch01 Mole et grandeur molaire</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge9df29a">Masse molaire</a>
+<ul>
+<li><a href="#orgc618a5b">Quantité de matière</a>
+<ul>
+<li><a href="#orgfe2fdaa">Remarque :</a></li>
+</ul>
+</li>
+<li><a href="#orgfddeae9">Masse molaire atomique</a>
+<ul>
+<li><a href="#org0bb8fc6">Remarque :</a></li>
+</ul>
+</li>
+<li><a href="#org6d51f60">Masse molaire moléculaire</a>
+<ul>
+<li><a href="#orge112456">Exemple :</a></li>
+</ul>
+</li>
+<li><a href="#orgee1cb0f">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#orgb4ae72f">3 p 24 :</a></li>
+<li><a href="#org26426ce">5 p 24</a></li>
+</ul>
+</li>
+<li><a href="#orga92e1dd">Correction&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></a>
+<ul>
+<li><a href="#orgdee66e1">3 p 24</a></li>
+<li><a href="#orga63c4d9">5 p 24</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgdfd736f">Quantité de matière</a>
+<ul>
+<li><a href="#org60d9445">Lien entre masse et masse molaire</a></li>
+<li><a href="#org86c384e">Lien avec le volume molaire</a>
+<ul>
+<li><a href="#org6bda82c">Remarque :</a></li>
+</ul>
+</li>
+<li><a href="#org9f92a96">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#org9d87cda">9 p 25</a></li>
+<li><a href="#org5dccf44">11 p 25</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb8a8858">Concentration en quantité de matière</a>
+<ul>
+<li><a href="#org67e9a92">Définition</a></li>
+<li><a href="#orgf19ef9c">Préparation par dissolution</a></li>
+<li><a href="#org816d126">Préparation par dilution</a></li>
+</ul>
+</li>
+<li><a href="#orgbe6649a">Dosage par étalonnage</a>
+<ul>
+<li><a href="#orgdc6b9c5">Couleur d'une solution</a></li>
+<li><a href="#orgafa5d7e">Absorbance</a></li>
+<li><a href="#org442f13e">Spectre d'absorption</a></li>
+<li><a href="#org9f06f0a">Loi de Beer-Lambert</a></li>
+<li><a href="#org30b57f5">Dosage par étalonnage</a>
+<ul>
+<li><a href="#org9351394">Définition : Dosage :</a></li>
+<li><a href="#orgbfcfdb5">Protocole :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org4dab83b">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#orgb171af5">16 p 26</a></li>
+<li><a href="#orgd70d579">21 p 26</a></li>
+<li><a href="#orgce145e7">23 p 26</a></li>
+<li><a href="#orgc17a045">34 p 29</a></li>
+<li><a href="#orge3bf309">Sucre</a></li>
+<li><a href="#org2032546">Loi de Beer-Lambert</a></li>
+<li><a href="#orgfc3771b">Homéopathie</a>
+<ul>
+<li><a href="#org16cc185">Doc 1 : Principe de base</a></li>
+<li><a href="#org6958823">Doc 2 : Méthode de dilution</a></li>
+<li><a href="#org34709dd">Donnée :</a></li>
+<li><a href="#org65899af">Problème :</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-orge9df29a" class="outline-2">
+<h2 id="orge9df29a">Masse molaire</h2>
+<div class="outline-text-2" id="text-orge9df29a">
+</div>
+<div id="outline-container-orgc618a5b" class="outline-3">
+<h3 id="orgc618a5b">Quantité de matière</h3>
+<div class="outline-text-3" id="text-orgc618a5b">
+<p>
+La <b>quantité de matière</b> (\(n\)) est la grandeur utilisée pour dénombrer
+des entités chimiques (atomes, molécules ou ions)
+\[n = \dfrac{N}{N_A},\]
+avec \(N\) le nombre d'entités (sans unités),
+\(N_A = 6.02\times10^23\) mol<sup>-1</sup> la <b>constante d'Avogadro</b>
+et \(n\) la quantité de matière en mol.
+</p>
+</div>
+
+<div id="outline-container-orgfe2fdaa" class="outline-4">
+<h4 id="orgfe2fdaa">Remarque :</h4>
+<div class="outline-text-4" id="text-orgfe2fdaa">
+<p>
+1 mole = 12g de carbone 12
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfddeae9" class="outline-3">
+<h3 id="orgfddeae9">Masse molaire atomique</h3>
+<div class="outline-text-3" id="text-orgfddeae9">
+<p>
+La <b>masse molaire atomique</b> (\(M\)) d'un élément correspond à la masse
+d'une mole d'atomes de cette entité.
+\[M = \dfrac{m}{n},\]
+avec \(m\) en g, \(n\) en mol et \(M\) en g/mol.
+</p>
+</div>
+
+<div id="outline-container-org0bb8fc6" class="outline-4">
+<h4 id="org0bb8fc6">Remarque :</h4>
+<div class="outline-text-4" id="text-org0bb8fc6">
+<ul class="org-ul">
+<li>Les valeurs des masses molaires atomiques sont dans le tableau périodique.</li>
+<li>La masse molaire d'un ion monoatomique est la même que celle de l'atome correspondant.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org6d51f60" class="outline-3">
+<h3 id="org6d51f60">Masse molaire moléculaire</h3>
+<div class="outline-text-3" id="text-org6d51f60">
+<p>
+La <b>masse molaire moléculaire</b> correspond à la masse d'une mole de molécules.
+Elle est égale à la somme des masses molaires atomiques des atomes qui
+la compose.
+</p>
+</div>
+
+<div id="outline-container-orge112456" class="outline-4">
+<h4 id="orge112456">Exemple :</h4>
+<div class="outline-text-4" id="text-orge112456">
+<p>
+masse molaire du méthanol COH<sub>4</sub>
+</p>
+
+<p>
+M(COH<sub>4</sub>) = M(C) + M(O) + 4&times;M(H) = 12.0 + 16.0 + 4&times;1.0 = 32.0 g/mol
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgee1cb0f" class="outline-3">
+<h3 id="orgee1cb0f">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h3>
+<div class="outline-text-3" id="text-orgee1cb0f">
+</div>
+<div id="outline-container-orgb4ae72f" class="outline-4">
+<h4 id="orgb4ae72f">3 p 24 :</h4>
+<div class="outline-text-4" id="text-orgb4ae72f">
+<p>
+Une goutte d'eau contient une quantité de matière n=2.1&times;10<sup>-3</sup> mol.
+Exprimer puis calculer le nombre de molécules d'eau contenues
+dans la goutte.
+</p>
+</div>
+</div>
+<div id="outline-container-org26426ce" class="outline-4">
+<h4 id="org26426ce">5 p 24</h4>
+<div class="outline-text-4" id="text-org26426ce">
+<p>
+Les ions hydrogénocarbonate HCO<sub>3</sub><sup>-</sup> et les ions sodium Na<sup>+</sup> sont présents dans le sang.
+</p>
+<ol class="org-ol">
+<li>Pourquoi peut-on considérer que la masse molaire de l'ion sodium
+est la même que celle de l'atome de sodium ?</li>
+<li>Exprimer puis calculer la masse molaire moléculaire de l'ion hydrogénocarbonate.</li>
+</ol>
+
+
+<p>
+<b>Données :</b> M(H) = 1.0 g/mol, M(C) = 12.0 g/mol, M(O) = 16.0 g/mol
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga92e1dd" class="outline-3">
+<h3 id="orga92e1dd">Correction&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></h3>
+<div class="outline-text-3" id="text-orga92e1dd">
+</div>
+<div id="outline-container-orgdee66e1" class="outline-4">
+<h4 id="orgdee66e1">3 p 24</h4>
+<div class="outline-text-4" id="text-orgdee66e1">
+<p>
+N = n &times; N<sub>A</sub> = 2.1 &times; 10<sup>-3</sup> &times; 6.02 &times; 10<sup>23</sup> = 1.2 &times; 10<sup>21</sup>
+</p>
+</div>
+</div>
+<div id="outline-container-orga63c4d9" class="outline-4">
+<h4 id="orga63c4d9">5 p 24</h4>
+<div class="outline-text-4" id="text-orga63c4d9">
+<ol class="org-ol">
+<li>m(e) très faible</li>
+<li>M = M(C) + M(H) + 3 &times; M(O) = 61.0 g/mol</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="outline-container-orgdfd736f" class="outline-2">
+<h2 id="orgdfd736f">Quantité de matière</h2>
+<div class="outline-text-2" id="text-orgdfd736f">
+</div>
+<div id="outline-container-org60d9445" class="outline-3">
+<h3 id="org60d9445">Lien entre masse et masse molaire</h3>
+<div class="outline-text-3" id="text-org60d9445">
+<div class="equation">
+<p>
+n = \dfrac{m}{M}
+</p>
+
+</div>
+<p>
+Pour un liquide ou un gaz, on utilise la masse volumique &rho;
+et le volume utilisé.
+</p>
+</div>
+</div>
+<div id="outline-container-org86c384e" class="outline-3">
+<h3 id="org86c384e">Lien avec le volume molaire</h3>
+<div class="outline-text-3" id="text-org86c384e">
+<p>
+Pour un gaz à 20°C et 1.013 &times; 10<sup>5</sup> Pa, le volume occupé par une mole
+de ce gaz est V<sub>m</sub> = 24.0 L/mol.
+</p>
+<div class="equation">
+<p>
+n = \dfrac{V}{V_m},
+</p>
+
+</div>
+<p>
+avec V<sub>m</sub> le volume molaire en L/mol.
+</p>
+</div>
+
+<div id="outline-container-org6bda82c" class="outline-4">
+<h4 id="org6bda82c">Remarque :</h4>
+<div class="outline-text-4" id="text-org6bda82c">
+<p>
+à pression et température fixe, tous les gaz ont le même volume
+molaire.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9f92a96" class="outline-3">
+<h3 id="org9f92a96">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h3>
+<div class="outline-text-3" id="text-org9f92a96">
+</div>
+<div id="outline-container-org9d87cda" class="outline-4">
+<h4 id="org9d87cda">9 p 25</h4>
+<div class="outline-text-4" id="text-org9d87cda">
+<p>
+Une bouteille contient un volume V=1.0 L d'acétone.
+</p>
+<ol class="org-ol">
+<li>Exprimer puis calculer la masse \(m\) d'acétone contenue
+dans cette bouteille.</li>
+<li>En déduire la quantité de matière correspondante.</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org5dccf44" class="outline-4">
+<h4 id="org5dccf44">11 p 25</h4>
+<div class="outline-text-4" id="text-org5dccf44">
+<p>
+Un récipient de volume V=3.0 L contient n<sub>1</sub> = 0.050 mol de CO<sub>2</sub>
+et n<sub>2</sub> de diazote à 20°C et 1.013 &times; 10<sup>5</sup> Pa.
+</p>
+<ol class="org-ol">
+<li>Calculer la quantité de matière totale de gaz contenue dans
+le flacon.</li>
+<li>En déduire la valeur de n<sub>2</sub>.</li>
+</ol>
+
+
+<p>
+<b>Données :</b> V<sub>m</sub> = 24.0 L/mol
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgb8a8858" class="outline-2">
+<h2 id="orgb8a8858">Concentration en quantité de matière</h2>
+<div class="outline-text-2" id="text-orgb8a8858">
+</div>
+<div id="outline-container-org67e9a92" class="outline-3">
+<h3 id="org67e9a92">Définition</h3>
+<div class="outline-text-3" id="text-org67e9a92">
+<p>
+La concentration molaire (ou en quantité de matière) d'une espèce
+chimique en solution correspond au rapport de <b>la quantité de matière</b>
+\(n\) de soluté par <b>le volume</b> \(V\) de solution.
+</p>
+<div class="displaymath">
+<p>
+C = \dfrac{n}{V}
+</p>
+
+</div>
+
+<p>
+La relation avec la <b>concentration en masse</b> \(t\) (ou \(c_m\)) est
+</p>
+<div class="displaymath">
+<p>
+C = \dfrac{t}{M}
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgf19ef9c" class="outline-3">
+<h3 id="orgf19ef9c">Préparation par dissolution</h3>
+<div class="outline-text-3" id="text-orgf19ef9c">
+<p>
+Pour préparer une solution de concentration molaire \(C\),
+il faut prélever une masse
+1, \(m = C \times V_{sol} \times M\)
+</p>
+</div>
+</div>
+<div id="outline-container-org816d126" class="outline-3">
+<h3 id="org816d126">Préparation par dilution</h3>
+<div class="outline-text-3" id="text-org816d126">
+<p>
+Lors d'une dilution, la quantité de matière <b>soluté</b> varie pas.
+Donc
+\[C_m \times V_m = C_f \times V_f\]
+</p>
+
+<p>
+Le quotient F = C<sub>m</sub>/C<sub>f</sub> = V<sub>f</sub>/V<sub>m</sub> se nomme <b>facteur de dilution</b>.
+</p>
+</div>
+</div>
+</section>
+<section id="outline-container-orgbe6649a" class="outline-2">
+<h2 id="orgbe6649a">Dosage par étalonnage</h2>
+<div class="outline-text-2" id="text-orgbe6649a">
+</div>
+<div id="outline-container-orgdc6b9c5" class="outline-3">
+<h3 id="orgdc6b9c5">Couleur d'une solution</h3>
+<div class="outline-text-3" id="text-orgdc6b9c5">
+<p>
+La couleur d'une solution dépend des radiations que cette dernière absorbe.
+</p>
+
+<p>
+La couleur perçue d'une solution correspond à la couleur complémentaire des radiations absorbées.
+</p>
+
+<p>
+Plus la concentration d’une espèce chimique colorée en solution est élévée, plus les radiations sont absorbées, et plus la solution est foncée.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgafa5d7e" class="outline-3">
+<h3 id="orgafa5d7e">Absorbance</h3>
+<div class="outline-text-3" id="text-orgafa5d7e">
+<p>
+L'absorbance mesure la capacité d'un milieu
+à absorber la lumière qui le traverse.
+</p>
+
+<figure>
+<p>
+\centering
+</p>
+<div class="tikzpicture">
+<p>
+\fill[blue!20] (0,-1)&#x2013;++(0,-2)&#x2013;++(1,0)&#x2013;++(0,2)&#x2013;cycle;
+\draw[thick] (0,0)&#x2013;++(0,-3)&#x2013;++(1,0)&#x2013;++(0,3);
+\draw[->, ultra thick] (-1,-1.5)&#x2013;++(1, 0);
+\draw[->, thin] (1,-1.5)&#x2013;++(1, 0);
+</p>
+
+</div>
+</figure>
+</div>
+</div>
+
+<div id="outline-container-org442f13e" class="outline-3">
+<h3 id="org442f13e">Spectre d'absorption</h3>
+<div class="outline-text-3" id="text-org442f13e">
+<p>
+Afin de mesurer l'absorbance, on utilise
+un spectrophotomètre, qui permet de faire
+des mesures allant des ultraviolets proches (200 à 400 nm) aux radiations visibles (400 à 800 nm).
+</p>
+
+<p>
+Si le pic d'absorbance est dans le domaine visible,
+l'espèce chimique en solution est colorée.
+</p>
+</div>
+</div>
+<div id="outline-container-org9f06f0a" class="outline-3">
+<h3 id="org9f06f0a">Loi de Beer-Lambert</h3>
+<div class="outline-text-3" id="text-org9f06f0a">
+<p>
+Pour une longueur d'onde fixée, l'absorbance \(A(\lambda)\)
+d'une espèce chimique en solution est proportionnelle à
+l'épaisseur \(\ell\) de la cuve et à la concentration \(C\) de
+la solution
+\[A(\lambda) = \epsilon \times \ell \times C\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org30b57f5" class="outline-3">
+<h3 id="org30b57f5">Dosage par étalonnage</h3>
+<div class="outline-text-3" id="text-org30b57f5">
+</div>
+<div id="outline-container-org9351394" class="outline-4">
+<h4 id="org9351394">Définition : Dosage :</h4>
+<div class="outline-text-4" id="text-org9351394">
+<p>
+doser une espèce chimique consiste à déterminer la quantité
+de matière ou la concentration de cette espèce.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbfcfdb5" class="outline-4">
+<h4 id="orgbfcfdb5">Protocole :</h4>
+<div class="outline-text-4" id="text-orgbfcfdb5">
+<ol class="org-ol">
+<li>Déterminer la longueur d’onde &lambda;<sub>max</sub> pour laquelle
+le spectre d’absorption de l’espèce chimique présente
+une absorbance maximale.</li>
+
+<li>Pour la longueur d’onde &lambda;<sub>max</sub>, mesurer l’absorbance des
+solutions étalons et réaliser la droite d’étalonnage
+représentant la loi de Beer-Lambert, A(&lambda;) = k &times; C</li>
+
+<li>Mesurer l’absorbance de la solution à doser et
+déterminer sa concentration en exploitant la droite
+d’étalonnage.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+
+
+<section id="outline-container-org4dab83b" class="outline-2">
+<h2 id="org4dab83b">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h2>
+<div class="outline-text-2" id="text-org4dab83b">
+</div>
+<div id="outline-container-orgb171af5" class="outline-3">
+<h3 id="orgb171af5">16 p 26</h3>
+</div>
+<div id="outline-container-orgd70d579" class="outline-3">
+<h3 id="orgd70d579">21 p 26</h3>
+</div>
+<div id="outline-container-orgce145e7" class="outline-3">
+<h3 id="orgce145e7">23 p 26</h3>
+</div>
+<div id="outline-container-orgc17a045" class="outline-3">
+<h3 id="orgc17a045">34 p 29</h3>
+</div>
+<div id="outline-container-orge3bf309" class="outline-3">
+<h3 id="orge3bf309">Sucre</h3>
+<div class="outline-text-3" id="text-orge3bf309">
+<p>
+Le sucre de table est le saccharose de formule brute C<sub>12</sub>H<sub>12</sub>O<sub>11</sub>.
+Le saccharose est synthétisé par des plantes comme la canne à
+sucre ou la betterave sucrière.
+</p>
+<ol class="org-ol">
+<li>Calculer la masse molaire d'une molécule de saccharose.</li>
+<li>À l'aide de la réponse précédente, calculer la masse d'un
+échantillon de 10 mol de sucre.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org2032546" class="outline-3">
+<h3 id="org2032546">Loi de Beer-Lambert</h3>
+<div class="outline-text-3" id="text-org2032546">
+<p>
+Le jaune de tartrazine (E102) est un colorant de synthèse
+utilisé dans l'industrie alimentaire.
+</p>
+
+<p>
+Un spectrophotomètre a permis de mesurer l'absorbance
+de solutions de différentes concentrations.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Solution</th>
+<th scope="col" class="org-right">1</th>
+<th scope="col" class="org-right">2</th>
+<th scope="col" class="org-right">3</th>
+<th scope="col" class="org-right">4</th>
+<th scope="col" class="org-right">5</th>
+<th scope="col" class="org-right">6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">c (&mu;mol/L)</td>
+<td class="org-right">10.0</td>
+<td class="org-right">15.0</td>
+<td class="org-right">20.0</td>
+<td class="org-right">30.0</td>
+<td class="org-right">40.0</td>
+<td class="org-right">50.0</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Absorbance A</td>
+<td class="org-right">0.26</td>
+<td class="org-right">0.39</td>
+<td class="org-right">0.51</td>
+<td class="org-right">0.81</td>
+<td class="org-right">1.05</td>
+<td class="org-right">1.30</td>
+</tr>
+</tbody>
+</table>
+
+<ol class="org-ol">
+<li>Tracer le graphe A = f(C)</li>
+<li>Cette courbe respecte-t-elle la loi de Beer-Lambert ?</li>
+<li>On mesure l'absorbance d'une solution de jaune de tartrazine
+de concentration inconnue. On trouve A<sub>S</sub> = 0.92.
+Quelle est la concentration c<sub>s</sub> de cette solution ?</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfc3771b" class="outline-3">
+<h3 id="orgfc3771b">Homéopathie</h3>
+<div class="outline-text-3" id="text-orgfc3771b">
+<p>
+Le concept d'homéopathie repose sur l'idée qu'une substance
+qui provoque un symptôme peut être utilisée pour traiter ce
+même symptôme en cas de maladie.
+</p>
+</div>
+<div id="outline-container-org16cc185" class="outline-4">
+<h4 id="org16cc185">Doc 1 : Principe de base</h4>
+<div class="outline-text-4" id="text-org16cc185">
+<p>
+Des plantes sont mises à macérer dans un solvant pour obtenir une
+teinture mère.
+La concentration de la teinture mère en principe actif peut être
+de 1 mol&sdot;L<sup>-1</sup>.
+Cette teinture mère est ensuite diluée plusieurs fois.
+</p>
+</div>
+</div>
+<div id="outline-container-org6958823" class="outline-4">
+<h4 id="org6958823">Doc 2 : Méthode de dilution</h4>
+<div class="outline-text-4" id="text-org6958823">
+<p>
+Une solution dite "1 CH" est réalisée en diluant 1 goutte
+de teinture mère dans 99 gouttes de solvant.
+Puis, une goutte de "1 CH" est diluée dans 99 gouttes de solvant
+pour obtenir une solution "2 CH".
+Le protocole est répété à l'identique, parfois jusqu'à "30 CH".
+</p>
+</div>
+</div>
+<div id="outline-container-org34709dd" class="outline-4">
+<h4 id="org34709dd">Donnée :</h4>
+<div class="outline-text-4" id="text-org34709dd">
+<p>
+N<sub>A</sub> = 6.02 &times; 10<sup>23</sup> mol<sup>-1</sup>
+</p>
+</div>
+</div>
+<div id="outline-container-org65899af" class="outline-4">
+<h4 id="org65899af">Problème :</h4>
+<div class="outline-text-4" id="text-org65899af">
+<p>
+Déterminer le nombre de molécules de principe actif contenu
+dans 10 mL de solution "9 CH".
+</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ch01 Mole et grandeur molaire</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

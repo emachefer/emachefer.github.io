@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Énergie et puissance électriques</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Énergie et puissance électriques</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org56ccaa4">Rappels sur l'électricité</a>
+<ul>
+<li><a href="#org14de9a8">Seconde</a></li>
+</ul>
+</li>
+<li><a href="#orgd45b95f">Courant électrique et porteurs de charge</a>
+<ul>
+<li><a href="#orgcd0e975">Porteurs de charge</a></li>
+<li><a href="#orgbb14936">Exercices</a></li>
+</ul>
+</li>
+<li><a href="#orge75d2b8">Source réelle de tension continue</a>
+<ul>
+<li><a href="#org79c47e9">Source idéale de tension</a></li>
+<li><a href="#org1f703e2">Modélisation d'une source réelle</a></li>
+</ul>
+</li>
+<li><a href="#org42e4909">Puissance électrique et énergie électrique</a>
+<ul>
+<li><a href="#org06874eb">Puissance électrique</a></li>
+<li><a href="#orgcd72da8">Énergie électrique</a></li>
+<li><a href="#org24a7c9b">Bilan de puissance</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org56ccaa4" class="outline-2">
+<h2 id="org56ccaa4">Rappels sur l'électricité</h2>
+<div class="outline-text-2" id="text-org56ccaa4">
+</div>
+<div id="outline-container-org14de9a8" class="outline-3">
+<h3 id="org14de9a8">Seconde</h3>
+<div class="outline-text-3" id="text-org14de9a8">
+<ul class="org-ul">
+<li>La relation entre tension (U en V), résistance (R en &Omega;) et intensité du courant (I en A) est
+\[I = U/R\]</li>
+<li>La puissance électrique (P en W) est
+\[P = U \times I\]</li>
+<li>L'effet Joule correspond à la puissance dissipée sous forme de chaleur
+\[P_{joule} = R \times I^2\]</li>
+<li>L'énergie électrique (E en J) correspond a la puissance consommée ou produite (P en W) sur une durée &Delta; t (en s)
+\[E = P \times \Delta t\]</li>
+<li>Un courant électrique circule de la borne <b>+</b> vers la borne <b>-</b> à l'extérieur du générateur</li>
+<li>Lois de Kirchhoff :
+<ul class="org-ul">
+<li>Loi des mailles : la somme des tensions dans le système est égale à la tension délivrée par la source de tension
+\[U_G = \sum u_i\]</li>
+<li>Loi des noeuds : la somme des courants arrivant sur un noeud est égale à la somme des courant sortants</li>
+</ul></li>
+<li>On branche un voltmètre en <b>dérivation</b> et un ampèremètre en <b>série</b></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgd45b95f" class="outline-2">
+<h2 id="orgd45b95f">Courant électrique et porteurs de charge</h2>
+<div class="outline-text-2" id="text-orgd45b95f">
+</div>
+<div id="outline-container-orgcd0e975" class="outline-3">
+<h3 id="orgcd0e975">Porteurs de charge</h3>
+<div class="outline-text-3" id="text-orgcd0e975">
+<div class="definition">
+<p>
+Un porteur de charge est une particule ayant une charge positive ou négative. Dans les solutions ce sont les cations et les anions, dans les métaux ce sont les électrons.
+</p>
+
+</div>
+
+<p>
+Si un nombre <i>N</i> de porteurs de charges <i>q</i> traverse un conducteur électrique durant une durée <i>&Delta; t</i>, l'intensité du courant électrique est alors défini par
+\[I = \dfrac{|N \times q|}{\Delta t}\]
+avec <i>I</i> en ampère (A), <i>q</i> en coulombs (C) et <i>&Delta; t</i> en s.
+</p>
+
+<div class="exemple">
+<p>
+Si un courant d'intensité I = 3,2 A circule dans un conducteur pendant une durée &Delta; t = 15 s, alors la charge électrique totale ayant traversé le conducteur est Q = I &times; &Delta; t = 48 C. Le nombre d'électrons ayant traversés ce conducteur est
+\[N = Q/e = 3 \times 10^{20}\]
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbb14936" class="outline-3">
+<h3 id="orgbb14936">Exercices</h3>
+<div class="outline-text-3" id="text-orgbb14936">
+<div class="exercice">
+<p>
+Au cours d'un éclair 2.00 &times; 10<sup>21</sup> électrons traversent un paratonnerre pendant une durée &Delta; t = 3,0 ms.
+</p>
+<ol class="org-ol">
+<li><p>
+Quel est le courant traversant le paratonnerre ?
+</p>
+
+<div class="drawer reponse">
+<p>
+I = 1.07 &times; 10<sup>5</sup> A = 107 kA
+</p>
+
+</div></li>
+</ol>
+
+</div>
+
+<div class="exercice">
+<p>
+16 p 250
+</p>
+
+<div class="drawer reponse">
+<p>
+I = N &times; |q| / &Delta; t
+</p>
+
+<p>
+Soit N = I &times; &Delta; t/ |q| = 150 &times; 10<sup>-12</sup> &times; 9 &times; 3600 / (1,60 &times; 10<sup>-19</sup>)
+</p>
+
+<p>
+N = 3.04 &times; 10<sup>13</sup> électrons
+</p>
+
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orge75d2b8" class="outline-2">
+<h2 id="orge75d2b8">Source réelle de tension continue</h2>
+<div class="outline-text-2" id="text-orge75d2b8">
+</div>
+<div id="outline-container-org79c47e9" class="outline-3">
+<h3 id="org79c47e9">Source idéale de tension</h3>
+<div class="outline-text-3" id="text-org79c47e9">
+<p>
+Une source de tension idéale est une source dont la tension ne varie pas quelque soit l'intensité du courant électrique.
+</p>
+
+
+<figure id="org7302fd6">
+<img src="data/plt-tension-ideal.png" alt="plt-tension-ideal.png">
+
+</figure>
+</div>
+</div>
+
+
+<div id="outline-container-org1f703e2" class="outline-3">
+<h3 id="org1f703e2">Modélisation d'une source réelle</h3>
+<div class="outline-text-3" id="text-org1f703e2">
+<p>
+Une source réelle de tension ne délivre pas une tension continue en fonction du courant électrique (voir <a href="#org7302fd6">1</a>). Elle est modélisée avec une source idéale et une résistance branchées en série.
+</p>
+
+<p>
+Sa tension est définie par
+\[U_G = E - R \times I\]
+où E est la <b>force électromotrice</b> de la source idéale (en V), I est le courant traversant le système (en A) et R la <b>résistance interne</b> de la source de tension (en &Omega;).
+</p>
+<div class="exercice">
+<p>
+6, 7 p 248
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org42e4909" class="outline-2">
+<h2 id="org42e4909">Puissance électrique et énergie électrique</h2>
+<div class="outline-text-2" id="text-org42e4909">
+</div>
+<div id="outline-container-org06874eb" class="outline-3">
+<h3 id="org06874eb">Puissance électrique</h3>
+<div class="outline-text-3" id="text-org06874eb">
+<p>
+Quelques ordre de grandeur de puissance électrique p 242 du manuel.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcd72da8" class="outline-3">
+<h3 id="orgcd72da8">Énergie électrique</h3>
+<div class="outline-text-3" id="text-orgcd72da8">
+<p>
+L'énergie s'exprime en J, mais d'après la relation
+\[E = P \times \Delta t\]
+il est courant de voir une énergie exprimé en kW &sdot; h
+\[1 kW \cdot h = 1 \times 10^3 W \times 3,6 \times 10^3 s = 3,6\times 10^6 J\]
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org24a7c9b" class="outline-3">
+<h3 id="org24a7c9b">Bilan de puissance</h3>
+<div class="outline-text-3" id="text-org24a7c9b">
+
+<figure>
+<img src="data/img-bilan-puissance.png" alt="img-bilan-puissance.png">
+
+</figure>
+
+<p>
+On appelle rendement d'un convertisseur son efficacité à transmettre la puissance d'entrée
+\[\eta = \dfrac{P_{exploitable}_{}}{P_{entree}}\]
+plus le rendement est proche de 1 (100%) plus le convertisseur est efficace.
+</p>
+
+<div class="exemple">
+<ul class="org-ul">
+<li>Rendement d'une résistance, la puissance électrique exploitable correspond à l'effet Joule
+\[P_e = U \times I = R \times I^2 = P_J\]
+soit
+\[\eta = \dfrac{R \times I^2}{U \times I} = 1\]</li>
+<li>Rendement d'une source réelle de tension
+\[P_e = U \times I - R \times I^2 = P_\chi - P_J\]
+soit
+\[\eta = \dfrac{P_e}{P_\chi} = \dfrac{U}{E} \neq 1\]</li>
+</ul>
+
+</div>
+
+<div class="exercice">
+<p>
+11, 13, 15, 18, 19, 23, 27 p 249-253
+</p>
+
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Énergie et puissance électriques</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

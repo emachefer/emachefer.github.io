@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch03 Évolution et tableau d'avancement</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Ch03 Évolution et tableau d'avancement</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org4747331">Tableau d'avancement</a>
+<ul>
+<li><a href="#org57d7c90">Avancement d'une réaction</a>
+<ul>
+<li><a href="#orga67403f">Définition :</a></li>
+</ul>
+</li>
+<li><a href="#org0e2f00d">Courbe d'avancement</a>
+<ul>
+<li><a href="#org4c111d7">Remarque :</a></li>
+<li><a href="#org134863d">Exemple : 2 H<sub>2</sub> + O<sub>2</sub> \(\to\) 2 H<sub>2</sub>O</a></li>
+</ul>
+</li>
+<li><a href="#orge932d0a">Tableau d'avancement</a>
+<ul>
+<li><a href="#org88341a3">Exemple : situation précédente</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org7295cb5">Exploitation du tableau d'avancement</a>
+<ul>
+<li><a href="#org2247d68">Transformation totale et non totale</a></li>
+<li><a href="#org11f4637">Mélange stœchiométrique</a>
+<ul>
+<li><a href="#org13d42d5">Exemple : titrage d'une solution de diiode (I<sub>2</sub><sub>(aq)</sub>) par du thiosulfate de sodium (S<sub>2</sub>O<sub>3</sub><sup>2-</sup><sub>(aq)</sub> + Na<sup>+</sup><sub>(aq)</sub>)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgfa0f338">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a></li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org4747331" class="outline-2">
+<h2 id="org4747331">Tableau d'avancement</h2>
+<div class="outline-text-2" id="text-org4747331">
+</div>
+<div id="outline-container-org57d7c90" class="outline-3">
+<h3 id="org57d7c90">Avancement d'une réaction</h3>
+<div class="outline-text-3" id="text-org57d7c90">
+<p>
+Au cours d'une transformation chimique, les quantités des réactifs
+diminuent alors que celle des produits augmente.
+</p>
+</div>
+
+<div id="outline-container-orga67403f" class="outline-4">
+<h4 id="orga67403f">Définition :</h4>
+<div class="outline-text-4" id="text-orga67403f">
+<p>
+L'avancement d'une réaction (noté <i>x</i>) est une grandeur
+qui permet de modéliser la quantité de matière présente à un instant
+<i>t</i>, elle s'exprime en mol.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0e2f00d" class="outline-3">
+<h3 id="org0e2f00d">Courbe d'avancement</h3>
+<div class="outline-text-3" id="text-org0e2f00d">
+</div>
+<div id="outline-container-org4c111d7" class="outline-4">
+<h4 id="org4c111d7">Remarque :</h4>
+<div class="outline-text-4" id="text-org4c111d7">
+<p>
+On peut représenter l'avancement d'une réaction par une courbe,
+avec en abscisse l'avancement <i>x</i> de la réaction et en ordonnée
+la quantité de matière.
+</p>
+</div>
+</div>
+<div id="outline-container-org134863d" class="outline-4">
+<h4 id="org134863d">Exemple : 2 H<sub>2</sub> + O<sub>2</sub> \(\to\) 2 H<sub>2</sub>O</h4>
+<div class="outline-text-4" id="text-org134863d">
+<p>
+<a href=""></a>
+</p>
+
+
+<figure>
+<img src="results.png" alt="results.png">
+
+</figure>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge932d0a" class="outline-3">
+<h3 id="orge932d0a">Tableau d'avancement</h3>
+<div class="outline-text-3" id="text-orge932d0a">
+<p>
+Un  tableau d'avancement permet de décrire la
+composition d'un système à l'état initial,
+à un état intermédiaire et à  l'état final
+d'une transformation chimique en fonction de son avancement.
+</p>
+</div>
+
+<div id="outline-container-org88341a3" class="outline-4">
+<h4 id="org88341a3">Exemple : situation précédente</h4>
+<div class="outline-text-4" id="text-org88341a3">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">2 H<sub>2</sub></th>
+<th scope="col" class="org-left">+</th>
+<th scope="col" class="org-left">O<sub>2</sub></th>
+<th scope="col" class="org-left">\(\to\)</th>
+<th scope="col" class="org-left">2 H<sub>2</sub>O</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">x = 0</td>
+<td class="org-left">2.0</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">1.5</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">0</td>
+</tr>
+
+<tr>
+<td class="org-left">x</td>
+<td class="org-left">2.0 - 2 x</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">1.5 - x</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">2 x</td>
+</tr>
+
+<tr>
+<td class="org-left">x = x<sub>f</sub></td>
+<td class="org-left">2.0 - 2 x<sub>f</sub></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">1.5 - x<sub>f</sub></td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">2 x<sub>f</sub></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org7295cb5" class="outline-2">
+<h2 id="org7295cb5">Exploitation du tableau d'avancement</h2>
+<div class="outline-text-2" id="text-org7295cb5">
+</div>
+<div id="outline-container-org2247d68" class="outline-3">
+<h3 id="org2247d68">Transformation totale et non totale</h3>
+<div class="outline-text-3" id="text-org2247d68">
+<p>
+Une transformation est considérée comme totale lorsque
+l'avancement final atteint une valeur maximale
+x<sub>max</sub>, qui correspond à l'épuisement d'un (ou des) réactif(s).
+</p>
+
+<p>
+Si une transformation est non totale, l'avancement
+final doit être déterminé expérimentalement.
+</p>
+</div>
+</div>
+<div id="outline-container-org11f4637" class="outline-3">
+<h3 id="org11f4637">Mélange stœchiométrique</h3>
+<div class="outline-text-3" id="text-org11f4637">
+<p>
+Lorsque tous les réactifs sont limitants, il ne reste
+que les produits de réaction à l'état final lorsque la transformation
+est considérée comme totale.
+</p>
+
+<p>
+Dans ce cas, le mélange est dit stœchiométrique.
+</p>
+
+<p>
+Pour une réaction : &alpha; A + &beta; B &rarr; &gamma; C + &delta; D, on a
+</p>
+<div class="org-center">
+<p>
+\(\dfrac{n_A}{\alpha} = \dfrac{n_B}{\beta}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org13d42d5" class="outline-4">
+<h4 id="org13d42d5">Exemple : titrage d'une solution de diiode (I<sub>2</sub><sub>(aq)</sub>) par du thiosulfate de sodium (S<sub>2</sub>O<sub>3</sub><sup>2-</sup><sub>(aq)</sub> + Na<sup>+</sup><sub>(aq)</sub>)&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h4>
+<div class="outline-text-4" id="text-org13d42d5">
+</div>
+<ul class="org-ul">
+<li><a id="orgf8aca03"></a>Protocole<br>
+<div class="outline-text-5" id="text-orgf8aca03">
+<ul class="org-ul">
+<li>faire une dilution de la solution de diiode (F = 10 = 50.0 / 5.0)</li>
+<li>remplir la burette d'une solution titrante de thiosulfate (c = 1.0e-2 mol/L)</li>
+<li>prélever un volume de 10 mL de diiode et le verser dans l'erlenmeyer</li>
+<li>mettre un barreau aimanté dans l'erlenmeyer,
+puis le poser sur l'agitateur magnétique</li>
+<li>ajuster l'ensemble pour que l'embout de la burette soit dans
+l'encolure de l'erlenmeyer</li>
+<li>faire un premier dosage rapide en versant mL par mL, dès que la décoloration
+est persistante, arrêter le dosage et noter l'encadrement</li>
+<li>faire un deuxième plus précis en versant un volume en amont
+proche de du volume noté précédemment, puis verser lentement
+goutte à goutte. Noter le volume équivalent</li>
+<li>faire un troisième dosage précis pour confirmer</li>
+</ul>
+</div>
+</li>
+<li><a id="org30f1c5c"></a>Exploitation<br>
+<div class="outline-text-5" id="text-org30f1c5c">
+<ol class="org-ol">
+<li>Les couples oxydant réducteurs sont I<sub>2</sub><sub>(aq)</sub>/I<sup>-</sup><sub>(aq)</sub>
+et S<sub>4</sub>O<sub>6</sub><sup>2-</sup><sub>(aq)</sub>/S<sub>2</sub>O<sub>3</sub><sup>2-</sup><sub>(aq)</sub>. Écrire l'équation de réaction.</li>
+<li>À l'équivalence, le mélange est stœchiométrique, il ne reste plus de réactifs.
+Écrire le tableau d'avancement de cette réaction.</li>
+<li>Déterminer la quantité de matière initiale de diiode.</li>
+<li>Vérifier que n(I<sub>2</sub><sub>(aq)</sub>)/1 = n(S<sub>2</sub>O<sub>3</sub><sup>2-</sup><sub>(aq)</sub>)/2</li>
+<li>Déterminer la concentration en quantité de matière de la solution fille, puis de la solution mère.</li>
+<li>Une bétadine de 10% a une concentration en masse de 0.1 g/ L, calculer
+la quantité de matière (M(I) = 126.9 g/mol)</li>
+<li>Calculer l'écart relatif &epsilon; = \(\dfrac{\abs{exp - attendue}}{attendue}\), si écart inférieur à 5%
+indication de l'étiquette validée</li>
+</ol>
+
+
+<p>
+<b>Critiques si supérieur à 5%:</b>
+</p>
+<ul class="org-ul">
+<li>flacon ouvert depuis longtemps, transformation partielle du diiode</li>
+<li>incertitudes liées à la manipulation (mauvaise dilution, mauvais titrage)</li>
+<li>il reste du diiode après le prélévement pipette jaugée</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="outline-container-orgfa0f338" class="outline-2">
+<h2 id="orgfa0f338">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h2>
+<div class="outline-text-2" id="text-orgfa0f338">
+<ul class="org-ul">
+<li>QCM 1 p 55</li>
+<li>4 et 6 p 58</li>
+<li>8 10 et 12 p 59</li>
+<li>19 p 61</li>
+<li>22 p 62</li>
+</ul>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ch03 Évolution et tableau d'avancement</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

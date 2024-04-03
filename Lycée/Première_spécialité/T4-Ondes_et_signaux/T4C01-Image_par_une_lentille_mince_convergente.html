@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image par une lentille mince convergente</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Image par une lentille mince convergente</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1e9f1ae">Focométrie&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></a>
+<ul>
+<li><a href="#org6e0e372">Introduction</a></li>
+<li><a href="#orga7b684a">Autocolimation</a></li>
+<li><a href="#orgb7d34d6">Méthode de Bessel</a></li>
+<li><a href="#org60b1ef0">Analyse et conclusion</a></li>
+</ul>
+</li>
+<li><a href="#org4e5a106">Relation de conjugaison et de grandissement</a>
+<ul>
+<li><a href="#org64c827b">Démarche éxpérimentale&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></a></li>
+<li><a href="#org302b576">Théorie&#xa0;&#xa0;&#xa0;<span class="tag"><span class="COURS">COURS</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org650337e">Image réelle et virtuelle</a>
+<ul>
+<li><a href="#orgfca1b97">Définition</a></li>
+<li><a href="#org4a02f3b">Exercices</a></li>
+</ul>
+</li>
+<li><a href="#orge9944e1">À retenir&#xa0;&#xa0;&#xa0;<span class="tag"><span class="BO">BO</span>&#xa0;<span class="PROF">PROF</span></span></a></li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org1e9f1ae" class="outline-2">
+<h2 id="org1e9f1ae">Focométrie&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></h2>
+<div class="outline-text-2" id="text-org1e9f1ae">
+</div>
+<div id="outline-container-org6e0e372" class="outline-3">
+<h3 id="org6e0e372">Introduction</h3>
+<div class="outline-text-3" id="text-org6e0e372">
+<div class="org-center">
+<p>
+<i>La focométrie consiste à déterminer expérimentalement la distance focale d'une lentille</i>.
+</p>
+
+<ul class="org-ul">
+<li><b>Capacités attendues :</b>
+<ul class="org-ul">
+<li>Estimer la distance focale d’une lentille mince convergente.</li>
+<li>Réaliser une mise au point en modifiant soit la distance focale de la lentille convergente soit la géométrie du montage optique.</li>
+</ul></li>
+</ul>
+</div>
+
+<ol class="org-ol">
+<li>Qu'est-ce que la distance focale ?</li>
+<li><p>
+Construire l'image <i>A'B'</i> de l'objet <i>AB</i> ci dessous en complétant les rayons.
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orga7b684a" class="outline-3">
+<h3 id="orga7b684a">Autocolimation</h3>
+<div class="outline-text-3" id="text-orga7b684a">
+<ul class="org-ul">
+<li>À l'extrémité gauche du banc optique, placer l'objet source</li>
+<li>Sur un support, placer la lentille et y accoler un miroir plan</li>
+<li>Déplacer l'ensemble lentille-miroir de manière à voir dans le même plan que l'objet source une image nette</li>
+<li>Relever la distance entre l'objet et la lentille</li>
+<li>L'image de l'objet devrait être nette entre deux positions différentes, noter &Delta; x la distance entre ces positions correspondant à l'incertitude de la mesure</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb7d34d6" class="outline-3">
+<h3 id="orgb7d34d6">Méthode de Bessel</h3>
+<div class="outline-text-3" id="text-orgb7d34d6">
+<ul class="org-ul">
+<li>À l'extrémité gauche du banc optique, placer l'objet source</li>
+<li>Placer l'écran à une distance D = 100 cm de l'objet</li>
+<li>Positionner la lentille entre l'objet et l'écran et trouver les deux positions de la lentille permettant de trouver une image nette</li>
+<li>Calculer la distance focale \(f' = \dfrac{D^2 - d^2}{4 \times D}\)</li>
+<li><p>
+Compléter le tableau suivant avec de différentes valeurs de D
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">D (cm)</th>
+<th scope="col" class="org-right">150</th>
+<th scope="col" class="org-right">125</th>
+<th scope="col" class="org-right">100</th>
+<th scope="col" class="org-right">75</th>
+<th scope="col" class="org-right">50</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">x<sub>1</sub> (cm)</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">x<sub>2</sub> (cm)</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">d (cm)</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">f' (cm)</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+<li>Calculer la valeur moyenne des résultats \(\bar{f'}\) et l'incertitude de type A \(U(f') = \dfrac{2 \times \sigma}{\sqrt{5}}\) avec &sigma; l'écart type</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org60b1ef0" class="outline-3">
+<h3 id="org60b1ef0">Analyse et conclusion</h3>
+<div class="outline-text-3" id="text-org60b1ef0">
+<ul class="org-ul">
+<li>La relation entre la distance focale et la vergence d'une lentille est \(C = \dfrac{1}{f'}\). Comparer cette valeur à celles obtenues précédemment.</li>
+<li>Comparer les deux méthodes de focométrie en présentant leurs avantages et inconvénients.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org4e5a106" class="outline-2">
+<h2 id="org4e5a106">Relation de conjugaison et de grandissement</h2>
+<div class="outline-text-2" id="text-org4e5a106">
+</div>
+<div id="outline-container-org64c827b" class="outline-3">
+<h3 id="org64c827b">Démarche éxpérimentale&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></h3>
+<div class="outline-text-3" id="text-org64c827b">
+<ul class="org-ul">
+<li>À l'extrémité gauche du banc optique, placer l'objet source</li>
+<li>Placer la lentille à une distance \(OA =  50\) cm de l'objet source</li>
+<li>Placer l'écran de manière à avoir une image nette</li>
+<li>Vérifier la relation suivante
+\[\dfrac{1}{OA'} - \dfrac{1}{OA} = \dfrac{1}{F'}\]</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org302b576" class="outline-3">
+<h3 id="org302b576">Théorie&#xa0;&#xa0;&#xa0;<span class="tag"><span class="COURS">COURS</span></span></h3>
+<div class="outline-text-3" id="text-org302b576">
+<ul class="org-ul">
+<li>Le grandissement est une grandeur sans unité qui correspond au rapport entre la taille de l'image (y<sub>B'</sub> = \(\overline{A'B'}\)) et la taille de l'objet (y<sub>B</sub> = \(\overline{AB}\)) :
+\[\gamma = \dfrac{y_{B'}}{y_B},\]
+d'après le <b>théorème de Thalès</b>, on a aussi \(\gamma = \dfrac{x_{A'}}{x_A}\) avec \(\overline{OA} = x_A\), \(\overline{OA'} = x_{A'}\)
+<ul class="org-ul">
+<li>si |&gamma;| &lt; 1 : l'image est plus petite que l'objet</li>
+<li>si |&gamma;| &gt; 1 : l'image est plus grande que l'objet</li>
+</ul></li>
+<li>La <b>relation de conjugaison</b> relie la distance entre l'objet et la lentille, la distance entre l'image et la lentille, et la distance focale de la lentille
+\[\dfrac{1}{f'} = \dfrac{1}{x_{A'}} - \dfrac{1}{x_A}\]</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org650337e" class="outline-2">
+<h2 id="org650337e">Image réelle et virtuelle</h2>
+<div class="outline-text-2" id="text-org650337e">
+</div>
+<div id="outline-container-orgfca1b97" class="outline-3">
+<h3 id="orgfca1b97">Définition</h3>
+<div class="outline-text-3" id="text-orgfca1b97">
+<ul class="org-ul">
+<li>Si |x<sub>A</sub>| &gt; f', alors l'image est <b>réelle</b>  : elle peut être observée sur un écran</li>
+<li>Si |x<sub>A</sub>| &lt; f', alors l'image est <b>virtuelle</b> : elle ne peut pas être observée sur un écran.</li>
+</ul>
+
+<div class="exemple">
+<p>
+Soit une lentille avec f' = 5,0 cm et un objet AB placer à x<sub>A</sub> = -4,0 cm.
+</p>
+
+<p>
+D'après la relation de conjugaison :
+\[\dfrac{1}{f'} = \dfrac{1}{x_{A'}} - \dfrac{1}{x_A},\]
+donc \(\dfrac{1}{x_{A'}} = \dfrac{1}{f'} + \dfrac{1}{x_A}\), soit
+\[\dfrac{1}{x_{A'}} = \dfrac{1}{5,0} + \dfrac{1}{-4,0} = 0,20 - 0,25\]
+Donc \(x_{A'} = - 1/0,05 = -20,0\) cm l'image est située <b>avant</b> la lentille.
+</p>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4a02f3b" class="outline-3">
+<h3 id="org4a02f3b">Exercices</h3>
+<div class="outline-text-3" id="text-org4a02f3b">
+<div class="exercice">
+<p>
+On observe une partition à travers une loupe de distance focale f' = 6,0 cm.
+Une portée de hauteur 6,0 mm est placée à une distance de 4,0 cm devant la lentille.
+</p>
+<ol class="org-ol">
+<li>Sur un schéma, construire l'image A'B' d'un objet AB, en déduire la taille de l'image ainsi que sa position.</li>
+<li>Vérifier si la relation de conjugaison est correcte
+\[\dfrac{1}{f'} = \dfrac{1}{\overline{OA'}} + \dfrac{1}{\overline{OA}}\]</li>
+<li>Retrouver la valeur de la taille de l'image à l'aide de la formule du grandissement.</li>
+<li>Peut-on visualiser l'image sur un écran ?</li>
+</ol>
+
+</div>
+
+<div class="exercice">
+<p>
+Une même personne mesure plusieurs fois la distance focale d'une lentille convergente. Les valeurs obtenues sont les suivantes.
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">24,9</td>
+<td class="org-left">25,3</td>
+<td class="org-left">24,4</td>
+<td class="org-left">24,6</td>
+<td class="org-left">25,1</td>
+</tr>
+
+<tr>
+<td class="org-left">25,3</td>
+<td class="org-left">24,4</td>
+<td class="org-left">24,6</td>
+<td class="org-left">24,3</td>
+<td class="org-left">25,3</td>
+</tr>
+
+<tr>
+<td class="org-left">24,6</td>
+<td class="org-left">24,2</td>
+<td class="org-left">25,0</td>
+<td class="org-left">24,8</td>
+<td class="org-left">25,7</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Déterminer la valeur de la focale en calculant la moyenne ainsi que l'incertitude associée U(f') = \(\dfrac{2 \times \sigma}{\sqrt{N}}\) où N représente le nombre de mesures.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orge9944e1" class="outline-2">
+<h2 id="orge9944e1">À retenir&#xa0;&#xa0;&#xa0;<span class="tag"><span class="BO">BO</span>&#xa0;<span class="PROF">PROF</span></span></h2>
+<div class="outline-text-2" id="text-orge9944e1">
+<ul class="org-ul">
+<li>Exploiter les relations de conjugaison et de grandissement <b>fournies</b> pour déterminer la position et la taille de l’image d’un objet-plan réel.</li>
+<li>Déterminer les caractéristiques de l’image d’un objet-plan réel formée par une lentille mince convergente.</li>
+<li><i>Estimer la distance focale d’une lentille mince convergente.</i></li>
+<li><i>Tester la relation de conjugaison d’une lentille mince convergente.</i></li>
+<li><i>Réaliser une mise au point en modifiant soit la distance focale de la lentille convergente soit la géométrie du montage optique.</i></li>
+<li><b>Capacités mathématiques :</b> Utiliser le théorème de Thalès. Utiliser des grandeurs algébriques.</li>
+</ul>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Image par une lentille mince convergente</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

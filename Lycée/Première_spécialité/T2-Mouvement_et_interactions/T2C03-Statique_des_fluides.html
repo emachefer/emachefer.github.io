@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch07 T2 Statique des fluides</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Ch07 T2 Statique des fluides</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org94e170f">Préalables</a></li>
+<li><a href="#org550442f">Statique des fluides</a>
+<ul>
+<li><a href="#org9f98e98">Expérience</a></li>
+<li><a href="#org75d0101">Analyse</a></li>
+</ul>
+</li>
+<li><a href="#org6b93147">Loi de Boyle-Mariotte</a>
+<ul>
+<li><a href="#org9111670">Exercices</a>
+<ul>
+<li><a href="#org7db1683">33 p 205</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org94e170f" class="outline-2">
+<h2 id="org94e170f">Préalables</h2>
+<div class="outline-text-2" id="text-org94e170f">
+<p>
+<i>voir l'activité numérique sur éclat</i>
+</p>
+</div>
+</section>
+
+<section id="outline-container-org550442f" class="outline-2">
+<h2 id="org550442f">Statique des fluides</h2>
+<div class="outline-text-2" id="text-org550442f">
+</div>
+<div id="outline-container-org9f98e98" class="outline-3">
+<h3 id="org9f98e98">Expérience</h3>
+<div class="outline-text-3" id="text-org9f98e98">
+<ol class="org-ol">
+<li>À l'aide du matériel disponible,
+proposer une expérience permettant de mesurer la
+pression en fonction de la profondeur.</li>
+<li><p>
+Mettre en oeuvre le protocole et remplir le tableau suivant.
+h<sub>0</sub> = <span class="underline">\hspace{1cm}</span> cm, P<sub>atm</sub> = <span class="underline">\hspace{1cm}</span> Pa
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Volume (mL)</th>
+<th scope="col" class="org-left">h (&times; 10<sup>-2</sup> m)</th>
+<th scope="col" class="org-left">Pression (Pa)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">100</td>
+<td class="org-left">h<sub>0</sub></td>
+<td class="org-left">P<sub>atm</sub></td>
+</tr>
+
+<tr>
+<td class="org-right">90</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">80</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">70</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">60</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">50</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">40</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">30</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">20</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org75d0101" class="outline-3">
+<h3 id="org75d0101">Analyse</h3>
+<div class="outline-text-3" id="text-org75d0101">
+<ul class="org-ul">
+<li>Faire la moyenne des mesures des différents groupes</li>
+<li><p>
+Calculer l'écart type :
+</p>
+
+<p>
+\(\sigma_P = \dfrac{1}{N} \sum (P_i - \bar{P})\)
+</p></li>
+<li>Tracer le graphique &Delta; P = f(&Delta; h)
+(<i>avec &Delta; P = P<sub>atm</sub> - P<sub>i</sub> et &Delta; h = h<sub>0</sub> - h<sub>i</sub></i>)</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org6b93147" class="outline-2">
+<h2 id="org6b93147">Loi de Boyle-Mariotte</h2>
+<div class="outline-text-2" id="text-org6b93147">
+<ul class="org-ul">
+<li><p>
+Mesurer la pression en fonction du volume
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">V (mL)</th>
+<th scope="col" class="org-right">60</th>
+<th scope="col" class="org-right">50</th>
+<th scope="col" class="org-right">40</th>
+<th scope="col" class="org-right">30</th>
+<th scope="col" class="org-right">20</th>
+<th scope="col" class="org-right">10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">P (Pa)</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+<li>Calculer la moyenne des valeurs obtenues entre les différents
+groupes.</li>
+<li>Tracer le graphique P = f(1/V). Quelle remarque pouvez-vous faire
+?</li>
+</ul>
+</div>
+
+
+
+<div id="outline-container-org9111670" class="outline-3">
+<h3 id="org9111670">Exercices</h3>
+<div class="outline-text-3" id="text-org9111670">
+</div>
+<div id="outline-container-org7db1683" class="outline-4">
+<h4 id="org7db1683">33 p 205</h4>
+<div class="outline-text-4" id="text-org7db1683">
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">z (m)</th>
+<th scope="col" class="org-right">P (Pa)</th>
+<th scope="col" class="org-right">V (L)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-right">1.01e5</td>
+<td class="org-right">1.50</td>
+</tr>
+
+<tr>
+<td class="org-right">0.5</td>
+<td class="org-right">1.06e5</td>
+<td class="org-right">1.43</td>
+</tr>
+
+<tr>
+<td class="org-right">1.0</td>
+<td class="org-right">1.11e5</td>
+<td class="org-right">1.37</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">1.5</td>
+<td class="org-right">1.16e5</td>
+<td class="org-right">1.31</td>
+</tr>
+
+<tr>
+<td class="org-right">2.0</td>
+<td class="org-right">1.21e5</td>
+<td class="org-right">1.26</td>
+</tr>
+
+<tr>
+<td class="org-right">2.5</td>
+<td class="org-right">1.26e5</td>
+<td class="org-right">1.21</td>
+</tr>
+
+<tr>
+<td class="org-right">3.0</td>
+<td class="org-right">1.30e5</td>
+<td class="org-right">1.17</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-right">1.99e5</td>
+<td class="org-right">0.76</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-right">2.48e5</td>
+<td class="org-right">0.61</td>
+</tr>
+
+<tr>
+<td class="org-right">20</td>
+<td class="org-right">2.97e5</td>
+<td class="org-right">0.51</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ch07 T2 Statique des fluides</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

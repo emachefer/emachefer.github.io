@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ch05 T2 Interactions fondamentales</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Ch05 T2 Interactions fondamentales</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7da73ff">Notions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span>&#xa0;<span class="nopres">nopres</span></span></a></li>
+<li><a href="#org29a4901">Rappels de seconde</a>
+<ul>
+<li><a href="#org4603df5">Test de connaissances</a></li>
+<li><a href="#orgf708532">Action mécanique</a></li>
+<li><a href="#org33dd341">Lois de Newton</a></li>
+<li><a href="#orga632ee7">Exercice : Puissances de dix</a></li>
+<li><a href="#org54873cb">Exercice : tracer de somme de vecteurs</a></li>
+</ul>
+</li>
+<li><a href="#orge3e6196">Force de gravitation</a></li>
+<li><a href="#org96bbd86">Force électrostatique</a>
+<ul>
+<li><a href="#org5b5df37">Charges électriques et électrisation</a></li>
+<li><a href="#org13edf46">Loi de Coulomb</a></li>
+</ul>
+</li>
+<li><a href="#org142818f">Pour aller plus loin : les autres interactions fondamentales</a></li>
+<li><a href="#org7cac8b8">Notion de champ</a>
+<ul>
+<li><a href="#org6140353">Qu'est-ce qu'un champ ?</a></li>
+<li><a href="#org2c5e9ad">TP Champ électrostatique d'un condensateur plan</a></li>
+<li><a href="#org98cdd69">Ligne de champ</a></li>
+</ul>
+</li>
+<li><a href="#orgb04e91c">Exercices</a></li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org7da73ff" class="outline-2">
+<h2 id="org7da73ff">Notions&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span>&#xa0;<span class="nopres">nopres</span></span></h2>
+<div class="outline-text-2" id="text-org7da73ff">
+<ul class="org-ul">
+<li>Charge électrique, interaction électrostatique, influence électrostatique
+<ul class="org-ul">
+<li>Interpréter des expériences mettant en jeu l'interaction électrostatique</li>
+</ul></li>
+<li>Loi de Coulomb
+<ul class="org-ul">
+<li>Utiliser la loi de Coulomb</li>
+<li>Citer les analogies entre la loi de Coulomb et la loi d'interaction gravitationnelle</li>
+</ul></li>
+<li>Force de gravitation et champ de gravitation, force électrostatique et champ électrostatique
+<ul class="org-ul">
+<li>Utiliser es expressions vectorielles :
+<ul class="org-ul">
+<li>de la force et du champ de gravitation</li>
+<li>de la force et du champ électrostatique</li>
+</ul></li>
+<li>Caractériser localement une ligne de champ électrostatique ou de gravitation</li>
+<li>Illustrer l'interaction électrostatique. Cartographier un champ électrostatique.</li>
+</ul></li>
+</ul>
+</div>
+</section>
+
+<section id="outline-container-org29a4901" class="outline-2">
+<h2 id="org29a4901">Rappels de seconde</h2>
+<div class="outline-text-2" id="text-org29a4901">
+</div>
+<div id="outline-container-org4603df5" class="outline-3">
+<h3 id="org4603df5">Test de connaissances</h3>
+<div class="outline-text-3" id="text-org4603df5">
+<table>
+
+
+<colgroup>
+<col  class="org-right">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">&#xa0;</th>
+<th scope="col" class="org-left">Question</th>
+<th scope="col" class="org-left">A</th>
+<th scope="col" class="org-left">B</th>
+<th scope="col" class="org-left">C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">Une interaction est modélisée par</td>
+<td class="org-left">des forces</td>
+<td class="org-left">des vitesses</td>
+<td class="org-left">des longueurs</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">La norme d'une force s'exprime s'exprime en</td>
+<td class="org-left">joule (J)</td>
+<td class="org-left">kilogramme (kg)</td>
+<td class="org-left">newton (N)</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">La valeur d'une charge électrique s'exprime en</td>
+<td class="org-left">ampère (A)</td>
+<td class="org-left">coulomb (C)</td>
+<td class="org-left">volt (V)</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">Un électron porte une charge électrique</td>
+<td class="org-left">positive</td>
+<td class="org-left">négative</td>
+<td class="org-left">neutre</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">La force de gravitation est</td>
+<td class="org-left">dépendante de la masse</td>
+<td class="org-left">répulsive</td>
+<td class="org-left">attractive</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgf708532" class="outline-3">
+<h3 id="orgf708532">Action mécanique</h3>
+<div class="outline-text-3" id="text-orgf708532">
+<ul class="org-ul">
+<li>Un <b>système</b> est un objet (ou ensemble), modélisé par un point</li>
+<li>L'<b>action mécanique</b> qu'il subit est modélisé par une <b>force</b>, représentée par un vecteur dont la norme est exprimée en <b>newton</b> (N)</li>
+<li>Si un système est soumis à plusieurs forces dont la somme est \(\vec{F}_{tot}\) :
+<ul class="org-ul">
+<li>si \(\vec{F}_{tot} = \vec{0}\) alors le système est à l'équilibre (<b>principe d'inertie</b> ou première loi de Newton)</li>
+<li>si \(\vec{F}_{tot} \neq \vec{0}\) alors le système n'est pas à l'équilibre, et la vitesse du système varie dans le sens de \(\vec{F}_{tot}\)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org33dd341" class="outline-3">
+<h3 id="org33dd341">Lois de Newton</h3>
+<div class="outline-text-3" id="text-org33dd341">
+<ul class="org-ul">
+<li><p>
+Première loi ou principe d'inertie :
+</p>
+
+<p>
+Tout corps soumis à une résultante des forces nulle poursuit dans son mouvement rectiligne et uniforme.
+</p></li>
+<li>Seconde loi de Newton : <i>Hors programme</i></li>
+<li><p>
+Troisième loi de Newton ou principe des actions réciproques :
+Tout corps A exerçant une force sur un corps B subit une force d'intensité égale, de même direction mais de sens opposé, exercée par le corps B.
+</p>
+<div class="org-center">
+<p>
+\(\vec{F}_{A/B} = - \vec{F}_{B/A}\)
+</p>
+</div></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga632ee7" class="outline-3">
+<h3 id="orga632ee7">Exercice : Puissances de dix</h3>
+<div class="outline-text-3" id="text-orga632ee7">
+<div class="exercice">
+<p>
+Sans calculatrice, effectuer les calculs suivants, exprimer le résultat avec l'écriture scientifique:
+</p>
+<ul class="org-ul">
+<li>\(A = \dfrac{32 \times 10^{-7} \times 3,7 \times 10^{-4}}{16 \times 10^{-8}}\)</li>
+<li>\(B = \dfrac{24 \times 10^{-15}}{0.6 \times 10^{-4}}\)</li>
+<li>\(C = 9,0 \times 10^9 \times \dfrac{(8,0 \times 10^{-19})^2}{(3,0 \times 10^{-10})^2}\)</li>
+<li>\(D = 6,67 \times 10^{-11} \times \dfrac{10 \times 10^{-31} \times 2 \times 10^{-27}}{5 \times 10^{-11}}\)</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org54873cb" class="outline-3">
+<h3 id="org54873cb">Exercice : tracer de somme de vecteurs</h3>
+<div class="outline-text-3" id="text-org54873cb">
+<p>
+Tracer les vecteurs \(\vec{w} = \vec{u} + \vec{v}\), \(\vec{p} = -2 \times \vec{u}\) et \(\vec{q} = 0,5 \times \vec{v}\) (\(\vec{u}\) en rouge et \(\vec{v}\) en vert).
+</p>
+
+<svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="none"/>
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="gray" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <defs>
+      <marker id='redhead' orient="auto"
+        markerWidth='3' markerHeight='4'
+        refX='0.1' refY='2'>
+        <path d='M0,0 V4 L2,2 Z' fill="red"/>
+      </marker>
+    </defs>
+    <defs>
+      <marker id='greenhead' orient="auto"
+        markerWidth='3' markerHeight='4'
+        refX='0.1' refY='2'>
+        <path d='M0,0 V4 L2,2 Z' fill="green"/>
+      </marker>
+    </defs>
+
+    <path
+      id='arrow-line-r1'
+      marker-end='url(#redhead)'
+      stroke-width='3'
+      fill='none' stroke='red'
+      d='M100,20, 84 40,80'
+      />
+    <path
+      id='arrow-line-g1'
+      marker-end='url(#greenhead)'
+      stroke-width='3'
+      fill='none' stroke='green'
+      d='M100,20, 120 90,80'
+      />
+
+
+
+    <path
+      id='arrow-line-r2'
+      marker-end='url(#redhead)'
+      stroke-width='3'
+      fill='none' stroke='red'
+      d='M300,80, 282 64,80'
+      />
+    <path
+      id='arrow-line-g2'
+      marker-end='url(#greenhead)'
+      stroke-width='3'
+      fill='none' stroke='green'
+      d='M300,80, 360 140,80'
+      />
+
+
+
+    <path
+      id='arrow-line-g3'
+      marker-end='url(#greenhead)'
+      stroke-width='3'
+      fill='none' stroke='green'
+      d='M600,40, 654 40,80'
+      />
+    <path
+      id='arrow-line-r3'
+      marker-end='url(#redhead)'
+      stroke-width='3'
+      fill='none' stroke='red'
+      d='M600,40, 618 40,80'
+      />
+</svg>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orge3e6196" class="outline-2">
+<h2 id="orge3e6196">Force de gravitation</h2>
+<div class="outline-text-2" id="text-orge3e6196">
+<p>
+L'expression vectorielle de la force de gravitation d'un corps <i>A</i> sur un autre <i>B</i> est :
+</p>
+<div class="org-center">
+<p>
+\(\vec{F}_{A/B} =- G \dfrac{m_A m_B}{d_{AB}^2} \vec{u}_{AB}\),
+</p>
+</div>
+<p>
+avec \(G = 6,67 \times 10^{-11}\) N&sdot;m<sup>2</sup> &sdot;kg<sup>-2</sup>, et
+\(\vec{u}_{AB}\) vecteur unitaire orienté de A vers B.
+</p>
+
+<svg width="100%" height="40%">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="5"
+    refX="0" refY="2.5" orient="auto">
+      <polygon points="0 0, 10 2.5, 0 5" />
+    </marker>
+  </defs>
+  <circle cx="5%" cy="40" r="20" stroke="blue" stroke-width="2" fill="turquoise" />
+  <circle cx="80%" cy="40" r="40" stroke="red" stroke-width="2" fill="yellow" />
+  <line x1="5%" y1="40" x2="80%" y2="40" stroke="black" stroke-dasharray="10,10" />
+  <text x="2%" y="40" fill="blue">A</text>
+  <text x="82%" y="40" fill="red">B</text>
+
+  <line x1="5%" y1="40" x2="10%" y2="40" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+  <!--text x="250" y="20" style="font-weight:bold;"> F1 </text-->
+  <foreignObject x="10%" y="50" width="100" height="100">
+  F&#8407;<sub>B/A</sub>
+  </foreignObject>
+
+  <line x1="80%" y1="40" x2="70%" y2="40" stroke="black" stroke-width="2" marker-end="url(#arrowhead)" />
+  <foreignObject x="70%" y="50" width="100" height="100">
+  F&#8407;<sub>A/B</sub>
+  </foreignObject>
+</svg>
+</div>
+</section>
+<section id="outline-container-org96bbd86" class="outline-2">
+<h2 id="org96bbd86">Force électrostatique</h2>
+<div class="outline-text-2" id="text-org96bbd86">
+</div>
+<div id="outline-container-org5b5df37" class="outline-3">
+<h3 id="org5b5df37">Charges électriques et électrisation</h3>
+<div class="outline-text-3" id="text-org5b5df37">
+<div class="definition">
+<p>
+L'électrisation d'un corps correspond à charger électriquement un objet.
+Cette électrisation peut être :
+</p>
+<ul class="org-ul">
+<li><b>par frottement/contact</b>, où les électrons sont transférés d'un
+corps à un autre</li>
+<li><b>par influence</b>, où les électrons d'un corps se déplacent sous l'effet
+d'une force électromagnétique</li>
+</ul>
+
+</div>
+
+<div class="exercice">
+<ul class="org-ul">
+<li>Dire, pour chaque expérience faite au tableau si l'électrisation
+est par frottement, contact ou par influence.</li>
+<li>Quelle différence peut-être faite entre la force de gravitation
+et la force électrostatique ?</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org13edf46" class="outline-3">
+<h3 id="org13edf46">Loi de Coulomb</h3>
+<div class="outline-text-3" id="text-org13edf46">
+<div class="definition">
+<p>
+Soient deux corps <i>A</i> de charge <i>q<sub>A</sub></i> et <i>B</i> de charge <i>q<sub>B</sub></i> distant
+de <i>d</i>. La force électrostatique entre ces deux corps est donc
+</p>
+<div class="org-center">
+<p>
+\(\vec{F}_{A/B} = k \times \dfrac{q_A q_B}{d^2} \times \vec{u}_{AB}\)
+</p>
+</div>
+<p>
+avec \(k = \dfrac{1}{4\pi\varepsilon_0} = 8,99 \times 10^9\)
+N&sdot;m<sup>2</sup> &sdot;C<sup>-2</sup> la constante de Coulomb,
+où <i>q<sub>A</sub></i> et <i>q<sub>B</sub></i> s'expriment en coulombs (C) et <i>d</i> s'exprime en m.
+</p>
+
+</div>
+
+<div class="exercice">
+<p>
+Dans l'atome d'hydrogène, la distance entre le proton et l'électron
+est \(d = 5,3 \times 10^{-11}\) m.
+</p>
+
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Particule</th>
+<th scope="col" class="org-left">Charge (C)</th>
+<th scope="col" class="org-left">masse (kg)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">électron</td>
+<td class="org-left">- 1,602 &times; 10<sup>-19</sup></td>
+<td class="org-left">9,11 &times; 10<sup>-31</sup></td>
+</tr>
+
+<tr>
+<td class="org-left">proton</td>
+<td class="org-left">1,602 &times; 10<sup>-19</sup></td>
+<td class="org-left">1,67 &times; 10<sup>-27</sup></td>
+</tr>
+</tbody>
+</table>
+
+<ol class="org-ol">
+<li><ol class="org-ol">
+<li>Exprimer puis calculer l'intensité de la force électrostatique entre l'électron
+et le proton.</li>
+<li>Cette force est-elle répulsive ou attractive ?</li>
+</ol></li>
+<li>Mêmes questions pour la force de gravitation entre
+ces deux corps.</li>
+<li>Que peut-on dire sur l'interaction gravitationnelle par
+rapport à l'interaction électrostatique ?</li>
+</ol>
+
+</div>
+
+<div class="remark">
+<ul class="org-ul">
+<li>La loi de Coulomb et la loi d'interaction gravitationnelle
+ont la même forme mathématique. Elles sont :
+<ul class="org-ul">
+<li>inversement proportionnelles au carré de la distance entre les
+deux corps</li>
+<li>proportionnelles aux masses ou aux charges</li>
+</ul></li>
+<li>La force de gravitation est moins intense que la force
+électrostatique</li>
+<li>La force de gravitation est toujours attractive alors que
+la force électrostatique peut être attractive ou répulsive</li>
+</ul>
+
+</div>
+
+<div class="exercice">
+<p>
+4, 6 et 8 p 184
+</p>
+
+</div>
+
+<div class="exercice">
+<ol class="org-ol">
+<li>Le noyau d'un atome a un rayon de l'ordre \(r = 10^{-15}\) m.
+<ol class="org-ol">
+<li>Quelle est l'interaction de la force électrostatique
+s'exerçant entre deux protons dans le noyau ?</li>
+<li>Cette interaction est-elle attractive ou répulsive ?</li>
+<li>Un noyau atomique est stable, quelle hypothèse
+peut être faite sur les forces s'exerçant dans le noyau ?</li>
+</ol></li>
+</ol>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org142818f" class="outline-2">
+<h2 id="org142818f">Pour aller plus loin : les autres interactions fondamentales</h2>
+<div class="outline-text-2" id="text-org142818f">
+<div class="remark">
+<ul class="org-ul">
+<li><b>Interaction électromagnétique</b><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> :
+interaction entre les particules
+chargés électriquement (lien avec électrostatique et magnétostatique)</li>
+<li><b>Interaction forte</b><sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> :
+interaction agissant sur les particules présentes à l'intérieur
+des protons et des neutrons permettant ainsi leur cohésion.
+Un de ses effets dérivés entraîne la cohésion du
+noyau atomique<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup></li>
+<li><b>Interaction faible</b><sup><a id="fnr.4" class="footref" href="#fn.4">4</a></sup> : interaction responsable des désintégrations
+radioactives. Elle est à l'origine de la fusion nucléaire dans
+les étoiles, mais aussi de la radioactivité &beta;</li>
+</ul>
+
+</div>
+</div>
+</section>
+
+<section id="outline-container-org7cac8b8" class="outline-2">
+<h2 id="org7cac8b8">Notion de champ</h2>
+<div class="outline-text-2" id="text-org7cac8b8">
+</div>
+<div id="outline-container-org6140353" class="outline-3">
+<h3 id="org6140353">Qu'est-ce qu'un champ ?</h3>
+<div class="outline-text-3" id="text-org6140353">
+<div class="definition">
+<p>
+Un <b>champ</b> correspond à la valeur, en <b>chaque point de l'espace</b>,
+d'une grandeur physique modélisée par un nombre V (champ scalaire)
+ou par un vecteur \(\vec{V}\) (champ vectoriel).
+</p>
+
+</div>
+
+<div class="exemple">
+<ul class="org-ul">
+<li>Champ scalaire : potentiel, température et pression (carte météo)</li>
+<li>Champ vectoriel :
+<ul class="org-ul">
+<li>champ gravitationnel : \(\vec{G} = -G \dfrac{m_A}{d^2} \vec{u}_{AB}\),
+avec m<sub>A</sub> la masse de l'astre, G la constante de gravitation
+universelle, et d la distance par rapport à l'astre</li>
+<li>champ électrique : \(\vec{E} = k \dfrac{q_A}{d^2} \vec{u}_{AB}\),
+avec q<sub>A</sub> la charge de la particule, k la constante de Coulomb,
+et d la distance par rapport à la particule.</li>
+</ul></li>
+</ul>
+
+</div>
+
+<div class="exercice">
+<ul class="org-ul">
+<li>Schématiser le champ gravitationnel d'un astre.</li>
+<li>Schématiser le champ électrique pour une charge q<sub>A</sub> &gt; 0.</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2c5e9ad" class="outline-3">
+<h3 id="org2c5e9ad">TP Champ électrostatique d'un condensateur plan</h3>
+<div class="outline-text-3" id="text-org2c5e9ad">
+<div class="doc">
+<p>
+Un condensateur est constitué de deux armatures conductrices,
+entre lesquelles on applique une différence de potentiel
+ou tension. Les armatures, portées à deux potentiels différents,
+vont se charger suite à un déplacement d'électrons.
+</p>
+
+</div>
+
+<div class="doc">
+<p>
+La tension électrique U<sub>AB</sub> entre deux points A et B est égale
+à la différence des potentiels électriques V<sub>A</sub> et V<sub>B</sub> de ces
+deux points, U<sub>AB</sub> = V<sub>A</sub> − V<sub>B</sub>.
+</p>
+
+<p>
+Dans le montage du condensateur plan, une plaque
+de cuivre est reliée à la masse du générateur donc V<sub>B</sub>​= 0 V.
+La sonde mesure directement la tension V<sub>A</sub>.
+</p>
+
+</div>
+
+<div class="doc">
+<p>
+La valeur de l'intensité du champ électrostatique
+en un point M dans un condensateur plan est
+</p>
+<div class="org-center">
+<p>
+\(E(M) = \dfrac{U_{MN}}{d}\)
+</p>
+</div>
+<p>
+avec U<sub>MN</sub> la tension mesurée entre la masse et le point <i>M</i>
+et <i>d</i> la distance entre la plaque chargée négativement et le
+point <i>M</i>.
+</p>
+
+</div>
+
+<ol class="org-ol">
+<li>Faire le montage du condensateur plan.</li>
+<li><b>Appeler le professeur pour faire vérifier le montage.</b></li>
+<li>Ajouter de la solution de sulfate de cuivre.</li>
+<li>Relever la tension électrique entre les deux plaques.</li>
+<li>Faire plusieurs relevés de tension dans la cuve et arrondir
+la mesure à 0,1 V près.
+Que peut-on dire sur les points qui ont la même tension ?</li>
+<li>Faire un diagramme de la cuve vu du dessus et tracer
+4 lignes d'équipotentielle.</li>
+<li>Sur chacune des équipotentielle, déterminer la valeur
+de l'intensité du champ électrique \(\vec{E}\)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org98cdd69" class="outline-3">
+<h3 id="org98cdd69">Ligne de champ</h3>
+<div class="outline-text-3" id="text-org98cdd69">
+<div class="definition">
+<p>
+Une <b>ligne de champ</b> est une ligne tangente en chacun de ses points
+au <b>vecteur champ</b>.
+Elle est orienté par une flèche dans le même sens que celui du champ.
+</p>
+
+</div>
+
+<div class="remark">
+<ul class="org-ul">
+<li>Plus le champ est intense, plus les lignes de champ sont ressérées.</li>
+<li>Les lignes de champ convergent vers le centre du corps si la
+valeur du champ est négative, divergent dans le cas contraire</li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-orgb04e91c" class="outline-2">
+<h2 id="orgb04e91c">Exercices</h2>
+<div class="outline-text-2" id="text-orgb04e91c">
+<p>
+Exercice 25, 29, 31 p 188-191
+</p>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">James Clerk Maxwell, 1860</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">Murray Gell-Mann, 1964 (quarks) et 1972 (QCD)</p></div></div>
+
+<div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">En lien avec l'énergie nucléaire</p></div></div>
+
+<div class="footdef"><sup><a id="fn.4" class="footnum" href="#fnr.4">4</a></sup> <div class="footpara"><p class="footpara">Enrico Fermi, 1930</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Ch05 T2 Interactions fondamentales</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

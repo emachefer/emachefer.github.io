@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 13:41 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mécanique des fluides</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Mécanique des fluides</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org045cf7a">Poussée d'Archimède</a>
+<ul>
+<li><a href="#orgfdebe28">De la pression à la poussée d'Archimède&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></a></li>
+<li><a href="#org2e5cb15">Expression de la poussée d'Archimède</a>
+<ul>
+<li><a href="#orgca67c31">4 p 288&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#org58b1a8e">5 p 288&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#orgc661111"><span class="todo TODO">TODO</span> 18 p 290&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#orgb168283"><span class="todo TODO">TODO</span> 23 p 292&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org78700a1">Conservation du débit volumique</a>
+<ul>
+<li><a href="#orgfb244f7">Débit volumique</a></li>
+<li><a href="#org07ab652">Conservation du débit volumique d'un fluide incompressible</a>
+<ul>
+<li><a href="#org49c93d2">9 p 288&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#org9a36a6d"><span class="todo TODO">TODO</span> 21 p 291&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org5470d0c">Relation de Bernouilli&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></a>
+<ul>
+<li><a href="#orgd602a16">Ligne de courant</a></li>
+<li><a href="#org5b5c826">Relation de Bernouilli</a></li>
+<li><a href="#org63cd971">Exercices</a>
+<ul>
+<li><a href="#org379d9f1">12 p 289&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#orgaf30d2b">15 p 289&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+<li><a href="#org5571f6d"><span class="todo TODO">TODO</span> 26 p 293&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgac02be9">Exercices</a>
+<ul>
+<li><a href="#org9cd8caf">Ballon d'hélium</a></li>
+<li><a href="#org076f1eb">Préparation ECE</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org045cf7a" class="outline-2">
+<h2 id="org045cf7a">Poussée d'Archimède</h2>
+<div class="outline-text-2" id="text-org045cf7a">
+</div>
+<div id="outline-container-orgfdebe28" class="outline-3">
+<h3 id="orgfdebe28">De la pression à la poussée d'Archimède&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></h3>
+<div class="outline-text-3" id="text-orgfdebe28">
+<p>
+<a href="./data/pression.pdf">./data/pression.pdf</a>
+Sur un solide immergé dans un fluide, le mouvement des particules du fluide
+provoque des chocs sur les parois du solide,
+ assimilés à une <b>force pressante</b> perpendiculaire aux parois.
+</p>
+
+<p>
+La pression au point M de sur la surface du volume est définie telle que
+</p>
+
+<p>
+\(d\vec{F} = -p_M d\vec{S}\), avec dS un élément de surface, soit
+</p>
+
+<p>
+p<sub>M</sub> = dF/dS (en Pa)
+</p>
+
+<p>
+La loi de la statique des fluides est
+</p>
+<div class="org-center">
+<p>
+&Delta; p<sub>AB</sub> = p<sub>A</sub> - p<sub>B</sub> = &rho; g (z<sub>A</sub> - z<sub>B</sub>),
+</p>
+</div>
+<p>
+pour z<sub>B</sub> &lt; z<sub>A</sub>, p<sub>B</sub> &gt; p<sub>A</sub>, donc pour un même élément de surface <i>dS</i> : F<sub>B</sub> &gt; F<sub>A</sub>.
+</p>
+
+<p>
+La résultante des forces s'exerçant sur le solide est donc verticale vers le haut.
+Cela correspond à la <b>poussée d'Archimède</b>.
+</p>
+
+<div class="definition">
+<p>
+Notée \(\vec{F}_P\), elle correspond à la somme des forces pressantes exercées
+par un fluide au repos sur la partie immergée d'un corps (solide ou fluide).
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2e5cb15" class="outline-3">
+<h3 id="org2e5cb15">Expression de la poussée d'Archimède</h3>
+<div class="outline-text-3" id="text-org2e5cb15">
+<p>
+Soit <i>dV</i> un élément de volume dans un fluide au repos.
+D'après le principe d'inertie,
+</p>
+<div class="org-center">
+<p>
+\(\vec{0} = \vec{P}_{fluide} + \vec{F}_P\),
+</p>
+
+<p>
+soit \(\vec{F}_P = -\vec{P} = -m_{fluide} \vec{g} = -\rho V \vec{g}\)
+</p>
+</div>
+
+<div class="remark">
+<p>
+La poussée d'Archimède exercée par un fluide de masse volumique &rho;<sub>fluide</sub>
+est une force opposée au poids du fluide déplacé
+</p>
+
+<p>
+\(\vec{F}_P = -\rho_{fluide} V_{im} \vec{g}\),
+</p>
+
+<p>
+avec F<sub>P</sub> en N, &rho;<sub>fluide</sub> en kg&sdot; m<sup>-3</sup>, V<sub>im</sub> en m<sup>3</sup> et g en N&sdot; kg<sup>-1</sup>
+</p>
+
+</div>
+</div>
+
+<div id="outline-container-orgca67c31" class="outline-4">
+<h4 id="orgca67c31">4 p 288&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-orgca67c31">
+<ol class="org-ol">
+<li>Les flèches correspondent aux forces pressantes exercées sur les parois du solide.</li>
+<li>La résultante des forces correspond à la poussée d'Archimède.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org58b1a8e" class="outline-4">
+<h4 id="org58b1a8e">5 p 288&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org58b1a8e">
+<ol class="org-ol">
+<li>Schéma : P et F<sub>P</sub></li>
+<li><p>
+\(\vec{P}_{ice} = \rho_ice V_ice \vec{g}\)
+</p>
+
+<p>
+P<sub>ice</sub> = &rho;<sub>ice</sub> V<sub>ice</sub> g = 9.2e2 * 7.0e4 * 9.81 = 6.3e8 N
+</p>
+
+<p>
+\(\vec{F}_P = - \rho_eau V_im \vec{g}\)
+</p>
+
+<p>
+F<sub>P</sub> = &rho;<sub>eau</sub> V<sub>im</sub> g = 1.02e3 * 6.3e4 * 9.81 = 6.3e8 N
+</p>
+
+<p>
+L'iceberg est en équilibre.
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgc661111" class="outline-4">
+<h4 id="orgc661111"><span class="todo TODO">TODO</span> 18 p 290&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-orgc661111">
+<ol class="org-ol">
+<li>Schéma : P et F<sub>P</sub></li>
+<li>F<sub>P</sub> = &rho;<sub>eau</sub> V<sub>im</sub> g</li>
+<li><p>
+Dans le référentiel terrestre considéré galiléen,
+les forces qui s'exercent sur le tronc se compensent, soit
+</p>
+
+<p>
+\(\vec{0} = \vec{P} + \vec{F}_P\)
+</p></li>
+<li><p>
+F<sub>P</sub> = P, soit &rho;<sub>eau</sub> V<sub>im</sub> = m<sub>tronc</sub> = &rho;<sub>bois</sub> V<sub>tronc</sub>
+</p>
+
+<p>
+V<sub>tronc</sub> = &pi; (D/2)<sup>2</sup> l, h = D/2, donc V<sub>im</sub> = V<sub>tronc</sub>/2
+</p>
+
+<p>
+Donc &rho;<sub>bois</sub> V<sub>tronc</sub> = &rho;<sub>eau</sub> V<sub>tronc</sub>/2
+</p>
+
+<p>
+&rho;<sub>bois</sub> = &rho;<sub>eau</sub>/2 = 500 kg/m³
+</p>
+
+<p>
+Le sapin est donc sec.
+</p></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgb168283" class="outline-4">
+<h4 id="orgb168283"><span class="todo TODO">TODO</span> 23 p 292&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org78700a1" class="outline-2">
+<h2 id="org78700a1">Conservation du débit volumique</h2>
+<div class="outline-text-2" id="text-org78700a1">
+</div>
+<div id="outline-container-orgfb244f7" class="outline-3">
+<h3 id="orgfb244f7">Débit volumique</h3>
+<div class="outline-text-3" id="text-orgfb244f7">
+<p>
+Un fluide s'écoule en régime permanent stationnaire
+si la valeur de sa vitesse en chaque point est indépendante du temps
+</p>
+<div class="org-center">
+<p>
+\(\dfrac{d\vec{v}}{dt} = \vec{0}\)
+</p>
+</div>
+
+<div class="definition">
+<p>
+En régime permanent stationnaire, lorsqu'un volume <i>V</i> de fluide s'écoule
+au travers d'une section pendant une durée &Delta; t, le <b>débit volumique</b>
+(D<sub>v</sub>) est donné par
+</p>
+<div class="org-center">
+<p>
+D<sub>v</sub> = dV / &Delta; t,
+</p>
+</div>
+<p>
+avec D<sub>v</sub> en m<sup>3</sup>/s, dV en m³ et &Delta; t en s.
+</p>
+
+</div>
+
+<div class="remark">
+<p>
+L'élément de volume s'exprime dV = S dl, donc le débit volumique D<sub>V</sub>
+est égal au produit de la surface de la section traversée par le fluide
+par la valeur <i>v</i> de la vitesse du fluide au niveau de cette section, soit
+</p>
+<div class="org-center">
+<p>
+D<sub>v</sub> = S &times; v
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org07ab652" class="outline-3">
+<h3 id="org07ab652">Conservation du débit volumique d'un fluide incompressible</h3>
+<div class="outline-text-3" id="text-org07ab652">
+<p>
+<a href="./data/debit_volumique.pdf">./data/debit_volumique.pdf</a>
+</p>
+
+<p>
+Un fluide incompressible s'écoule en régime permanent stationnaire
+dans deux tubes de sections différentes.
+La masse de fluide qui s'écoule dans le tube de section S<sub>A</sub> est
+identique à la masse de fluide qui s'écoule dans le tube de section S<sub>B</sub>
+pendant le même intervalle de temps &Delta; t.
+</p>
+
+<div class="remark">
+<p>
+Au cours d'un écoulement en régime permanent stationnaire,
+le débit volumique d'un fluide incompressible est conservé
+</p>
+<div class="org-center">
+<p>
+\(\dfrac{d Dv}{dt} = 0\)
+</p>
+</div>
+
+</div>
+
+<p>
+La valeur <i>v</i> de la vitesse du fluide incompressible augmente si la
+surface traversée diminue.
+</p>
+</div>
+
+<div id="outline-container-org49c93d2" class="outline-4">
+<h4 id="org49c93d2">9 p 288&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org49c93d2">
+<ol class="org-ol">
+<li>Dans un régime permanent stationnaire,
+le débit volumique des deux extrémités du tube est la même.</li>
+<li><p>
+D<sub>V1</sub> = D<sub>V2</sub>, donc
+</p>
+
+<p>
+S<sub>1</sub> v<sub>1</sub> = S<sub>2</sub> v<sub>2</sub>
+</p>
+
+<p>
+v<sub>2</sub> = S<sub>1</sub> v<sub>1</sub> / S<sub>2</sub> = 2.2 * 30 / 10 = 6.6 m/s
+</p></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9a36a6d" class="outline-4">
+<h4 id="org9a36a6d"><span class="todo TODO">TODO</span> 21 p 291&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org9a36a6d">
+<ol class="org-ol">
+<li><p>
+D<sub>V</sub> = V / &Delta; t
+</p>
+
+<p>
+D<sub>V</sub> = 75e-6 / (60/70) = 8.8e-5 m<sup>3</sup>/s
+</p></li>
+
+<li><p>
+v<sub>A</sub> = 0.31 m/s
+</p>
+
+<p>
+D<sub>V</sub> = S v<sub>A</sub>, donc
+</p>
+
+<p>
+S = D<sub>V</sub> / v<sub>A</sub>
+</p>
+
+<p>
+&pi; D<sup>2</sup>/4 = D<sub>V</sub> / v<sub>A</sub>
+</p>
+
+<p>
+D = \(\sqrt{4 * D_V / v_A * \pi}\) = 9.5e-3 m = 9.5 mm
+</p></li>
+
+<li><p>
+D<sub>VA</sub> = D<sub>VR</sub>
+</p>
+
+<p>
+v<sub>A</sub> S<sub>A</sub> = v<sub>R</sub> S<sub>R</sub>
+</p>
+
+<p>
+v<sub>R</sub> = v<sub>A</sub> S<sub>A</sub> / S<sub>R</sub> = v<sub>A</sub> (4&pi; D<sup>2</sup>/4)/(4&pi; d<sup>2</sup>/4)
+</p>
+
+<p>
+v<sub>R</sub> = v<sub>A</sub> D<sup>2</sup>/d<sup>2</sup> = v<sub>A</sub> D<sup>2</sup>/(D<sup>2</sup>/5<sup>2</sup>)
+</p>
+
+<p>
+v<sub>R</sub> = 25 v<sub>A</sub> = 25 * 0.31 = 7.75 m/s
+</p></li>
+
+<li>La vitesse est supérieure à 6 m/s, un souffle est donc entendu lors
+de l'auscultation.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org5470d0c" class="outline-2">
+<h2 id="org5470d0c">Relation de Bernouilli&#xa0;&#xa0;&#xa0;<span class="tag"><span class="definition">definition</span></span></h2>
+<div class="outline-text-2" id="text-org5470d0c">
+</div>
+<div id="outline-container-orgd602a16" class="outline-3">
+<h3 id="orgd602a16">Ligne de courant</h3>
+<div class="outline-text-3" id="text-orgd602a16">
+<div class="definition">
+<p>
+Une <b>ligne de courant</b> modélise la trajectoire d'une particule dans un fluide.
+Elle est orientée dans le sens du déplacement du fluide.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b5c826" class="outline-3">
+<h3 id="org5b5c826">Relation de Bernouilli</h3>
+<div class="outline-text-3" id="text-org5b5c826">
+<p>
+La relation de Bernouilli est une généralisation de la loi fondamentale
+de la statique des fluides, elle relie en toute position du fluide
+appartenant à une même ligne de courant la pression <i>P</i>,
+la valeur de la vitesse <i>v</i> et la coordonnée verticale de la position <i>z</i>
+</p>
+<div class="org-center">
+<p>
+1/2 &rho; v<sup>2</sup> + &rho; g z + P = constante
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org63cd971" class="outline-3">
+<h3 id="org63cd971">Exercices</h3>
+<div class="outline-text-3" id="text-org63cd971">
+</div>
+<div id="outline-container-org379d9f1" class="outline-4">
+<h4 id="org379d9f1">12 p 289&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+</div>
+
+<div id="outline-container-orgaf30d2b" class="outline-4">
+<h4 id="orgaf30d2b">15 p 289&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+</div>
+
+<div id="outline-container-org5571f6d" class="outline-4">
+<h4 id="org5571f6d"><span class="todo TODO">TODO</span> 26 p 293&#xa0;&#xa0;&#xa0;<span class="tag"><span class="exercice">exercice</span></span></h4>
+<div class="outline-text-4" id="text-org5571f6d">
+<div class="remark">
+<p>
+Pour un fluide incompressible, si S<sub>A</sub> &gt; S<sub>B</sub>, et z<sub>A</sub> = z<sub>B</sub>,
+la relation de Bernouilli devient
+</p>
+
+<p>
+1/2 &rho; v<sub>A</sub><sup>2</sup> + P<sub>A</sub> = 1/2 &rho; v<sub>B</sub><sup>2</sup> + P<sub>B</sub>
+</p>
+
+<p>
+1/2 &rho; (D<sub>V</sub>/S<sub>A</sub>)<sup>2</sup> + P<sub>A</sub> = 1/2 &rho; (D<sub>V</sub>/S<sub>B</sub>)<sup>2</sup> + P<sub>B</sub>
+</p>
+
+<p>
+Une section plus grande en A qu'en B implique une vitesse
+plus petite en A qu'en B, donc une pression grande en A qu'en B.
+</p>
+
+<p>
+C'est l'effet Venturi.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orgac02be9" class="outline-2">
+<h2 id="orgac02be9">Exercices</h2>
+<div class="outline-text-2" id="text-orgac02be9">
+</div>
+<div id="outline-container-org9cd8caf" class="outline-3">
+<h3 id="org9cd8caf">Ballon d'hélium</h3>
+<div class="outline-text-3" id="text-org9cd8caf">
+<p>
+Données :
+</p>
+<ul class="org-ul">
+<li>&rho;<sub>helium</sub> = 0.18 g/L</li>
+<li>&rho;<sub>air</sub> = 1.292 kg/m<sup>3</sup></li>
+<li>&rho;<sub>air</sub> = p(z)M/RT</li>
+</ul>
+
+<p>
+Soit un ballon d'hélium considéré sphérique de rayon r = 10 cm.
+</p>
+<ol class="org-ol">
+<li>Faire le bilan des forces et le schéma correspondant à la situation.</li>
+<li>Calculer la valeur de chaque force en jeu.</li>
+<li>Conclure sur la trajectoire suivie par le ballon.</li>
+<li>D'après la loi fondamentale de la statique des fluides,
+que peut-on dire de la pression si l'altitude augmente ?</li>
+<li>Le ballon peut-il continuer de monter indéfiniment ?</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-org076f1eb" class="outline-3">
+<h3 id="org076f1eb">Préparation ECE</h3>
+<div class="outline-text-3" id="text-org076f1eb">
+<ol class="org-ol">
+<li>v<sub>A</sub> = &Delta; h / &Delta; t = (60 - 29)/(0 - 400) = 0.775 mm/s</li>
+<li><ol class="org-ol">
+<li><p>
+Conservation du débit volumique
+</p>
+
+<p>
+D<sub>VA</sub> = D<sub>VC</sub>
+</p>
+
+<p>
+v<sub>A</sub> S<sub>A</sub> = v<sub>C</sub> S<sub>C</sub>
+</p>
+
+<p>
+v<sub>C</sub> = v<sub>A</sub> S<sub>A</sub> / S<sub>C</sub>
+</p></li>
+
+<li>A.N. : v<sub>C</sub> = 0.775 (&pi; 100<sup>2</sup>)/(&pi; 4<sup>2</sup>) = 484 mm/s</li>
+</ol></li>
+
+<li><ol class="org-ol">
+<li>v<sub>CTorr</sub> = \sqrt{2gH} = 20 m/s</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Mécanique des fluides</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>
