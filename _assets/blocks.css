@@ -1,0 +1,104 @@
+/**** BLOCKS ****/
+:root {
+    --main-color: hsl(15 10% 10% / 90%);
+    --sec-color: hsl(10 100% 50%);
+    --thi-color: hsl(10 100% 60%);
+    --fou-color: hsl(10 100% 70%);
+
+    --text-color: black;
+
+    --def-color: var(--fou-color);
+    --def-bg-color: #FEC;
+    --rem-color: var(--sec-color);
+    --rem-bg-color: #FEC;
+    --exer-color: #2255DD;
+    --exer-bg-color: #66AAFF;
+
+
+    /*Counters*/
+    counter-reset: def-counter 0;
+    counter-reset: rem-counter 0;
+    counter-reset: exer-counter 0;
+    counter-reset: exam-counter 0;
+    counter-reset: doc-counter 0;
+
+    font-size: 12pt;
+}
+
+div:where(.definition, .remark, .exemple, .exercice, .doc, .reponse) {
+    padding: 5px;
+    border-left : 5pt solid;
+    margin: 3vw;
+
+    color: var(--txt-color, --main-color);
+    border-color: var(--border-color, --main-color);
+    background-color: var(--bg-color, tranparent);
+}
+
+div:is(.definition, .remark, .exemple, .exercice, .doc, .reponse)::before {
+    font-weight: bold;
+    width: 100%;
+    font-size: larger;
+    color: var(--border-color, --main-color);
+    content: var(--txt, "")  " :\2001" attr(data-title);
+}
+
+.doc {
+    counter-increment: doc-counter 1;
+    --txt: "Document";
+}
+
+.definition {
+    counter-increment: def-counter 1;
+    --border-color: var(--def-color);
+    --bg-color: var(--def-bg-color);
+    --txt: "Définition";
+}
+.exemple {
+    counter-increment: exam-counter 1;
+    --border-color: var(--exer-color);
+    --txt: "Exemple";
+}
+
+.exercice {
+    --border-color: var(--exer-color);
+    --txt: "Exercice";
+}
+
+.remark {
+    counter-increment: rem-counter 1;
+    --txt: "Remarque";
+    --bg-color: hsla(100, 50%, 80%, 0.2);
+    --border-color: hsla(100, 50%, 40%, 0.9);
+}
+
+.reponse {
+    --bg-color: hsl(100 70% 80%);
+    --border-color: var(--text-color);
+    --txt: "Réponse :";
+    max-height: 1.2em;
+    max-width: 20em;
+    transition: all 0.5s ease-in-out;
+    padding: 5pt;
+    overflow-y: hidden;
+}
+
+.reponse:hover{
+    max-height: 100vh;
+    max-width: 70vw;
+    text-wrap: balance;
+    overflow-y: scroll;
+    overflow-wrap: break-word;
+}
+
+div.blank {
+    width: 50vi;
+    aspect-ratio: 4 / 3;
+    background-color: white;
+    border: 2pt solid var(--border-color);
+}
+.blank:after {
+    content: "Titre :";
+}
+
+/* End block */

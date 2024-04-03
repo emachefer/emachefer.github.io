@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="latex-7dmUmX.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="212.06427pt" height="198.17584pt" viewBox="-33.11665 -13.31038 212.06427 198.17584 "> 
+<g transform="translate(0, 184.86546 ) scale(1,-1) translate(0,13.31038 )"> 
+          <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <clipPath id="pgfcp1"><path d=" M -16.25067 0.0 L 178.74762 0.0 L 178.74762 161.99951 L -16.25067 161.99951 Z  "/> </clipPath>
+ <g clip-path="url(#pgfcp1)">
+ <g stroke="#00f" fill="#00f">
+ <g fill="#b3b3ff">
+ <path d=" M 0.0 0.0 h 40.62424 v 129.59961 h -40.62424 Z M 40.62424 0.0 h 40.62424 v 80.99976 h -40.62424 Z M 81.24847 0.0 h 40.62424 v 89.09973 h -40.62424 Z M 121.87271 0.0 h 40.62424 v 40.49988 h -40.62424 Z  " />
+ </g>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M 0.0 0.0 L 0.0 4.26762 M 40.62424 0.0 L 40.62424 4.26762 M 81.24847 0.0 L 81.24847 4.26762 M 121.87271 0.0 L 121.87271 4.26762 M 162.49695 0.0 L 162.49695 4.26762 M 0.0 161.99951 L 0.0 157.73187 M 40.62424 161.99951 L 40.62424 157.73187 M 81.24847 161.99951 L 81.24847 157.73187 M 121.87271 161.99951 L 121.87271 157.73187 M 162.49695 161.99951 L 162.49695 157.73187  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -16.25067 10.12497 L -13.40536 10.12497 M -16.25067 20.24994 L -13.40536 20.24994 M -16.25067 30.37491 L -13.40536 30.37491 M -16.25067 50.62485 L -13.40536 50.62485 M -16.25067 60.74982 L -13.40536 60.74982 M -16.25067 70.87479 L -13.40536 70.87479 M -16.25067 91.12473 L -13.40536 91.12473 M -16.25067 101.2497 L -13.40536 101.2497 M -16.25067 111.37466 L -13.40536 111.37466 M -16.25067 131.6246 L -13.40536 131.6246 M -16.25067 141.74957 L -13.40536 141.74957 M -16.25067 151.87454 L -13.40536 151.87454 M 178.74762 10.12497 L 175.90231 10.12497 M 178.74762 20.24994 L 175.90231 20.24994 M 178.74762 30.37491 L 175.90231 30.37491 M 178.74762 50.62485 L 175.90231 50.62485 M 178.74762 60.74982 L 175.90231 60.74982 M 178.74762 70.87479 L 175.90231 70.87479 M 178.74762 91.12473 L 175.90231 91.12473 M 178.74762 101.2497 L 175.90231 101.2497 M 178.74762 111.37466 L 175.90231 111.37466 M 178.74762 131.6246 L 175.90231 131.6246 M 178.74762 141.74957 L 175.90231 141.74957 M 178.74762 151.87454 L 175.90231 151.87454  " fill="none"/>
+ </g>
+ </g>
+ <g stroke-width="0.2">
+ <g stroke="#808080" fill="#808080">
+ <path d=" M -16.25067 0.0 L -11.98312 0.0 M -16.25067 40.49988 L -11.98312 40.49988 M -16.25067 80.99976 L -11.98312 80.99976 M -16.25067 121.49963 L -11.98312 121.49963 M -16.25067 161.99951 L -11.98312 161.99951 M 178.74762 0.0 L 174.48007 0.0 M 178.74762 40.49988 L 174.48007 40.49988 M 178.74762 80.99976 L 174.48007 80.99976 M 178.74762 121.49963 L 174.48007 121.49963 M 178.74762 161.99951 L 174.48007 161.99951  " fill="none"/>
+ </g>
+ </g>
+ <path d=" M -16.25067 0.0 L -16.25067 161.99951 L 178.74762 161.99951 L 178.74762 0.0 L -16.25067 0.0 Z  " fill="none"/>
+ <g transform="translate(-2.5,-9.9774)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 0</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(38.12424,-9.9774)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 5</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(76.24846,-9.9774)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 10</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(116.8727,-9.9774)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 15</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(157.49693,-9.9774)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 20</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-24.78365,-3.22221)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 0 </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-24.78365,37.27766)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(2.5,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 5 </g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-29.78368,77.77754)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 10</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-29.78368,118.27742)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 15</g> </g>
+ </text> 
+</g>
+ </g>
+ <g transform="translate(-29.78368,158.7773)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(5.00002,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> 20</g> </g>
+ </text> 
+</g>
+ </g>
+ <g stroke="#00f" fill="#00f">
+ <g fill="#b3b3ff">
+ <g stroke="#00f" fill="#00f">
+ <g fill="#b3b3ff">
+ <path d="  " />
+ </g>
+ </g>
+ </g>
+ </g>
+ <g transform="translate(-12.97397,174.03249)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(94.22244,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> Nombre d&#8217;élèves ayant répondu faux (/20)</g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ 
+                                                                </g> 
+</svg> 

@@ -1,0 +1,47 @@
+/**** TODO et TAG ****/
+.tag {
+    float: right;
+    text-shadow: 0 0 1pt hsla(120, 80%, 80%, 0.8);
+    color: orange;
+    border-radius: 5pt;
+    font-weight: bold;
+    & .physique:before {
+	content: "[ϕ] ";
+    }
+    & .chimie:before {
+	content: "[χ] "
+    }
+    & > span:before {
+	content: "#";
+    }
+}
+
+.outline-3:has(.DNW) {
+    & li:has(> input:checked) {
+	color: gray;
+	text-decoration-color: grey;
+	display: none;
+    }
+}
+
+
+/* Par défaut les parties avec le /tag/ prof ne sont pas affichées (gestion avec js) */
+.outline-2:has(> h2 .tag .prof) {
+    display: none;
+}
+.outline-3:has(> h3 .tag .prof) {
+    display: none;
+}
+
+.todo {
+    float: left;
+    background-color: hsla(60, 80%, 80%, 0.8);
+    color: gray;
+    scale: 0.5;
+}
+.done {
+    float: left;
+    text-decoration: line-through 0.15em;
+    color: hsla(0, 10%, 0%, 0.2);
+    scale: 0.5;
+}

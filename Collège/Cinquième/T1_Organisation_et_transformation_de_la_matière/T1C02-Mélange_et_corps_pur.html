@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 09:33 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mélange et corps pur</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Mélange et corps pur</h1>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgffb9a4b">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#org9babba0"><code>[6/8]</code> Attendus</a></li>
+<li><a href="#org0987751">Compétences socle</a></li>
+</ul>
+</li>
+<li><a href="#org19893f9">Comment détecter la présence d'eau ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></a>
+<ul>
+<li><a href="#org6b68c5e">Documents</a></li>
+<li><a href="#org33f1450">Compte rendu de l'expérience</a></li>
+<li><a href="#orgbbb3d21">Aides&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#org73dc63c">Protocole</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgcc69547">Mélanges et corps purs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cours">cours</span></span></a>
+<ul>
+<li><a href="#orgfbe4c51">Définitions</a></li>
+<li><a href="#orgc026517">Exemples</a></li>
+<li><a href="#org8dcef5e">Exercices</a></li>
+</ul>
+</li>
+<li><a href="#org4650862">Test d'identification&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cours">cours</span></span></a>
+<ul>
+<li><a href="#org1e6b945">Quelques exemples</a></li>
+<li><a href="#orgfe491b9">Exercices</a></li>
+</ul>
+</li>
+<li><a href="#org3117384">Qu'est-ce qu'on peut mélanger ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cours">cours</span></span></a>
+<ul>
+<li><a href="#orge5296fd">Types de mélanges</a></li>
+</ul>
+</li>
+<li><a href="#orgd6340cb">Panique en cours de potion&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AE">AE</span></span></a>
+<ul>
+<li><a href="#org15823f9">Questionnaire diagnostic&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></a></li>
+<li><a href="#orgbcb0716">Documents</a></li>
+<li><a href="#orge596494">Synthèse</a>
+<ul>
+<li><a href="#org25514d8">Objectifs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></a></li>
+</ul>
+</li>
+<li><a href="#orgafd35a4">Compte rendu expérimental&#xa0;&#xa0;&#xa0;<span class="tag"><span class="EXPERT">EXPERT</span></span></a></li>
+<li><a href="#orgd217bd6">Compte rendu expérimental&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NORMAL">NORMAL</span></span></a></li>
+<li><a href="#org849544b">Compte rendu expérimental&#xa0;&#xa0;&#xa0;<span class="tag"><span class="FACILE">FACILE</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org9fb14cf">Quelle quantité de sel peut-être dissoute dans l'eau ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AE">AE</span></span></a>
+<ul>
+<li><a href="#org3a61746">Documents</a></li>
+<li><a href="#orge9f015e">Compte rendu expérimental</a></li>
+<li><a href="#org00976bb">Conclusion</a></li>
+<li><a href="#org2f26c6d">Vrai ou faux ?</a></li>
+</ul>
+</li>
+<li><a href="#org2d97606">Exercices</a>
+<ul>
+<li><a href="#exMelanges">Corps pur ou mélange ?</a></li>
+<li><a href="#exHypothese">Établir une hypothèse</a></li>
+<li><a href="#exProtocole">Établir un protocole</a></li>
+<li><a href="#orgab15dac">Composition de l'air</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-orgffb9a4b" class="outline-2">
+<h2 id="orgffb9a4b">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h2>
+<div class="outline-text-2" id="text-orgffb9a4b">
+</div>
+<div id="outline-container-org9babba0" class="outline-3">
+<h3 id="org9babba0"><code>[6/8]</code> Attendus</h3>
+<div class="outline-text-3" id="text-org9babba0">
+<ol class="org-ol">
+<li class="on"><input type='checkbox' checked='checked' /> Espèce chimique et mélange.</li>
+<li class="on"><input type='checkbox' checked='checked' /> Notion de corps pur.</li>
+<li class="on"><input type='checkbox' checked='checked' /> Concevoir et réaliser des expériences pour caractériser des mélanges.</li>
+<li class="off"><input type='checkbox' /> Estimer expérimentalement une valeur de solubilité dans l’eau.</li>
+<li class="on"><input type='checkbox' checked='checked' /> Solubilité.</li>
+<li class="on"><input type='checkbox' checked='checked' /> Miscibilité.</li>
+<li class="off"><input type='checkbox' /> Composition de l’air.</li>
+<li class="on"><input type='checkbox' checked='checked' /> Mettre en œuvre des tests caractéristiques d’espèces chimiques à partir d’une banque fournie.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org0987751" class="outline-3">
+<h3 id="org0987751">Compétences socle</h3>
+<div class="outline-text-3" id="text-org0987751">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">D4/2.1</td>
+<td class="org-left">Concevoir des protocoles en réponse à un besoin</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/3.1</td>
+<td class="org-left">Appliquer systématiquement et de manière autonome des règles de sécurité et de respect de l'environnement</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/4.1</td>
+<td class="org-left">Expliquer une règle de sécurité ou de respect de l'environnement</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org19893f9" class="outline-2">
+<h2 id="org19893f9">Comment détecter la présence d'eau ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="TP">TP</span></span></h2>
+<div class="outline-text-2" id="text-org19893f9">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">\rowcolor{teal!30} ID</th>
+<th scope="col" class="org-left">Compétence évaluée</th>
+<th scope="col" class="org-left">TB</th>
+<th scope="col" class="org-left">MS</th>
+<th scope="col" class="org-left">MF</th>
+<th scope="col" class="org-left">MI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">D4/1.1</td>
+<td class="org-left">Extraire les informations utiles et les retranscrire</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.3</td>
+<td class="org-left">Modéliser et représenter des phénomènes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/2.1</td>
+<td class="org-left">Concevoir des protocoles</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/3.1</td>
+<td class="org-left">Appliquer les règles de sécurité et de respect de l'environnement</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<div class="drawer center">
+<p>
+Chaque jour, le corps humain élimine 2,4 litres d'eau à travers la respiration, la sueur et l'urine.
+Sur le site de l'assurance maladie, on peut pourtant lire la recommandation suivante :
+"Pour maintenir l’équilibre de l’organisme, il est recommandé de compenser ces pertes en buvant 1 à 1,5 litre d’eau par jour".
+</p>
+
+</div>
+
+<p>
+<b>Quelle question peux-tu dégager du texte ci-dessus ?</b>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p>
+</div>
+
+<div id="outline-container-org6b68c5e" class="outline-3">
+<h3 id="org6b68c5e">Documents</h3>
+<div class="outline-text-3" id="text-org6b68c5e">
+<div class="doc">
+<p>
+Le <b>sulfate de cuivre anhydre</b> (CuSO<sub>4</sub>) se présente sous la forme d'une poudre blanche.
+Il bleuit au contact de l'eau ou de la vapeur d'eau<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+L'étiquette du sulfate de cuivre est représentée ci-après.
+</p>
+
+
+<figure>
+<img src="etiquetteCuSO4.png" alt="etiquetteCuSO4.png">
+
+</figure>
+
+</div>
+
+<div class="doc">
+<div class="multicols">
+<ul class="org-ul">
+<li>Sulfate de cuivre anhydre</li>
+<li>Substances (huile, vinaigre, lait, fruit, sel)</li>
+<li>Tubes à essais</li>
+<li>Coupelle</li>
+<li>Bécher</li>
+<li>Pipettes</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org33f1450" class="outline-3">
+<h3 id="org33f1450">Compte rendu de l'expérience</h3>
+<div class="outline-text-3" id="text-org33f1450">
+<ol class="org-ol">
+<li><p>
+Hypothèse : À ton avis, les substances suivantes contiennent-elles de l'eau ?
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Substance</th>
+<th scope="col" class="org-left">Oui</th>
+<th scope="col" class="org-left">Non</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">huile</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">vinaigre</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">lait</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">fruit</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">sucre</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+
+<li>\faHandPointUp\quad À l'aide des documents, donne le protocole à suivre ainsi que le matériel à utiliser pour pouvoir tester la présence d'eau dans une substance. <b>Fait valider ton protocole avant de pouvoir passer à la suite</b>.
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+
+<li>En t'aidant des pages 6 et 7 du carnet de labo, indique les deux dangers liés à l'utilisation du sulfate de cuivre. Pourquoi faut-il mettre des lunettes de protection pour manipuler le sulfate de cuivre ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+
+<li>Pourquoi ne faut-il pas jeter le sulfate de cuivre dans l'évier ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li><p>
+Complète le tableau suivant.
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Substance</th>
+<th scope="col" class="org-left">huile</th>
+<th scope="col" class="org-left">vinaigre</th>
+<th scope="col" class="org-left">fruit</th>
+<th scope="col" class="org-left">sel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Couleur CuSO<sub>4</sub></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="blanc" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="bleu" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="bleu" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="blanc" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+</tbody>
+</table></li>
+
+<li>Rappelle les critères de réussite d'un schéma, puis, fais un schéma de l'expérience à l'état initial et à l'état final.
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+
+<li>Ton hypothèse faite en question 1. était-elle correcte ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+
+<li>Rédige une phrase permettant de répondre à la question suivante, comment peut-on mettre en évidence la présence d'eau dans une substance ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgbbb3d21" class="outline-3">
+<h3 id="orgbbb3d21">Aides&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h3>
+<div class="outline-text-3" id="text-orgbbb3d21">
+</div>
+<div id="outline-container-org73dc63c" class="outline-4">
+<h4 id="org73dc63c">Protocole</h4>
+<div class="outline-text-4" id="text-org73dc63c">
+</div>
+<ul class="org-ul">
+<li><a id="org91fff98"></a>Matériel<br>
+<div class="outline-text-5" id="text-org91fff98">
+<div class="multicols">
+<ul class="org-ul">
+<li>Sulfate de cuivre anhydre
+<ul class="org-ul">
+<li>Substances (eau, huile, vinaigre, fruit)</li>
+<li>Coupelle</li>
+<li>Pipettes</li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+</li>
+
+<li><a id="org3fd9b38"></a>Étapes<br>
+<div class="outline-text-5" id="text-org3fd9b38">
+<ol class="org-ol">
+<li>Placer dans la coupelle la substance a étudier.</li>
+<li>Mettre un peu de sulfate de cuivre anhydre sur la substance</li>
+<li>Noter la présence d'eau dans le tableau</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orgcc69547" class="outline-2">
+<h2 id="orgcc69547">Mélanges et corps purs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cours">cours</span></span></h2>
+<div class="outline-text-2" id="text-orgcc69547">
+</div>
+<div id="outline-container-orgfbe4c51" class="outline-3">
+<h3 id="orgfbe4c51">Définitions</h3>
+<div class="outline-text-3" id="text-orgfbe4c51">
+<div class="definition">
+<ul class="org-ul">
+<li>Un <b>corps pur</b> est une substance composée d'une seule espèce chimique.</li>
+<li>Un <b>mélange</b> est une substance composée au moins de deux espèces chimique <b>différentes</b> :
+<ul class="org-ul">
+<li>il est <b>hétérogène</b> si on peut faire voir différents constituants à l'oeil nu</li>
+<li>il est <b>homogène</b> lorsqu'on ne peut pas faire la différence entre les différents constituants</li>
+</ul></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc026517" class="outline-3">
+<h3 id="orgc026517">Exemples</h3>
+<div class="outline-text-3" id="text-orgc026517">
+<div class="exemple">
+<ul class="org-ul">
+<li>L'air est un mélange constitué d'environ 80% de diazote et 20% de dioxygène</li>
+<li>L'eau déminéralisée est un corps pur constitué uniquement de molécules d'eau</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org8dcef5e" class="outline-3">
+<h3 id="org8dcef5e">Exercices</h3>
+<div class="outline-text-3" id="text-org8dcef5e">
+<p>
+Faire <a href="#exMelanges">l'exercice 1 sur les mélanges</a>
+</p>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org4650862" class="outline-2">
+<h2 id="org4650862">Test d'identification&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cours">cours</span></span></h2>
+<div class="outline-text-2" id="text-org4650862">
+</div>
+<div id="outline-container-org1e6b945" class="outline-3">
+<h3 id="org1e6b945">Quelques exemples</h3>
+<div class="outline-text-3" id="text-org1e6b945">
+<div class="doc">
+<ul class="org-ul">
+<li>Il existe différents <b>tests caractéristiques</b> pour déterminer la présence d'une espèce chimique :
+<dl class="org-dl">
+<dt>Eau</dt><dd>test avec du sulfate de cuivre anhydre (devient bleu)</dd>
+<dt>Dioxyde de carbone</dt><dd>test avec de l'eau de chaux (liquide se trouble)</dd>
+<dt>Hydrogène</dt><dd>test avec une allumette (petite explosion qui souffle la flamme)</dd>
+<dt>Dioxygène</dt><dd>test avec une bûchette incandescente (luminosité accrue)</dd>
+</dl></li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfe491b9" class="outline-3">
+<h3 id="orgfe491b9">Exercices</h3>
+<div class="outline-text-3" id="text-orgfe491b9">
+<p>
+Faire les exercices <a href="#exHypothese">2 (établir une hypothèse)</a> et <a href="#exProtocole">3 (établir un protocole)</a>.
+</p>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org3117384" class="outline-2">
+<h2 id="org3117384">Qu'est-ce qu'on peut mélanger ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cours">cours</span></span></h2>
+<div class="outline-text-2" id="text-org3117384">
+</div>
+<div id="outline-container-orge5296fd" class="outline-3">
+<h3 id="orge5296fd">Types de mélanges</h3>
+<div class="outline-text-3" id="text-orge5296fd">
+<ol class="org-ol qcm">
+<li><p>
+Parmi les trois mélange suivant, lesquels peuvent faire un mélange homogène ?
+</p>
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> Mélange liquide-liquide</li>
+<li class="off"><input type='checkbox' /> Mélange liquide-solide</li>
+<li class="off"><input type='checkbox' /> Mélange liquide-gaz</li>
+</ol>
+<div class="drawer reponse">
+<p>
+Les trois sont possibles :
+</p>
+<dl class="org-dl">
+<dt>liquide-liquide</dt><dd>mélange eau et sirop</dd>
+<dt>liquide-solide </dt><dd>mélange eau et sel</dd>
+<dt>liquide-gaz</dt><dd>eau gazeuse, mélange eau et dioxyde de carbone</dd>
+</dl>
+
+</div></li>
+</ol>
+
+<div class="remark">
+<ul class="org-ul">
+<li>Le liquide dans lequel on dissout une substance s'appelle  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="solvant" /></li>
+<li>Si un solide ou un gaz se mélange à un  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="solvant" />, on dit qu'il est  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="soluble" /> dans le solvant</li>
+<li>Si un liquide se mélange à un autre liquide, on dit qu'ils sont  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="miscibles" /></li>
+</ul>
+
+</div>
+
+<div class="exercice">
+<ul class="org-ul">
+<li>Faire les exercices <b>4, 7, 8 p 56</b> et <b>13, 15 p 57</b></li>
+<li>Poursuivre avec le <b>21 p 58</b></li>
+</ul>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-orgd6340cb" class="outline-2">
+<h2 id="orgd6340cb">Panique en cours de potion&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AE">AE</span></span></h2>
+<div class="outline-text-2" id="text-orgd6340cb">
+<p>
+À Poudlard, les élèves sont interrogés en cours de potion.
+Ils doivent réaliser une potion contenant 4 morceaux de sucre dissous dans 24 mL d'eau dans un erlenmeyer.
+</p>
+
+<p>
+Cependant, les élèves de Serpentard ont pris tous les morceaux de sucre sauf 2, il ne reste plus que du sucre en poudre.
+<b>Explique aux autres élèves comment réussir la potion en proposant un protocole expérimental précis.</b>
+</p>
+</div>
+
+<div id="outline-container-org15823f9" class="outline-3">
+<h3 id="org15823f9">Questionnaire diagnostic&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></h3>
+<div class="outline-text-3" id="text-org15823f9">
+<ol class="org-ol qcm">
+<li>Afin de mesurer une masse, il faut utiliser
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> une règle</li>
+<li class="off"><input type='checkbox' /> un chronomètre</li>
+<li class="off"><input type='checkbox' /> une balance</li>
+<li class="off"><input type='checkbox' /> une éprouvette</li>
+</ol></li>
+<li>Afin de mesurer un volume, il faut utiliser
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> une éprouvette</li>
+<li class="off"><input type='checkbox' /> une règle</li>
+<li class="off"><input type='checkbox' /> une balance</li>
+<li class="off"><input type='checkbox' /> un chronomètre</li>
+</ol></li>
+<li>Une masse peut se mesurer en
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> milligramme</li>
+<li class="off"><input type='checkbox' /> mètre</li>
+<li class="off"><input type='checkbox' /> kilogramme</li>
+<li class="off"><input type='checkbox' /> litre</li>
+</ol></li>
+<li>Un volume peut se mesurer en
+<ol data-correct="2-3" class="org-ol">
+<li class="off"><input type='checkbox' /> seconde</li>
+<li class="off"><input type='checkbox' /> millilitre</li>
+<li class="off"><input type='checkbox' /> centimètre cube</li>
+<li class="off"><input type='checkbox' /> kilogramme</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-orgbcb0716" class="outline-3">
+<h3 id="orgbcb0716">Documents</h3>
+<div class="outline-text-3" id="text-orgbcb0716">
+<div class="drawer doc">
+<p>
+<b>Aides à la manipulation :</b>
+</p>
+<ul class="org-ul">
+<li>Aucune substance ne doit directement toucher le dessus de la balance, il est possible de poser un morceau de papier entre les morceaux de sucre et la balance</li>
+<li>Le mélange doit se faire dans l'erlenmeyer, il est réussi s'il est homogène</li>
+<li>Pour déterminer correctement le volume dans l'éprouvette, il faut regarder la graduation en face</li>
+<li>Le bouton <i>tare</i> de la balance permet de la remettre à zéro</li>
+</ul>
+
+</div>
+
+<div class="multicols">
+<div class="drawer doc">
+<p>
+<b>Matériel disponible :</b>
+</p>
+<ul class="org-ul">
+<li>2 morceaux de sucres (pour tous)</li>
+<li>Sucre en poudre</li>
+<li>Balance</li>
+<li>Erlenmeyer</li>
+<li>Éprouvette</li>
+<li>Bécher</li>
+<li>Entonnoir</li>
+<li>Cuillère</li>
+</ul>
+
+</div>
+
+<div class="drawer doc">
+<p>
+Utilisation d'une éprouvette.
+</p>
+
+
+<figure>
+<object type="image/svg+xml" data="./01_eprouvette.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orge596494" class="outline-3">
+<h3 id="orge596494">Synthèse</h3>
+<div class="outline-text-3" id="text-orge596494">
+<div class="drawer definition">
+<p>
+Une  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="masse" /> se mesure à l'aide d'une <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="balance" /></b>, son unité est le <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="gramme" /></b> (ou sous-unités).
+Elle est en lien avec la quantité de matière d'une espèce, plus la quantité est importante, plus la masse est  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="importante" />.
+</p>
+
+</div>
+
+<div class="drawer definition">
+<p>
+Un <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="volume" /></b> se mesure en chimie à l'aide d'une <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="éprouvette" /></b> ou d'une <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="pipette" /></b>, son unité est le <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="litre" /></b> (et sous unité) ou le <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="mètre cube" /></b> (et sous unités). Afin de mesuré correctement le volume, il faut avoir l'oeil en face de la graduation souhaitée. Il correspond à l'espace occupé par une substance.
+</p>
+
+</div>
+</div>
+
+<div id="outline-container-org25514d8" class="outline-4">
+<h4 id="org25514d8">Objectifs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></h4>
+<div class="outline-text-4" id="text-org25514d8">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Objectifs pédagogiques</b></th>
+<th scope="col" class="org-left"><b>Réussi</b></th>
+<th scope="col" class="org-left"><b>Non réussi</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Apprendre à mesurer une masse</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Apprendre à mesurer un volume</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgafd35a4" class="outline-3">
+<h3 id="orgafd35a4">Compte rendu expérimental&#xa0;&#xa0;&#xa0;<span class="tag"><span class="EXPERT">EXPERT</span></span></h3>
+<div class="outline-text-3" id="text-orgafd35a4">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ID</th>
+<th scope="col" class="org-left">Compétence évaluée</th>
+<th scope="col" class="org-left">TB</th>
+<th scope="col" class="org-left">MS</th>
+<th scope="col" class="org-left">MF</th>
+<th scope="col" class="org-left">MI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">D4/1.3</td>
+<td class="org-left">Modéliser et représenter des phénomènes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.5</td>
+<td class="org-left">Pratiquer le calcul numérique et le calcul littéral</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.6</td>
+<td class="org-left">Communiquer sur ses démarches, ses résultats et ses choix en argumentant</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ol class="org-ol">
+<li>Explique comment faire l'expérience sans les morceaux de sucre en proposant un protocole précis.
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li><p>
+Fais les schéma de chaque étapes de l'expérience (mesure de la masse de sucre en poudre, mesure du volume, ajout de l'eau dans l'erlenmeyer et mélange à l'état final).
+</p>
+<div class="multicols">
+<p>
+ <div class="blank"></div>
+ <div class="blank"></div>
+</p>
+
+</div>
+
+<div class="multicols">
+<p>
+ <div class="blank"></div>
+ <div class="blank"></div>
+</p>
+
+</div></li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-orgd217bd6" class="outline-3">
+<h3 id="orgd217bd6">Compte rendu expérimental&#xa0;&#xa0;&#xa0;<span class="tag"><span class="NORMAL">NORMAL</span></span></h3>
+<div class="outline-text-3" id="text-orgd217bd6">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ID</th>
+<th scope="col" class="org-left">Compétence évaluée</th>
+<th scope="col" class="org-left">TB</th>
+<th scope="col" class="org-left">MS</th>
+<th scope="col" class="org-left">MF</th>
+<th scope="col" class="org-left">MI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">D4/1.3</td>
+<td class="org-left">Modéliser et représenter des phénomènes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.5</td>
+<td class="org-left">Pratiquer le calcul numérique</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.6</td>
+<td class="org-left">Communiquer sur ses démarches, ses résultats et ses choix en argumentant</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+<ol class="org-ol">
+<li>Détermine la masse de 4 morceaux de sucre.
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Quelles substances doivent être contenues dans la potion ? Précise dans quelles proportions.
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li><p>
+Fais les schéma de chaque étapes de l'expérience (mesure de la masse de sucre en poudre, mesure du volume, ajout de l'eau dans l'erlenmeyer et mélange à l'état final).
+</p>
+<div class="multicols">
+<p>
+ <div class="blank"></div>
+ <div class="blank"></div>
+</p>
+
+</div>
+
+<div class="multicols">
+<p>
+ <div class="blank"></div>
+ <div class="blank"></div>
+</p>
+
+</div></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org849544b" class="outline-3">
+<h3 id="org849544b">Compte rendu expérimental&#xa0;&#xa0;&#xa0;<span class="tag"><span class="FACILE">FACILE</span></span></h3>
+<div class="outline-text-3" id="text-org849544b">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ID</th>
+<th scope="col" class="org-left">Compétence évaluée</th>
+<th scope="col" class="org-left">TB</th>
+<th scope="col" class="org-left">MS</th>
+<th scope="col" class="org-left">MF</th>
+<th scope="col" class="org-left">MI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">D4/1.5</td>
+<td class="org-left">Pratiquer le calcul numérique</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.3</td>
+<td class="org-left">Modéliser et représenter des phénomènes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.2</td>
+<td class="org-left">Mettre en oeuvre un raisonnement logique simple</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+<ol class="org-ol">
+<li><p>
+Pèse les deux morceaux de sucre, et note la valeur de la masse.
+</p>
+
+<p>
+m<sub>1</sub> =  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="" /> g
+</p></li>
+<li><p>
+Calcule la masse que devraient avoir 4 morceaux de sucres.
+</p>
+
+<p>
+m<sub>2</sub> =  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="" /> g
+</p></li>
+<li>Protocole expérimental :
+<ol class="org-ol">
+<li>Pose le bécher sur la balance et appui sur le bouton <b>Tare</b>, verse la masse calculée ci-dessus dans le bécher.</li>
+<li>Verse le sucre dans l'erlenmeyer à l'aide de l'entonnoir.</li>
+<li>Mesure 24 mL d'eau distillée dans l'éprouvette.</li>
+<li>Verse l'eau distillée dans l'erlenmeyer.</li>
+<li>Mélange en faisant attention de ne pas renverser d'eau</li>
+</ol></li>
+<li><p>
+Fais les schéma de chaque étapes de l'expérience (mesure de la masse de sucre en poudre, mesure du volume, ajout de l'eau dans l'erlenmeyer et mélange à l'état final).
+</p>
+<div class="multicols">
+<p>
+ <div class="blank"></div>
+ <div class="blank"></div>
+</p>
+
+</div>
+
+<div class="multicols">
+<p>
+ <div class="blank"></div>
+ <div class="blank"></div>
+</p>
+
+</div></li>
+</ol>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org9fb14cf" class="outline-2">
+<h2 id="org9fb14cf">Quelle quantité de sel peut-être dissoute dans l'eau ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AE">AE</span></span></h2>
+<div class="outline-text-2" id="text-org9fb14cf">
+</div>
+
+<div id="outline-container-org3a61746" class="outline-3">
+<h3 id="org3a61746">Documents</h3>
+<div class="outline-text-3" id="text-org3a61746">
+<div class="drawer doc">
+<p>
+L'eau de mer peut être assimilée à un mélange avec de l'eau et du sel.
+Chaque mer possède cependant une quantité de sel dissoute différente. Certains lac peuvent aussi avoir une concentration en sel supérieure à celle des mers et océans, comme le lac Assal, le lac Rose, le lac Don Juan ou la mer Morte.
+</p>
+
+<p>
+Sur ces derniers, on peut observer des tas de sels proche des côtes aux endroits ou le niveau de l'eau est plus faible.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge9f015e" class="outline-3">
+<h3 id="orge9f015e">Compte rendu expérimental</h3>
+<div class="outline-text-3" id="text-orge9f015e">
+<ol class="org-ol">
+<li>Quelle question peux-tu dégager du document ci-dessus ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Formule une hypothèse répondant à cette question.
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li><p>
+Remet le protocole suivant dans le bon ordre en indiquant un chiffre au niveau des tirets :
+</p>
+<dl class="org-dl">
+<dt>__</dt><dd>Mesurer la masse d'eau mise dans l'éprouvette</dd>
+<dt>__</dt><dd>Prélever une masse <i>m</i> de sel dans une coupelle à l'aide d'une spatule</dd>
+<dt>__</dt><dd>Mesurer la masse de l'éprouvette, puis celle du bécher et note les valeurs</dd>
+<dt>__</dt><dd>Mesurer un volume de 10 mL d'eau dans une éprouvette</dd>
+<dt>__</dt><dd>Mesure la masse finale</dd>
+<dt>__</dt><dd>Mettre l'eau puis le sel dans le bécher</dd>
+<dt>__</dt><dd>Mélanger à l'aide d'un agitateur</dd>
+</dl>
+
+<p>
+Mesures expérimentales :
+</p>
+<dl class="org-dl">
+<dt>masse de l'éprouvette</dt><dd>m = __ g</dd>
+<dt>masse du bécher</dt><dd>m = __ g</dd>
+<dt>masse d'eau</dt><dd>m = __ g</dd>
+<dt>masse finale</dt><dd>m = __ g</dd>
+</dl></li>
+
+<li>Fais le schéma de l'expérience au moment de l'ajout du sel dans l'éprouvette.
+ <div class="blank"></div></li>
+<li>Fais l'expérience décrite ci-dessus avec la masse de sel qui t'a été donné (m = __ g), puis répond aux questions suivantes.
+<ol class="org-ol">
+<li>Le sel a-t-il intégralement disparu ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Que peux-tu remarquer sur la masse totale, la masse de sel et la masse d'eau ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Fais le schéma de l'expérience à la fin de ton expérience.
+ <div class="blank"></div></li>
+</ol></li>
+<li><p>
+Rempli le tableau suivant
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Masse de sel (g)</th>
+<th scope="col" class="org-right">0.5</th>
+<th scope="col" class="org-right">1.0</th>
+<th scope="col" class="org-right">1.5</th>
+<th scope="col" class="org-right">2.0</th>
+<th scope="col" class="org-right">2.5</th>
+<th scope="col" class="org-right">3.0</th>
+<th scope="col" class="org-right">3.5</th>
+<th scope="col" class="org-right">4.0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Soluble</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+</tr>
+</tbody>
+</table></li>
+<li>Ton hypothèse était-elle correcte ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org00976bb" class="outline-3">
+<h3 id="org00976bb">Conclusion</h3>
+<div class="outline-text-3" id="text-org00976bb">
+<ol class="org-ol">
+<li><p>
+Complète la synthèse suivante.
+</p>
+<div class="drawer remark">
+<ul class="org-ul">
+<li>On appelle <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="solubilité" /></b> la quantité de <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="solide" /></b> pouvant être dissoute dans un <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="liquide" /></b></li>
+<li>Si le <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="solide" /></b> est intégralement dissout dans le liquide, le mélange est <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="homogène" /></b>, sinon, on observe des particules en suspension, le mélange est <b> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="hétérogène" /></b>.</li>
+</ul>
+
+</div></li>
+<li><ol class="org-ol">
+<li>À une température de 20°C, un litre de solution peut contenir jusqu'à 360 g de sel.
+Quelle masse de sel peut être contenue dans 10 mL de solution ?</li>
+<li>À une température de 20°C, un litre de solution peut contenir jusqu'à 2000 g de sucre.
+Quelle masse de sucre peut être contenue dans 10 mL de solution ?</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org2f26c6d" class="outline-3">
+<h3 id="org2f26c6d">Vrai ou faux ?</h3>
+<div class="outline-text-3" id="text-org2f26c6d">
+<ol class="org-ol qcm">
+<li><p>
+Lorsqu'on à mélange hétérogène entre deux liquide, le liquide le plus léger va en dessous.
+</p>
+<ul class="org-ul">
+<li class="off"><input type='checkbox' /> Vrai</li>
+<li class="off"><input type='checkbox' /> Faux</li>
+</ul>
+<div class="drawer reponse">
+<dl class="org-dl">
+<dt>Faux</dt><dd>Le liquide le plus lourd va en dessous</dd>
+</dl>
+
+</div></li>
+<li><p>
+Il existe une quantité maximale de solide pouvant être dissoute dans un liquide.
+</p>
+<ul class="org-ul">
+<li class="off"><input type='checkbox' /> Vrai</li>
+<li class="off"><input type='checkbox' /> Faux</li>
+</ul>
+<div class="drawer reponse">
+<dl class="org-dl">
+<dt>Vrai</dt><dd>Au delà de cette quantité il n'y a plus de dissolution possible</dd>
+</dl>
+
+</div></li>
+<li><p>
+L'atmosphère est constitué d'environ 80% de dioxygène de de 20% de dioxyde de carbone.
+</p>
+<ul class="org-ul">
+<li class="off"><input type='checkbox' /> Vrai</li>
+<li class="off"><input type='checkbox' /> Faux</li>
+</ul>
+<div class="drawer reponse">
+<dl class="org-dl">
+<dt>Faux</dt><dd>L'air est constitué d'environ <b>80% de diazote</b>, <b>20% de dioxygène</b> et de moins de 1% d'autres gaz</dd>
+</dl>
+
+</div></li>
+</ol>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org2d97606" class="outline-2">
+<h2 id="org2d97606">Exercices</h2>
+<div class="outline-text-2" id="text-org2d97606">
+</div>
+
+
+<div id="outline-container-orgfabc8a6" class="outline-3">
+<h3 id="exMelanges">Corps pur ou mélange ?</h3>
+<div class="outline-text-3" id="text-exMelanges">
+<p>
+On étudie les liquide suivant :
+</p>
+<div class="multicols">
+<ul class="org-ul">
+<li>Jus de fruit avec pulpe</li>
+<li>Huile végétale</li>
+<li>Soda</li>
+<li>Lait</li>
+<li>Eau de mer</li>
+<li>Menthe à l'eau</li>
+</ul>
+
+</div>
+
+<ol class="org-ol">
+<li>Parmi ces liquides, indique celui qui te semble être un corps pur.</li>
+<li>Lorsqu'on observe le lait au microscope, on distingue des particules de graisse. Dans ce cas, le mélange est-il homogène ou hétérogène ?</li>
+<li>Un liquide d'aspect homogène est-il forcément un corps pur ?</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-orgc4e9c9b" class="outline-3">
+<h3 id="exHypothese">Établir une hypothèse</h3>
+<div class="outline-text-3" id="text-exHypothese">
+<p>
+On laisse pendant plusieurs jour du sulfate de cuivre anhydre à l'air libre dans une salle de classe.
+Au début de l'expérience, la poudre est blanche dans la coupelle, après quelque jours, cette poudre est devenue bleu clair.
+</p>
+
+<ol class="org-ol">
+<li>Que peux-tu déduire de cette expérience. Répond en faisant une phrase contenant "J'observe que&#x2026; donc &#x2026; j'en conclu que&#x2026;".</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org18a94eb" class="outline-3">
+<h3 id="exProtocole">Établir un protocole</h3>
+<div class="outline-text-3" id="text-exProtocole">
+<p>
+Pour remplacer la levure dans une recette, il est possible de mélanger du bicarbonate de soude alimentaire et du jus de citron.
+Lorsque ces deux substances sont mélangées, un gaz est produit.
+</p>
+
+<ol class="org-ol">
+<li><p>
+En s'aidant de la vidéo suivante, établir un protocole permettant de déterminer le gaz produit.
+</p>
+<video width="600" height="400" controls>
+  <source src="/_assets/vid/dissolutionCraieAcide.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video></li>
+
+<li>À la suite de l'expérience, on se rend compte que l'eau de chaux s'est troublée. Que peux-tu en déduire du gaz produit ?</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgab15dac" class="outline-3">
+<h3 id="orgab15dac">Composition de l'air</h3>
+<div class="outline-text-3" id="text-orgab15dac">
+<div class="drawer doc">
+<p>
+L'air est un mélange de plusieurs gaz. Il est approximativement composé d'environ :
+</p>
+<ul class="org-ul">
+<li>78,08 % de diazote (N<sub>2</sub>) ;</li>
+<li>20,95 % de dioxygène (O<sub>2</sub>) ;</li>
+<li>moins de 1 % d'autres gaz dont :
+<ul class="org-ul">
+<li>des gaz rares (argon, néon, hélium, krypton, xénon) ;</li>
+<li>de différents gaz à effet de serre, dont le dioxyde de carbone est le principal représentant (environ 0,0417 % en juillet 2022) ;</li>
+</ul></li>
+</ul>
+
+</div>
+
+<ol class="org-ol">
+<li>Quels sont les deux gaz qui représentent plus de 99% de la composition de l'air.</li>
+<li>Calcule le pourcentage restant pour les autres gaz.</li>
+<li><p>
+Complète la phrase suivante, puis encadre la en rouge.
+</p>
+
+<p>
+<b>L'air est un mélange de plusieurs gaz différents, les deux principaux gaz sont  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="le dioxygène" /> représentant plus de 20% du volume total, et  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="le diazote" /> représentant presque 80%.</b>
+</p></li>
+</ol>
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">en formant le sulfate de cuivre pentahydraté.</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Mélange et corps pur</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

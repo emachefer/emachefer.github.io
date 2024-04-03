@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="latex-occhRr.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="284.52744pt" height="56.90549pt" viewBox="0.0 0.0 284.52744 56.90549 "> 
+<g transform="translate(0, 56.90549 ) scale(1,-1) translate(0,0.0 )"> 
+    <g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <g stroke="#fff" fill="#fff">
+ <path d=" M 0.0 0.0 M 0.0 0.0 L 0.0 56.90549 L 284.52744 56.90549 L 284.52744 0.0 Z M 284.52744 56.90549  " stroke="none"/>
+ </g>
+ <g fill="#00f">
+ <animateTransform attributeName="transform" type="translate"  dur="0.2" keyTimes="0.0;0.50009;1.0" keySplines="0 0 1 1;0 0 1 1" begin="pgf0.click +0.0s" calcMode="spline" values="0.0,0.0;28.45274,0.0;85.35823,0.0" xlink:href="#pgf0canvas1"/>
+ <g id="pgf0" >
+ <g> <g id="pgf0canvas1"> <g> <path id="pgf0p" d=" M 28.45274 28.45274 M 42.67911 28.45274 C 42.67911 36.30984 36.30984 42.67911 28.45274 42.67911 C 20.59564 42.67911 14.22638 36.30984 14.22638 28.45274 C 14.22638 20.59564 20.59564 14.22638 28.45274 14.22638 C 36.30984 14.22638 42.67911 20.59564 42.67911 28.45274 Z M 28.45274 28.45274  " />
+ </g></g></g>
+ </g>
+ </g>
+ </g>
+ </g>
+                                                                                  </g> 
+</svg> 

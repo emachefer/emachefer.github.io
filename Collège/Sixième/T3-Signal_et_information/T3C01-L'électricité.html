@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 09:32 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>L'électricité</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">L'électricité</h1>
+<p class="subtitle">Thème 3 - Chapitre 2</p>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgecce4db">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#orga7d5100">Attendus</a></li>
+<li><a href="#org93cdcde">Compétences</a></li>
+</ul>
+</li>
+<li><a href="#orgb096965">Vérification des idées reçues</a>
+<ul>
+<li><a href="#org7273ea2">Combien de fils faut-il pour faire fonctionner une ampoule ?</a>
+<ul>
+<li><a href="#orgf38c421">Pourquoi cette idée ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></a></li>
+</ul>
+</li>
+<li><a href="#org63b8f6e">Où dois se situer l'interrupteur pour couper l'alimentation ?</a>
+<ul>
+<li><a href="#org99dc7d9">Pourquoi cette idée ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org8563c6d">Représentation normalisé&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AD">AD</span></span></a></li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-orgecce4db" class="outline-2">
+<h2 id="orgecce4db">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h2>
+<div class="outline-text-2" id="text-orgecce4db">
+</div>
+<div id="outline-container-orga7d5100" class="outline-3">
+<h3 id="orga7d5100">Attendus</h3>
+<div class="outline-text-3" id="text-orga7d5100">
+<ul class="org-ul">
+<li class="on"><input type='checkbox' checked='checked' /> Mettre en évidence expérimentalement la possibilité d’intervertir les positions des composants d’un circuit à une boucle.</li>
+<li class="on"><input type='checkbox' checked='checked' /> Mettre en œuvre un circuit électrique à une boucle avec un convertisseur d’énergie (moteur, élément photovoltaïque, etc.).</li>
+<li class="off"><input type='checkbox' /> Mettre en œuvre un circuit électrique à une boucle avec un capteur (de température, d’éclairement, de mouvement, etc.).</li>
+<li class="on"><input type='checkbox' checked='checked' /> Donner une représentation schématique normalisée du circuit électrique réalisé.</li>
+<li class="off"><input type='checkbox' /> Rechercher des informations sur les règles de sécurité électrique et les prendre en compte dans son activité.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org93cdcde" class="outline-3">
+<h3 id="org93cdcde">Compétences</h3>
+</div>
+</section>
+
+
+<section id="outline-container-orgb096965" class="outline-2">
+<h2 id="orgb096965">Vérification des idées reçues</h2>
+<div class="outline-text-2" id="text-orgb096965">
+</div>
+<div id="outline-container-org7273ea2" class="outline-3">
+<h3 id="org7273ea2">Combien de fils faut-il pour faire fonctionner une ampoule ?</h3>
+<div class="outline-text-3" id="text-org7273ea2">
+<dl class="org-dl">
+<dt>Note ton hypothèse</dt><dd><p>
+en faisant une phrase (Je pense qu'il faut&#x2026;)
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p></dd>
+<dt>Relie l'ampoule</dt><dd><p>
+avec le nombre de fils de l'hypothèse. Est-ce que ton hypothèse était correcte ? Qu'as-tu appris ?
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p>
+<div class="remark">
+<p>
+Pour qu'un courant électrique puisse circuler dans un circuit, il faut qu'il forme  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="une boucle" /> qui relie  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="les deux bornes" /> du générateur.
+</p>
+
+</div></dd>
+<dt>Représente la situation</dt><dd><p>
+par un schéma
+</p>
+
+<p>
+ <div class="blank"></div>
+</p></dd>
+<dt>Notes personnelles</dt><dd><p>
+que je trouve importantes
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p></dd>
+</dl>
+</div>
+<div id="outline-container-orgf38c421" class="outline-4">
+<h4 id="orgf38c421">Pourquoi cette idée ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></h4>
+<div class="outline-text-4" id="text-orgf38c421">
+<p>
+Cette idée reçue provient du fait qu'il n'y a qu'un seul fil pour brancher un objet chez soi&#x2026;
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org63b8f6e" class="outline-3">
+<h3 id="org63b8f6e">Où dois se situer l'interrupteur pour couper l'alimentation ?</h3>
+<div class="outline-text-3" id="text-org63b8f6e">
+<dl class="org-dl">
+<dt>Note ton hypothèse</dt><dd><p>
+en faisant une phrase (Je pense que l'interrupteur&#x2026;)
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p></dd>
+<dt>Branche l'interrupteur</dt><dd><p>
+entre la borne <b>+</b> et l'ampoule, puis entre l'ampoule et la borne <b>&minus;</b> du générateur. Est-ce que ton hypothèse était correcte ? Qu'as tu appris ?
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p>
+<div class="remark">
+<p>
+Dans un circuit à <b>une boucle</b>, il  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="est possible" /> d'intervertir les composants.
+</p>
+
+</div></dd>
+</dl>
+
+
+<dl class="org-dl">
+<dt>Représente la situation</dt><dd><p>
+par un schéma
+</p>
+
+<p>
+ <div class="blank"></div>
+</p></dd>
+<dt>Notes personnelles</dt><dd><p>
+que je trouve importantes
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p></dd>
+</dl>
+</div>
+<div id="outline-container-org99dc7d9" class="outline-4">
+<h4 id="org99dc7d9">Pourquoi cette idée ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></h4>
+<div class="outline-text-4" id="text-org99dc7d9">
+<p>
+Généralement on pense que ce qui vient avant à une conséquence sur ce qui est après. Dans le cas de l'électricité, il suffit de couper la boucle n'importe où pour que le circuit et donc l'électricité soit coupée.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="outline-container-org8563c6d" class="outline-2">
+<h2 id="org8563c6d">Représentation normalisé&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AD">AD</span></span></h2>
+<div class="outline-text-2" id="text-org8563c6d">
+<div class="doc">
+<p>
+Pour toute installation électrique, il faut établir un schéma qui permet de comprendre facilement son fonctionnement.
+Il ne tient pas compte de l'emplacement réel des composant mais de la position relative les uns par rapport aux autres.
+</p>
+
+<p>
+Les symboles utilisés sont normalisés, c'est à dire qu'ils sont les mêmes pour tous les pays européens, et sont donc lisible par tous les électriciens.
+</p>
+
+</div>
+
+<dl class="org-dl">
+<dt>Question</dt><dd><p>
+Quel est l'intérêt d'avoir une représentation normalisée ?
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p></dd>
+</dl>
+
+<div class="doc">
+<ul class="org-ul">
+<li>Pour représenter un moteur, un générateur, un ampèremètre<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> ou un voltmètre<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup>, on utilise un cercle qui entoure la première lettre en majuscule du composant.</li>
+<li>Une ampoule est représentée par une croix inscrite dans un cercle.</li>
+<li>Une pile est représentée par deux segments parallèles entre eux, un petit symbolisant la borne \(\ominus\), et un plus grand symbolisant la borne \(\oplus\)</li>
+<li>Une LED (diode électroluminescente) est représenté par un triangle et un segment parallèle à sa base, auquel on ajoute deux flèche pour indiqué qu'elle émet de la lumière</li>
+<li>Un interrupteur ouvert est représenté par un segment incliné par rapport aux fils de connexion qui ne se touchent pas</li>
+</ul>
+
+</div>
+
+<div class="doc">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left"><b>Nom du composant</b></th>
+<th scope="col" class="org-left"><b>Symbole normalisé</b></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Générateur</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Moteur</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Ampèremètre</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Voltmètre</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"><a href="./ampoule.pdf">./ampoule.pdf</a></td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"><a href="./DEL.pdf">./DEL.pdf</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"><a href="./pile.pdf">./pile.pdf</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"><a href="./resistor.pdf">./resistor.pdf</a></td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"><a href="./switch.pdf">./switch.pdf</a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="doc">
+<p>
+Pour représenter le schéma je dois suivre les étapes suivantes :
+</p>
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> J'ai représenter la boucle du circuit électrique par un rectangle</li>
+<li class="off"><input type='checkbox' /> J'ai représenter les éléments du circuit par leur symboles en les positionnant sur les côtés du circuits</li>
+<li class="off"><input type='checkbox' /> J'ai relier les éléments par des traits verticaux et horizontaux</li>
+</ol>
+
+</div>
+
+
+<div class="doc">
+<dl class="org-dl">
+<dt>Moteur</dt><dd>composant électrique qui permet de transformer de l'énergie électrique en énergie cinétique</dd>
+<dt>Dipôle</dt><dd>nom générique d'un composant électrique</dd>
+<dt>Intensité de courant</dt><dd>lié au déplacement de charges électriques dans un matériau</dd>
+<dt>Tension électrique</dt><dd>correspond à la différence de niveaux d'énergie aux bornes d'un dipôle</dd>
+</dl>
+
+</div>
+
+<div class="exercice">
+<p>
+Représente par un schéma normalisé un montage associant une pile et deux ampoules.
+</p>
+
+</div>
+
+
+<div class="exercice">
+<p>
+Un élève souhaite modélisé une voiture téléguidée avec des phares.
+</p>
+<ol class="org-ol">
+<li>Cite quels sont les quatre dipôles nécessaires pour créer cette voiture.</li>
+<li>Fais un schéma normalisé possible pour ce montage.</li>
+<li>Après validation du schéma par le professeur, fais le montage correspondant.</li>
+</ol>
+
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">appareil qui mesure une intensité de courant</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">appareil qui mesure une tension électrique</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">L'électricité</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

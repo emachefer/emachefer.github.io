@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 09:33 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>01 - Estimation des incertitudes</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">01 - Estimation des incertitudes</h1>
+<p class="subtitle">Traitement des données</p>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org7d18723">Incertitude</a>
+<ul>
+<li><a href="#orgc461df6">Qu'est-ce qu'une incertitude ?</a></li>
+<li><a href="#orga7a4703">Quel type d'incertitude utiliser ?</a></li>
+<li><a href="#org38f3457">Type A (statistique)</a></li>
+<li><a href="#orgdd04600">Type B (mesure)</a>
+<ul>
+<li><a href="#orgd8561c2">Affichage digital</a></li>
+<li><a href="#org06e0e9f">Mesure sur graduations</a></li>
+<li><a href="#orgffbb16c">Valeur constructeur</a></li>
+</ul>
+</li>
+<li><a href="#orgc8664b9">Incertitude totale</a></li>
+<li><a href="#org09a45de">Intervalle élargi</a></li>
+</ul>
+</li>
+<li><a href="#org0674b9b">Compatibilité de la mesure</a>
+<ul>
+<li><a href="#org45a43b3">Théorie</a></li>
+<li><a href="#orgca2730b">Z-test</a></li>
+</ul>
+</li>
+<li><a href="#org6e52046">Vocabulaire</a>
+<ul>
+<li><a href="#org34e6eb2">Moyenne</a></li>
+<li><a href="#orgf2744e1">Écart type</a></li>
+</ul>
+</li>
+<li><a href="#org4438232">Ressources</a></li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-org7d18723" class="outline-2">
+<h2 id="org7d18723">Incertitude</h2>
+<div class="outline-text-2" id="text-org7d18723">
+</div>
+<div id="outline-container-orgc461df6" class="outline-3">
+<h3 id="orgc461df6">Qu'est-ce qu'une incertitude ?</h3>
+</div>
+<div id="outline-container-orga7a4703" class="outline-3">
+<h3 id="orga7a4703">Quel type d'incertitude utiliser ?</h3>
+<div class="outline-text-3" id="text-orga7a4703">
+
+<figure>
+<object type="image/svg+xml" data="./map-incertitudes.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+</div>
+</div>
+
+<div id="outline-container-org38f3457" class="outline-3">
+<h3 id="org38f3457">Type A (statistique)</h3>
+<div class="outline-text-3" id="text-org38f3457">
+<p>
+Soit une série de mesures <i>x<sub>i</sub></i>, l'estimation de la valeur vraie est donnée par
+\[x_E = \hat{x} \pm u(x)\]
+où \(\hat{x}\) correspond à l'<a href="#org34e6eb2">estimateur de la moyenne</a><sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> et \(u(x)\) l'incertitude définie par
+\[u(x) = \dfrac{1}{\sqrt{N}} \times \hat{\sigma}_{}\] où \(\sigma_{N-1}\) correspond à l'<a href="#orgf2744e1">écart type expérimental</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd04600" class="outline-3">
+<h3 id="orgdd04600">Type B (mesure)</h3>
+<div class="outline-text-3" id="text-orgdd04600">
+</div>
+<div id="outline-container-orgd8561c2" class="outline-4">
+<h4 id="orgd8561c2">Affichage digital</h4>
+<div class="outline-text-4" id="text-orgd8561c2">
+<p>
+Soit &Delta;<sub>num</sub> le pas de l'affichage, la valeur est contenue dans l'intervalle \([x - \Delta_\mathrm{num}; x + \Delta_\mathrm{num}]\), soit
+\[u(x) = \dfrac{\Delta_\mathrm{num}}{\sqrt{3}}\]
+</p>
+</div>
+</div>
+<div id="outline-container-org06e0e9f" class="outline-4">
+<h4 id="org06e0e9f">Mesure sur graduations</h4>
+</div>
+<div id="outline-container-orgffbb16c" class="outline-4">
+<h4 id="orgffbb16c">Valeur constructeur</h4>
+</div>
+</div>
+
+<div id="outline-container-orgc8664b9" class="outline-3">
+<h3 id="orgc8664b9">Incertitude totale</h3>
+<div class="outline-text-3" id="text-orgc8664b9">
+<p>
+Somme quadratique des différentes incertitudes
+\[u_\mathrm{tot} = \sqrt{u_A^2 + u_B^2}\]
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09a45de" class="outline-3">
+<h3 id="org09a45de">Intervalle élargi</h3>
+</div>
+</section>
+
+<section id="outline-container-org0674b9b" class="outline-2">
+<h2 id="org0674b9b">Compatibilité de la mesure</h2>
+<div class="outline-text-2" id="text-org0674b9b">
+</div>
+<div id="outline-container-org45a43b3" class="outline-3">
+<h3 id="org45a43b3">Théorie</h3>
+<div class="outline-text-3" id="text-org45a43b3">
+<p>
+La mesure \(x\) du mesurande \(X\) est compatible avec le modèle \(x'\) si
+\[|x-x'| \leq k \times u(x-x'),\]
+soit \(|x-x'| \leq k \times \dfrac{1}{\sqrt{N}} \times \hat{\sigma}\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgca2730b" class="outline-3">
+<h3 id="orgca2730b">Z-test</h3>
+<div class="outline-text-3" id="text-orgca2730b">
+<p>
+Le mesurage \(M\) du mesurande \(X\) suivant une loi normale de moyenne &mu; et d'écart type<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> &sigma; connus
+\[z = \dfrac{M - \mu}{u(x)}_{}\]
+</p>
+
+<div class="remark">
+<p>
+Ne fonctionne que pour N &gt; 50 ou pour distribution connue.
+</p>
+
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org6e52046" class="outline-2">
+<h2 id="org6e52046">Vocabulaire</h2>
+<div class="outline-text-2" id="text-org6e52046">
+</div>
+<div id="outline-container-org34e6eb2" class="outline-3">
+<h3 id="org34e6eb2">Moyenne</h3>
+<div class="outline-text-3" id="text-org34e6eb2">
+<div block-title="Moyenne" class="definition">
+<p>
+Soit une série de mesures <i>x<sub>i</sub></i>, l'estimateur de la moyenne est
+\[\hat{x} = \dfrac{1}{N} \sum_{i=1}^N x_i\]
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgf2744e1" class="outline-3">
+<h3 id="orgf2744e1">Écart type</h3>
+<div class="outline-text-3" id="text-orgf2744e1">
+<div block-title="Écart-type de la population" class="definition">
+<p>
+L'écart-type est défini par
+\[\sigma_{} = \sqrt{\dfrac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}\]
+où &mu; est la moyenne de la distribution.
+</p>
+
+</div>
+
+
+<div block-title="Écart-type expérimental" class="definition">
+<p>
+L'estimateur de l'écart-type est
+\[\hat{\sigma}_{} = \sqrt{\dfrac{1}{N-1} \sum_{i=1}^{N} (x_i - \hat{x})^2}\]
+</p>
+
+</div>
+</div>
+</div>
+</section>
+<section id="outline-container-org4438232" class="outline-2">
+<h2 id="org4438232">Ressources</h2>
+<div class="outline-text-2" id="text-org4438232">
+<ul class="org-ul">
+<li><a href="https://eduscol.education.fr/document/7067/download">Eduscol - mesure et incertitudes au lycée</a></li>
+</ul>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Estimateur de la moyenne \(\hat{x} = \dfrac{1}{N} \sum_{i=1}^{N} x_i\)
+</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" class="footnum" href="#fnr.2">2</a></sup> <div class="footpara"><p class="footpara">
+Écart type de la population \(\sigma = \sqrt{\dfrac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2}\)
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">01 - Estimation des incertitudes</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

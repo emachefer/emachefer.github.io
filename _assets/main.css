@@ -1,0 +1,798 @@
+:root {
+    /* --main-color: hsl(15 10% 10%); */
+    --main-color: #222;
+    --sec-color: hsl(10 100% 50%);
+    --thi-color: hsl(10 100% 60%);
+    --fou-color: hsl(10 100% 70%);
+
+    --outBgColor1: hsla(150,  90%, 70%, var(--outOpacity, 0.9));
+    --outBgColor2: hsla(100, 100%, 70%, var(--outOpacity, 0.9));
+    --outBgColor3: hsla( 50, 100%, 70%, var(--outOpacity, 0.9));
+
+    --text-color: black;
+
+    --width: 90vw;
+    --height: 90vh;
+
+    --postHeight: 50pt;
+
+    --titleFontSize: max(7vmin, 70pt);
+
+    /**Linear gradients**/
+    --myColor1:  hsla( 50, 80%, 70%, 0.2);
+    --myColor2:  hsla(250, 80%, 60%, 0.2);
+    --myColor3:  hsla( 10, 70%, 60%, 0.2);
+
+    /*Counters*/
+    font-size: 12pt;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--sec-color) var(--main-color) ;
+    scrollbar-width: auto;
+    scroll-padding-block: 5em;
+}
+
+body {
+    counter-reset: sec-counter 0;
+    background-color: var(--main-color);
+    background: linear-gradient(180deg,  hsla(250, 60%, 5%, 1)0%, hsla(250, 50%, 10%, 1) 72%, hsla(250, 40%, 12%, 1) 100%);
+    font-family: Comfortaa, Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    /* line-height: 1.5em; */
+}
+
+#content {
+    width: 95vw;
+    min-height: calc(100vh - 2*var(--postHeight));
+    margin: auto;
+    margin-top: 2em;
+    overflow-x: clip;
+
+    scroll-snap-type: y mandatory;
+    & .outline-2 {
+	scroll-snap-align: start;
+	margin-top: 5vh;
+	margin-left: 2vw;
+	padding-bottom: 8vh;
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7vh), 0 100%);
+    }
+    & > p, > .resume {
+	margin: auto;
+	width: 80%;
+	padding: 2em;
+	background-color: hsla(240, 20%, 80%, 0.5);
+	clip-path: polygon(0 1em, 100% 0, 100% calc(100% - 1em), 0 100%);
+	transition: 0.1s ease-in;
+    }
+    & > p:hover, > .resume:hover {
+	background-color: hsla(240, 20%, 80%, 0.9);
+    }
+}
+
+#postamble {
+    /* height: var(--postHeight); */
+    display: grid;
+    text-align: center;
+    grid-auto-flow: column;
+    color: white;
+    display: grid;
+    overflow: hidden;
+    & a {
+	color: white;
+    }
+}
+
+.outline-text-2, .outline-text-3 {
+    padding: 10pt;
+}
+
+b:hover {
+    background-color: hsla(55, 90%, 60%, 0.8);
+}
+
+/******** FOOTNOTES ********/
+#footnotes {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    margin: 0 auto;
+    height: 1.5rem;
+    scale: 0.6;
+
+    border-radius: 5pt;
+    border: solid;
+    overflow-y: scroll;
+    background-color: #fffaf3;
+    & > :not(h2) {
+	visibility: hidden;
+	height: 0;
+    }
+    & > h2 {
+	height: auto;
+	margin-top: 0;
+	font-size: 1.5rem;
+	width: auto;
+	background-color: firebrick;
+	color: black;
+	position: sticky;
+	top: 0;
+    }
+    & div.footdef {
+	display: flex;
+	align-content: baseline;
+    }
+}
+#footnotes:hover {
+    height: 30vh;
+    scale: 1;
+    & > :not(h2) {
+	visibility: visible;
+	display: block;
+	height: auto;
+    }
+}
+
+
+/**** HEADERS ****/
+h1, h2, h3, h4 {
+    padding: 0.1em;
+    text-align: center;
+    min-height: 0;
+    transition: 0.5s ease-in-out;
+
+}
+
+/***** Title/subtitle and h1 ****/
+header {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    top: 0;
+    left:0;
+    color: white;
+    & h1 {
+	font-size: 3rem;
+	display: inline-block;
+	font-variant: small-caps;
+	font-weight: bold;
+	vertical-align: middle;
+	line-height: normal;
+	color: tomato;
+	-webkit-text-stroke: 2px #222;
+	background-color: cornsilk;
+	--myColor1:  hsla( 50, 80%, 80%, 0.99);
+	--myColor2:  hsla(250, 80%, 90%, 0.99);
+	background: linear-gradient(90deg, var(--myColor1) 50%, var(--myColor2));
+	border: solid;
+	width: 80vw;
+	margin-bottom: 5pt;
+	@media screen and (min-width: 600px) {
+	    position: sticky;
+	    top: 1em;
+	}
+    }
+    & .subtitle {
+	position: sticky;
+	top: 0;
+	-webkit-text-stroke: 1px var(--myColor1);
+    }
+}
+
+.outline-2 {
+    background-color: #fffaf3;
+
+    & h2 {
+	width: 100%;
+	color: var(--sec-color);
+	background-color: inherit;
+	box-shadow: 0 2pt 5pt;
+	font-size: 2.5rem;
+	position: sticky;
+	top: 0;
+	counter-reset: subsec-counter 0;
+    }
+    & h2:not(:has(.tag .prof)):before {
+	counter-increment: sec-counter;
+	content: counter(sec-counter, upper-roman) " - ";
+    }
+    & .todo {
+	& li:has(> input:checked), li:has(> input:checked) a {
+	    text-decoration: line-through 2pt;
+	    color: gray !important;
+	}
+    }
+}
+.outline-2:nth-of-type(3n) h2 {
+    background: linear-gradient(90deg, hsla(50, 80%, 80%, 0.95) 60%, hsla(300, 60%, 90%, 0.95));
+}
+.outline-2:nth-of-type(3n+1) h2{
+    background: linear-gradient(90deg, hsla(250, 80%, 90%, 0.95) 20%, hsla(120, 70%, 90%, 0.95));
+}
+.outline-2:nth-of-type(3n+2) h2{
+    background: linear-gradient(90deg, hsla(10, 70%, 90%, 0.95) 30%, hsla(150, 50%, 80%, 0.95));
+}
+
+.outline-3 {
+    & h3 {
+	counter-reset: subsub-counter 0;
+	font-size: 2rem;
+	color: var(--thi-color);
+	background-color: transparent;
+	box-shadow: 0 2pt 1pt;
+	& .tag {
+	    display: none;
+	}
+    }
+
+    & h3:has(.tag .DNW) {
+	color: darkslategray;
+
+	& ~ .outline-text-3 {
+	    background-color: darkslategray;
+	    color: lightgray;
+	    border: solid black;
+	}
+	& ~ .outline-text-3:before {
+	    content: "Ne pas noter";
+	    font-weight: bold;
+	    color: lightgreen;
+	}
+    }
+    & h3:has(.tag .pres, .tag .prof) {
+	color: limegreen;
+    }
+    /* Seules les parties qui ne sont pas #prof ou #pres sont numérotés */
+    & h3:not(:has(.tag .pres, .tag .prof, .tag .DNW)):before {
+	counter-increment: subsec-counter;
+	content: counter(subsec-counter)" | ";
+    }
+}
+
+.outline-4 h4:before {
+    counter-increment: subsub-counter;
+    content: counter(subsub-counter, lower-alpha) "|\2000";
+}
+
+/* To hide DIV elements */
+.hidden {
+    opacity: 0.9;
+    transition: 0.5s ease-out;
+    & h2 {
+	padding-top: 25vh;
+	text-align: center;
+	vertical-align: middle;
+	min-height: 50vh;
+    }
+}
+.hidden:hover {
+    opacity: 1;
+}
+
+div {
+    transition: 0.5s ease-in-out;
+}
+
+:is(.outline-text-2, .outline-3, .outline-text-3,
+    .outline-4, .outline-text-4) {
+    max-height: 800vh;
+    overflow-y: scroll;
+}
+
+.hidden :is(.outline-text-2, .outline-3, .outline-text-3,
+	    .outline-4, .outline-text-4) {
+    max-height: 0pt;
+    padding: 0pt;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+:is(h2, h3, h4)::after {
+    content: "▾";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    float:left;
+    border-radius: 50%
+}
+
+.hidden :is(h2, h3, h4)::after {
+    content: "▸";
+    float:left;
+}
+
+:is(header h1, .outline-2 h2, .outline-3 h3, .outline-4 h4):hover {
+    cursor: pointer;
+    opacity: 1;
+    box-shadow: 0 0pt 2pt yellow, 0 2pt 4pt orange, 0 4pt 6pt red;
+    /* transform: rotate(-2deg); */
+}
+
+
+/**** LINKS ****/
+a {
+    --bxcolor: hsl(10 70% 50%);
+    box-shadow: inset 0 var(--bxHeight, 0) var(--bxcolor);
+    border-bottom: solid var(--bxcolor);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: 0.5s ease-in-out;
+    padding: 2px;
+    color: var(--main-color);
+    text-decoration: none;
+    font-style: italic;
+}
+a:hover, a:focus, a:active {
+    --bxHeight: -5em;
+    --tColor: hsla(190, 80%, 90%, 0.9);
+    font-weight: bold;
+    font-style: normal;
+    transform: scale(1.05);
+    color: var(--tColor);
+    border-bottom: solid var(--tColor);
+}
+
+#org-div-home-and-up {
+    position:fixed;
+    display:  grid;
+    grid-auto-flow: column;
+    gap: 3pt;
+    bottom: 10pt;
+    right: 10pt;
+    z-index:100000;
+    font-size: 1rem;
+    & a {
+	padding: 5pt;
+	background-color: var(--fou-color);
+	border: 2px solid var(--sec-color);
+    }
+}
+
+.org-src-container > pre {
+    padding: 10px;
+    overflow: auto;
+    background-color: #222;
+    color: #eee;
+}
+
+
+/**** TABLE ****/
+th {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+}
+tr {
+    transition: 0.5s ease-in-out;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
+tr:last-child {
+    background-color: #bababa;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: hidden;
+    & td, th {
+	border: 1px solid;
+	padding: 5pt;
+    }
+    & tr:hover {
+	background-color: palegreen;
+    }
+    & td:hover {
+	background-color: limegreen;
+    }
+}
+.tbComp tr {
+    & td:first-child, tr td:nth-child(2) {
+	background-color: inherit;
+    }
+    & td:nth-child(3) { background-color: green;}
+    & td:nth-child(4) { background-color: limegreen;}
+    & td:nth-child(5) { background-color: orange;}
+    & td:nth-child(6) { background-color: red;}
+}
+
+
+/*******/
+.note {
+    padding: 10px;
+}
+
+figure {
+    width: 100%;
+    overflow: scroll;
+    /* & object { */
+    /* 	transform: scale(0.8); */
+    /* 	margin: auto; */
+    /* } */
+    /* & object:active{ */
+    /* 	transform: scale(1); */
+    /* } */
+}
+svg {
+    display:block;
+    margin:auto;
+    resize: horizontal;
+    width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+iframe {
+    display: block;
+    margin: auto;
+    padding: 3em;
+    background-color: var(--main-color);
+}
+
+/******  TOC de l'index  *********/
+ul.lstToc {
+    text-align: center;
+    padding: 10pt;
+    list-style-type: none;
+    background-color: #fffaf3;
+
+    & a {
+	display: inline-block;
+	width: min(95%, 82vw);
+	padding: 1em 0;
+	margin: 0;
+	box-shadow: unset;
+	background-color: unset;
+	border: none;
+    }
+    & a:hover {
+	transform: unset;
+	text-shadow: 0 0 5px yellow, 0 0 10px orange, 0 0 15px red;
+    }
+    & input[type="checkbox"]:hover {
+	cursor: pointer;
+    }
+    & input[type="checkbox"] {
+	position: relative;
+	top: 50%;
+	left: -1.2%;
+	transform: scale(3);
+	opacity: 0.01;
+    }
+    & li:has(input[type="checkbox"]):before {
+	content: '☰';
+    }
+    & li:has(input[type="checkbox"]:checked):before {
+	content: '☓';
+    }
+
+    & ul {
+	list-style-type: none;
+	padding: 1em 0;
+	transition: 0.5s ease-in-out;
+    }
+
+    & li {
+	font-size: 1.5rem;
+	padding: 0;
+	box-shadow: 0 1pt 1pt;
+	width: 100%;
+	transition: 0.5s ease-in-out;
+    }
+    & li:nth-of-type(3n){
+	background: linear-gradient(90deg, var(--myColor1) 60%, hsla(300, 60%, 60%, 0.2));
+    }
+    & li:nth-of-type(3n+1){
+	background: linear-gradient(90deg,  var(--myColor2) 20%, hsla(120, 70%, 60%, 0.2));
+    }
+    & li:nth-of-type(3n+2){
+	background: linear-gradient(90deg, var(--myColor3) 30%, hsla(150, 50%, 60%, 0.2));
+    }
+    /* Sélectionne uniquement item en cours */
+    & li:hover:not(:has(li:hover)) {
+	font-size: 1.7rem;
+	--myColor1: hsla(120, 90%, 80%, 0.5);
+	--myColor2: hsla(30, 90%, 60%, 0.2);
+	--myColor3: hsla(190, 70%, 60%, 0.2);
+	& li {
+	    font-size: 1.5rem;
+	}
+    }
+
+
+    & li:has(> input) > ul {
+	padding: 0;
+	max-height: 0;
+	overflow: hidden;
+    }
+    & li:has(> input:checked) {
+	& > ul {
+	    text-align: center;
+	    padding: 1em 0;
+	    max-height: 500vh;
+	    overflow-y: scroll;
+	}
+    }
+    & li > ul ul {
+	display: flex;
+	flex-direction: row;
+	overflow-x: scroll;
+	scroll-snap-type: x proximity;
+	border-radius:
+	gap: 1em;
+	align-items: center;
+    	& li {
+	    box-sizing: border-box;
+	    display: block;
+	    min-width: max(50%, 200px);
+	    max-width: 80vi;
+	    min-height: 30vmin;
+	    border-radius: 5pt;
+	    border: solid 2pt;
+	    box-shadow: 5pt 5pt 5pt;
+	    margin: auto auto;
+	    padding: 10pt;
+	    scroll-snap-align: start;
+	    text-align: center;
+	}
+    }
+}
+
+/* TODO WIP afficher aides dans accordéon */
+.outline-3:has(h3 .aides), .outline-4:has(h4 .aides) {
+    & dl {
+	display: block;
+    }
+    & dt:has(input[type="checkbox"]):before {
+	content: "Coup de pouce : ";
+    }
+    & dt:has(input[type="checkbox"]) {
+	background-color: hsla(20, 90%, 60%, 0.2);
+	padding: 0.5em;
+	& + dd {
+	    margin: auto;
+	    padding-top: 1pt;
+	    box-shadow: 0 2pt 2pt;
+	    transition: 0.5s ease-in;
+	    max-height: 0;
+	    overflow: hidden;
+	}
+    }
+    & dt:has(input[type="checkbox"]:checked) {
+	background-color: hsla(120, 50%, 80%, 0.2);
+	& + dd {
+	    padding: 1em;
+	    max-height: 100vh;
+	    overflow-y: scroll;
+	    background-color: hsla(260, 90%, 60%, 0.2);
+	}
+    }
+}
+
+
+
+/******* Display toc on  left side if hover *********/
+#table-of-contents {
+    background-color: #eee;
+    position: fixed;
+    top: 20pt;
+    left: 0pt;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    width: 1.5rem;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    z-index: 1000;
+    padding: 0pt;
+    transition: 0.5s ease-in-out;
+    border-radius: 1rem;
+        & > :not(h2){
+	visibility: hidden;
+	display: none;
+	max-width: max(40vw, 8em);
+    }
+
+    & h2 {
+	margin: 0;
+	font-size: 1.2rem;
+	padding-top: 15pt;
+	padding-bottom: 15pt;
+	writing-mode: vertical-lr;
+	background-color: tomato;
+	color: var(--text-color);
+	width: auto;
+	position: sticky;
+	right: 0;
+	top: 0;
+    }
+    & a {
+	font-size: 1rem;
+    }
+}
+
+#table-of-contents:hover {
+    width: max(50vw, 10em);
+    max-height: 80vh;
+    box-shadow: 0 0 90rem 20rem #6e7b8b;
+    & > :not(h2){
+	visibility: visible;
+	display: block;
+    }
+}
+
+/* Si TOC dans un outline, il ne faut pas afficher tag avec prof */
+#text-table-of-contents {
+    & li:has(.prof) {
+	display: none;
+    }
+}
+
+textarea {
+    margin: auto;
+    font-size: 1.5rem;
+    font-family: Comfortaa, Helvetica, Arial, sans-serif;
+    width: 80vi;
+    resize: vertical;
+}
+
+/***** LISTS *****/
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+  & dt {
+      font-weight: bold;
+      grid-column-start: 1;
+  }
+  & dd {
+      grid-column-start: 2;
+  }
+}
+
+/***** funFacts *****/
+.funFacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    border-radius: 5pt;
+
+    list-style: decimal inside none;
+    padding: 0;
+    min-width: 80vw;
+
+    text-align: center;
+
+    & > li { margin: 0;}
+    & > li:nth-of-type(3n)   { background-color: plum;}
+    & > li:nth-of-type(3n+1) { background-color: peachpuff;}
+    & > li:nth-of-type(3n+2) { background-color: paleturquoise;}
+
+    & li {
+	min-width: inherit;
+	padding: 0 1em;
+	scroll-snap-align: start;
+    }
+
+    & > li::marker {
+	font-size: 1.5rem;
+	color: darkcyan;
+    }
+}
+
+/***** QCM ******/
+.qcm::after {
+    content: "QCM ";
+    font-weight: bold;
+    font-size: 2rem;
+    position: sticky;
+    right: 10pt;
+}
+
+:is(.qcm, .exo, .exercice) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    border-radius: 5pt;
+    list-style: decimal inside none;
+    padding: 1rem;
+
+    & > li { margin: 2em 0;}
+    & > li:nth-of-type(3n)   { background-color: plum;}
+    & > li:nth-of-type(3n+1) { background-color: peachpuff;}
+    & > li:nth-of-type(3n+2) { background-color: paleturquoise;}
+
+    & li {
+	min-width: 80vi;
+	padding: 10pt;
+	scroll-snap-align: start;
+	transition: 0.5s ease-in-out;
+    }
+
+    & > li::marker {
+	font-size: 3rem;
+	color: darkcyan;
+    }
+    & li:has(> input:checked) {
+	color: black !important;
+	background-color: hsla(10, 90%, 50%, 0.5);
+	width: 50vi;
+    }
+    & li:has(> input:checked + .underline, > input:checked + p .underline) {
+	color: black !important;
+	background-color: hsla(120, 80%, 80%, 0.5);
+	font-size: larger;
+	width: 50vi;
+	text-decoration: unset !important;
+	font-weight: bold;
+    }
+
+    & ul { list-style: none;}
+    & ol { list-style: upper-latin inside none;}
+}
+
+
+:is(.exercice, .qcm):has(> li input[type="checkbox"]) {
+    & li p {
+	display: inline;
+    }
+    & > li .reponse {
+	max-height: 0;
+	max-width: 0;
+	margin: 0;
+	visibility: collapse;
+	background-color: inherit;
+    }
+    & input[type="checkbox"]:before {
+	content: "Afficher la réponse ";
+    }
+}
+:is(.exercice, .qcm):has(> li input[type="checkbox"]:checked) {
+    & li:has(input:checked) {
+	text-decoration: unset;
+	color: black !important;
+	& > .reponse {
+	    max-width: 80vw !important;
+	    max-height: 100vh !important;
+	    visibility: visible;
+	}
+	& textarea {
+	    display: none;
+	}
+    }
+}
+
+input[type="text"] {
+    border-style: dotted;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Comfortaa, Helvetica, Arial, sans-serif;
+}
+input[type="text"]:invalid {
+    background-color: hsla(10, 90%, 80%, 0.4);
+    color: firebrick;
+}
+input[type="text"]:valid {
+    color: darkgreen;
+    font-weight: bold;
+    background-color: transparent;
+    text-decoration: underline;
+}

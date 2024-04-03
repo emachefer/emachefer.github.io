@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 09:33 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Circuits électriques</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Circuits électriques</h1>
+<p class="subtitle">Thème 3 - Chapitre 1</p>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org53ebdd5">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#org6855f4e">Attendus</a></li>
+<li><a href="#org435dbf8">Compétences</a></li>
+</ul>
+</li>
+<li><a href="#org51155b1">Quelques conceptions</a></li>
+<li><a href="#orgb74689f">Comment manipuler en toute sécurité ?</a>
+<ul>
+<li><a href="#org4438ab5">Comment manipuler en sécurité un montage électrique ?</a>
+<ul>
+<li><a href="#orgaa7e053">Toujours être vigilant</a></li>
+<li><a href="#org0014cf7">Utiliser correctement le matériel</a></li>
+<li><a href="#orgd36ebd9">Être organisé</a></li>
+<li><a href="#org7815324">Ne pas manipuler proche de l'eau ou avec les mains mouillées</a></li>
+<li><a href="#org0fa10d7">Signaler les anomalies</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9d1102c">Comment schématiser un montage électrique ?</a></li>
+<li><a href="#orgcdbcf66">Montage en série et en dérivation</a>
+<ul>
+<li><a href="#org6ac40c0">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#orgb4e80b7">Attendus du BO</a></li>
+<li><a href="#orgf2f6a81">Compétences travaillées</a></li>
+</ul>
+</li>
+<li><a href="#org25d0e48">Amélioration d'une voiture téléguidée</a></li>
+</ul>
+</li>
+<li><a href="#org3b5b0c0">Loi d'additivité des intensités</a>
+<ul>
+<li><a href="#orgc267b86">Comment brancher un ampèremètre ?</a></li>
+<li><a href="#org6863683">Mesure du courant électrique</a></li>
+<li><a href="#org04b17cc">Test de la loi d'additivité des intensité</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+
+<section id="outline-container-org53ebdd5" class="outline-2">
+<h2 id="org53ebdd5">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h2>
+<div class="outline-text-2" id="text-org53ebdd5">
+</div>
+<div id="outline-container-org6855f4e" class="outline-3">
+<h3 id="org6855f4e">Attendus</h3>
+<div class="outline-text-3" id="text-org6855f4e">
+<ul class="org-ul">
+<li class="off"><input type='checkbox' /> Élaborer et mettre en œuvre un protocole expérimental simple visant à réaliser un circuit électrique répondant à un cahier des charges simple  ou à vérifier une loi de l’électricité.</li>
+<li class="on"><input type='checkbox' checked='checked' /> Dipôles en série, dipôles en dérivation.</li>
+<li class="on"><input type='checkbox' checked='checked' /> L’intensité du courant électrique est la même en tout point d’un circuit qui ne compte que des dipôles en série.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org435dbf8" class="outline-3">
+<h3 id="org435dbf8">Compétences</h3>
+</div>
+</section>
+
+<section id="outline-container-org51155b1" class="outline-2">
+<h2 id="org51155b1">Quelques conceptions</h2>
+<div class="outline-text-2" id="text-org51155b1">
+<ol class="org-ol qcm">
+<li>Afin de faire fonctionner une ampoule, je n'ai besoin que d'un seul fil
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> <p>
+Vrai
+</p>
+<div class="reponse">
+<p>
+Non, cette conception provient du fait qu'il n'y a qu'un seul fil pour brancher un objet chez soi&#x2026;
+</p>
+
+</div></li>
+<li class="off"><input type='checkbox' /> <p>
+<span class="underline">Faux</span>
+</p>
+<div class="reponse">
+<p>
+Dans un câble électrique, il y a bien deux fils, un pour chaque trou de la prise électrique
+</p>
+
+</div></li>
+</ol></li>
+
+<li>Pour fonctionner, un interrupteur doit se situer avant la lampe
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> Vrai</li>
+<li class="off"><input type='checkbox' /> <p>
+<span class="underline">Faux</span>
+</p>
+<div class="reponse">
+<p>
+Si on coupe la boucle du circuit à n'importe quel endroit, l'électricité ne peut plus circuler.
+</p>
+
+</div></li>
+</ol></li>
+
+<li>À chaque fois que le courant passe dans une ampoule, il diminue
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> Vrai</li>
+<li class="off"><input type='checkbox' /> <p>
+<span class="underline">Faux</span>
+</p>
+<div class="reponse">
+<p>
+Cette conception vient du fait qu'on parle d'une ampoule qui "consomme du courant".
+</p>
+
+</div></li>
+</ol></li>
+
+<li>L'ampoule qui brille le plus est celle traversée par une intensité de courant plus importante.
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> Vrai</li>
+<li class="off"><input type='checkbox' /> <span class="underline">Faux</span></li>
+</ol></li>
+</ol>
+
+
+
+<div class="drawer results">
+
+<figure>
+<object type="image/svg+xml" data="./502_resultats.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+</div>
+
+
+<div class="drawer results">
+
+<figure>
+<object type="image/svg+xml" data="./501_resultats.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+</div>
+</div>
+</section>
+
+
+
+<section id="outline-container-orgb74689f" class="outline-2">
+<h2 id="orgb74689f">Comment manipuler en toute sécurité ?</h2>
+<div class="outline-text-2" id="text-orgb74689f">
+<table class="tbComp">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ID</th>
+<th scope="col" class="org-left">Compétence évaluée</th>
+<th scope="col" class="org-left">TB</th>
+<th scope="col" class="org-left">MS</th>
+<th scope="col" class="org-left">MF</th>
+<th scope="col" class="org-left">MI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">D2/2</td>
+<td class="org-left">Coopérer et réaliser des projets</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/4.2</td>
+<td class="org-left">Expliquer des règles de sécurité</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+<div class="org-center">
+<p>
+D'après le document de l'INRS, trouve les 10 règles à respecter pour manipuler en toute sécurité en séance sur l'électricité.
+Par groupe de trois maximum, fais une affiche permettant d'expliquer ces règles de sécurité.
+</p>
+</div>
+
+
+<figure>
+<img src="./qr-inrs-sécurité-électricité.png" alt="qr-inrs-sécurité-électricité.png">
+
+</figure>
+
+<div data-title="Comment faire une bonne affiche ?" class="doc">
+<p>
+Dans de nombreuses conférences académiques, des poster sur les travaux en cours sont affichés.
+Dans ce type d'évènements, les chercheurs présentent leur poster aux autres personnes intéressées par le sujet.
+</p>
+
+<p>
+Les meilleurs poster ont généralement :
+</p>
+<dl class="org-dl">
+<dt>Un titre</dt><dd>il attire l' oeil, peut se lire et être compris de loin, sur une à deux lignes</dd>
+<dt>Les auteurs</dt><dd>directement sous le titre</dd>
+<dt>Une introduction</dt><dd>rapide présentation du sujet qui doit accrocher le lecteur</dd>
+<dt>Les résultats</dt><dd>Rubrique la plus important, présentées à l'aides de schémas, graphiques ou autres informations visuelles</dd>
+<dt>Une conclusion</dt><dd>Rapide résumé des résultats</dd>
+<dt>Une attention particulière</dt><dd><ul class="org-ul">
+<li>nombre de mots limités (ici on limitera entre 50 et 200 mots)</li>
+<li>informations claires et lisibles</li>
+<li>accessibles au plus grand nombre (pas de jargon)</li>
+</ul></dd>
+</dl>
+
+</div>
+</div>
+
+<div id="outline-container-org4438ab5" class="outline-3">
+<h3 id="org4438ab5">Comment manipuler en sécurité un montage électrique ?</h3>
+<div class="outline-text-3" id="text-org4438ab5">
+<div class="drawer introduction">
+<p>
+Lorsqu'il est soumis à une certaine tension, le corps humain peut subir une électrisation ou des brûlure.
+Afin d'éviter de se mettre en danger, il faut connaître certaines règles de sécurités.
+</p>
+
+</div>
+</div>
+
+
+<div id="outline-container-orgaa7e053" class="outline-4">
+<h4 id="orgaa7e053">Toujours être vigilant</h4>
+<div class="outline-text-4" id="text-orgaa7e053">
+<p>
+Dès un courant d'intensité de 0,5 mA des contractions musculaires involontaires peuvent se produire.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0014cf7" class="outline-4">
+<h4 id="org0014cf7">Utiliser correctement le matériel</h4>
+<div class="outline-text-4" id="text-org0014cf7">
+<ul class="org-ul">
+<li>S'assurer du bon fonctionnement du matériel avant de l'utiliser.</li>
+<li>Éteindre ou débrancher systématiquement le matériel après son utilisation.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd36ebd9" class="outline-4">
+<h4 id="orgd36ebd9">Être organisé</h4>
+<div class="outline-text-4" id="text-orgd36ebd9">
+<p>
+Il faut faire un montage propre afin de ne pas confondre les fils.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7815324" class="outline-4">
+<h4 id="org7815324">Ne pas manipuler proche de l'eau ou avec les mains mouillées</h4>
+<div class="outline-text-4" id="text-org7815324">
+<p>
+L'eau peut conduire l'électricité, sa présence augment les risques.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0fa10d7" class="outline-4">
+<h4 id="org0fa10d7">Signaler les anomalies</h4>
+<div class="outline-text-4" id="text-org0fa10d7">
+<ul class="org-ul">
+<li>matériel défectueux</li>
+<li>odeur de brûlé ou fumée</li>
+<li>émission d'étincelles</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="outline-container-org9d1102c" class="outline-2">
+<h2 id="org9d1102c">Comment schématiser un montage électrique ?</h2>
+<div class="outline-text-2" id="text-org9d1102c">
+<p>
+<i>Mon Carnet de LABO, p. 46</i>
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Dipôle</th>
+<th scope="col" class="org-left">Symbole</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Pile</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Générateur</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fil de connexion</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Lampe</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Interrupteur</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Moteur</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">DEL</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Diode</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Résistor</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ol class="org-ol exercice">
+<li><p>
+Schématise le montage p 47 du carnet
+</p>
+
+<figure>
+<object type="image/svg+xml" data="./T3C01_montage.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+<p>
+ <div class="blank"></div>
+</p></li>
+</ol>
+</div>
+</section>
+
+<section id="outline-container-orgcdbcf66" class="outline-2">
+<h2 id="orgcdbcf66">Montage en série et en dérivation</h2>
+<div class="outline-text-2" id="text-orgcdbcf66">
+</div>
+<div id="outline-container-org6ac40c0" class="outline-3">
+<h3 id="org6ac40c0">Compétences et attendus&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h3>
+<div class="outline-text-3" id="text-org6ac40c0">
+</div>
+<div id="outline-container-orgb4e80b7" class="outline-4">
+<h4 id="orgb4e80b7">Attendus du BO</h4>
+<div class="outline-text-4" id="text-orgb4e80b7">
+<ul class="org-ul">
+<li class="off"><input type='checkbox' /> Élaborer et mettre en œuvre un protocole expérimental simple visant à réaliser un circuit électrique répondant à un cahier des charges simple  ou à vérifier une loi de l’électricité.</li>
+<li class="off"><input type='checkbox' /> Dipôles en série, dipôles en dérivation.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgf2f6a81" class="outline-4">
+<h4 id="orgf2f6a81">Compétences travaillées</h4>
+</div>
+</div>
+<div id="outline-container-org25d0e48" class="outline-3">
+<h3 id="org25d0e48">Amélioration d'une voiture téléguidée</h3>
+<div class="outline-text-3" id="text-org25d0e48">
+<table class="tbComp">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ID</th>
+<th scope="col" class="org-left">Compétence évaluée</th>
+<th scope="col" class="org-left">TB</th>
+<th scope="col" class="org-left">MS</th>
+<th scope="col" class="org-left">MF</th>
+<th scope="col" class="org-left">MI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">D4/1.2</td>
+<td class="org-left">Mettre en oeuvre un raisonnement logique simple</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D4/1.3</td>
+<td class="org-left">Modéliser et représenter des phénomènes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Une élève souhaite ajouter des phares à sa voiture télécommandée. Elle décide de faire un montage associant une pile, deux lampes et un interrupteur avec quatre fils de connexion.
+</p>
+
+<ol class="org-ol exercice">
+<li><p>
+Fait un schéma possible de ce montage.
+ <div class="blank"></div>
+</p>
+<div class="definition">
+<p>
+On appelle ce type de montage (composé d'une seule boucle) un <b>circuit</b> en  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="série" />.
+</p>
+
+</div></li>
+
+<li><p>
+Le montage fonctionne, mais une ampoule a grillée après l'utilisation, modélise ce phénomène en dévissant une ampoule. La deuxième ampoule continue-t-elle de fonctionner ?
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p>
+<div class="remark">
+<p>
+Dans un montage en  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="série" />, si l'un des composant de la  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="boucle" /> est défaillant, le  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="courant électrique" /> ne circule plus.
+</p>
+
+</div></li>
+<li><div class="definition">
+<p>
+On appelle montage en  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="dérivation|parallèle" /> un circuit qui comporte au moins deux boucles.
+</p>
+
+</div>
+
+<p>
+Réalise un schéma du montage ou les deux lampes sont montées en parallèle.
+ <div class="blank"></div>
+</p></li>
+<li><p>
+<b>Après validation du montage par le professeur</b>, réalise le circuit schématisé avec les deux lampes puis avec celle qui ne fonctionne plus. Que peux-tu remarquer ?
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p></li>
+<li><p>
+Quel type de montage aurait du faire cette élève afin d'éviter ce problème ?
+</p>
+
+<p>
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea>
+</p></li>
+</ol>
+</div>
+</div>
+</section>
+
+
+<section id="outline-container-org3b5b0c0" class="outline-2">
+<h2 id="org3b5b0c0">Loi d'additivité des intensités</h2>
+<div class="outline-text-2" id="text-org3b5b0c0">
+</div>
+
+
+<div id="outline-container-orgc267b86" class="outline-3">
+<h3 id="orgc267b86">Comment brancher un ampèremètre ?</h3>
+<div class="outline-text-3" id="text-orgc267b86">
+<div class="definition">
+<p>
+Un ampèremètre est un instrument qui permet de mesurer  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern=".*(intensité)+ .*(courant)+ (électrique)*" /> parcourant une boucle. Il se branche en  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="série" /> avec les autres composant dans une boucle. L'intensité est mesurée en  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="ampères" /> (A) son symbole est
+</p>
+
+<div class="drawer results">
+
+<figure>
+<img src="./symboleAmperemetre.png" alt="symboleAmperemetre.png">
+
+</figure>
+
+</div>
+
+</div>
+
+<div class="remark">
+<ul class="org-ul">
+<li>Placer le sélecteur dans la zone rose <b><code>A</code></b> en choisissant le plus grand calibre (celui noté <b><code>10A</code></b>)</li>
+<li>Brancher deux fils de connexion dans les bornes <b><code>10A</code></b> et <b><code>COM</code></b></li>
+<li>Brancher l'appareil en série pour mesurer l'intensité en un point du circuit</li>
+<li><b>Si l'intensité est trop petite</b>, choisir un autre calibre en tournant le sélecteur et en passant sur la borne <b><code>mA</code></b></li>
+</ul>
+
+</div>
+
+
+<div class="exercice">
+<p>
+En utilisant les symboles, schématiser le montage en série d'une pile, d'un ampèremètre et d'un résistor.
+ <div class="blank"></div>
+</p>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org6863683" class="outline-3">
+<h3 id="org6863683">Mesure du courant électrique</h3>
+<div class="outline-text-3" id="text-org6863683">
+<ol class="org-ol exercice">
+<li>Afin de mesurer l'intensité du courant, on refait le montage de l'activité précédente avec deux lampes en série. Refais le schéma du montage avec les symboles normalisés en branchant un ampèremètre avant et après chaque ampoule.
+ <div class="blank"></div></li>
+<li><p>
+Une fois le schéma validé, fais le montage en mettant l'ampèremètre entre la borne + et la première lampe. Complète l'image ci-dessous en indiquant la valeur mesurée dans l'afficheur, en entourant où sont connectés les fils, et en indiquant par une flèche la position du curseur central.
+</p>
+<p>
+<a href="./multimetre.pdf">./multimetre.pdf</a>
+</p></li>
+<li><p>
+Place l'ampèremètre entre les deux ampoules, puis après la dernière. Note à chaque fois la valeur de l'intensité électrique.
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+</colgroup>
+
+<colgroup>
+<col  class="org-right">
+</colgroup>
+
+<colgroup>
+<col  class="org-right">
+</colgroup>
+
+<colgroup>
+<col  class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Position</th>
+<th scope="col" class="org-right">1</th>
+<th scope="col" class="org-right">2</th>
+<th scope="col" class="org-right">3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Intensité ( <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  />)</td>
+<td class="org-right"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-right"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-right"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+</tbody>
+</table></li>
+<li><p>
+À partir de tes relevés expérimentaux, complète la conclusion suivante.
+</p>
+<div class="remark">
+<p>
+Dans un montage à  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="une boucle" />, l'intensité du courant électrique est  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="la même" /> en chaque point du circuit.
+</p>
+
+</div></li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org04b17cc" class="outline-3">
+<h3 id="org04b17cc">Test de la loi d'additivité des intensité</h3>
+<div class="outline-text-3" id="text-org04b17cc">
+<div class="definition">
+<p>
+La somme des intensités qui entrent dans un noeud est égale à la somme des intensités sortante de ce noeud.
+</p>
+
+</div>
+<p>
+Imagine une expérience permettant de vérifier cette loi.
+</p>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Circuits électriques</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* WIP Mise en page avec media print*/
+
+/* TODO*/
+/* - [X] Ne pas afficher :prof*/
+
+/* MISE EN PAGE*/
+/* - Imprimer seulement outline ayant :pdf: ou :print: ? */
+
+@page {
+    margin: 1cm;
+    size: A4 portrait;
+     @top-center {
+	 content: string(heading, first);;
+     }
+}
+h2 {
+    string-set: heading content();
+}
+
+* {
+    background: white !important;
+    color: black !important;
+    clip-path: unset;
+    border: none;
+    box-shadow: unset;
+    text-shadow: unset;
+}
+
+html {
+    font-size: 8pt !important;
+}
+
+/* #content { */
+/*     display: flex; */
+/*     flex-wrap: wrap; */
+/* } */
+
+h1, h2, h3, h4 {
+    font-size: 1.5rem !important;
+    height: auto !important;
+    padding: 1rem;
+    color: hsl(10, 90%, 40%) !important;
+    -webkit-text-stroke: unset !important;
+}
+
+table {
+    border: solid;
+}
+
+
+header {
+    height: auto;
+}
+
+#table-of-contents, #postamble, #org-div-home-and-up,
+.outline-3:has(> h3 .aides), .outline-4:has(> h4 .aides) {
+    display: none !important;
+}
+
+.hidden {
+    & :is(.outline-text-2, .outline-3, .outline-text-3,
+	 .outline-4, .outline-text-4) {
+	max-height: none !important;
+    }
+    & h2 {
+	padding-top: 1rem;
+	min-height: 0;
+    }
+}
+
+.outline-2:has(> h2 .tag .prof), .outline-3:has(> h3 .tag .prof) {
+    display: none;
+}
+
+.outline-2 {
+    clip-path: unset !important;
+    & + .outline-2 {
+	page-break-before: always;
+    }
+}
+.todo, .done, .tag, .reponse {
+    display: none !important;
+}
+
+/* Si les liens sont externes, il faut afficher l'url */
+a[href^="http"]:after {
+    content: "("attr(href)")";
+}
+
+iframe {
+    display: none;
+}

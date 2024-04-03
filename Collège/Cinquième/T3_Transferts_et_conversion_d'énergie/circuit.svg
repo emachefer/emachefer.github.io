@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?> 
+<?xml-stylesheet href="latex-MLiL1Y.css" type="text/css"?> 
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57.30548pt" height="28.66774pt" viewBox="-0.2 -22.29265 57.30548 28.66774 "> 
+<g transform="translate(0,6.37509 ) scale(1,-1) translate(0,22.29265 )"> 
+<g stroke="#000" fill="#000">
+ <g stroke-width="0.4">
+ <path d=" M 0.0 0.0 L 12.51923 0.0 M 50.4041 -9.75938 L 6.50137 -9.75938 M 44.38626 0.0 L 56.90549 0.0  " fill="none"/>
+ <g stroke="#000" fill="#000">
+ <g stroke-width="0.79999">
+ <path d=" M 12.51923 5.9751 h 31.86703 v -11.9502 h -31.86703 Z  " fill="none"/>
+ <g stroke-width="0.4">
+ <g transform="translate(28.45274,0.0)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ </g>
+ <g transform="matrix(-1.0,0.0,0.0,-1.0,8.99097,-9.75938)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(0.0,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> </g> </g>
+ </text> 
+</g>
+ </g>
+ <g stroke="#000" fill="#000">
+ <path d=" M 10.73367 -9.75938 L 10.73367 -7.76772 L 6.50137 -9.75938 L 10.73367 -11.75105 L 10.73367 -9.75938  " />
+ </g>
+ <g transform="translate(22.25066,-18.79268)">
+ <g fill="#000">
+ <text style="stroke:none" transform="scale(1,-1) translate(6.20207,0)" text-anchor="middle"  font-size="10"> 
+<g fill="#000">
+ <g stroke="none"> <tspan font-family="cmmi" font-size="10">U</tspan><tspan baseline-shift="sub"><tspan font-family="cmr" font-size="7">1</tspan></tspan></g> </g>
+ </text> 
+</g>
+ </g>
+ </g>
+ </g>
+ 
+                     </g> 
+</svg> 

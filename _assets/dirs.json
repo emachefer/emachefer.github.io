@@ -1,0 +1,8 @@
+{ "nom" : "Main",
+  "url" : "/index.html",
+  "contains" :
+  [{"nom" : "Collège",
+     "url" : "/Collège/index.html",
+     "contains" : []}
+  ]
+}

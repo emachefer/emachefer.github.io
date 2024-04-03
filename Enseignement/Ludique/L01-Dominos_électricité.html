@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<!-- 2024-04-03 mer. 09:32 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dominos-puzzle électricité</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="E. Machefer">
+<link rel="stylesheet"href="/_assets/main.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/tags.css" type="text/css"/>
+             <link rel="stylesheet" media="screen" href="/_assets/flashcard.css" type="text/css"/>
+             <link rel="stylesheet" media="print" href="/_assets/print.css" type="text/css"/>
+             <link rel="stylesheet" href="/_assets/blocks.css" type="text/css"/>
+             <script type="text/javascript" src="/_assets/org-js.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="org-div-home-and-up">
+ <a accesskey="h" href="../index.html"> UP </a>
+ |
+ <a accesskey="H" href="/index.html"> HOME </a>
+</div><div id="content">
+<header>
+<h1 class="title">Dominos-puzzle électricité</h1>
+<p class="subtitle">Ludique</p>
+</header><nav id="table-of-contents">
+<h2>Table des matières</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgf2914a6">Ressources</a></li>
+<li><a href="#orgd299786">Liste des pièces</a></li>
+<li><a href="#orgc60370f">Les pièces</a>
+<ul>
+<li><a href="#org77824ab">Générateur</a></li>
+<li><a href="#org37c44b8"><span class="todo TODO">TODO</span> Pile</a></li>
+<li><a href="#org2219de5"><span class="todo TODO">TODO</span> Interrupteurs</a></li>
+<li><a href="#org8232bee"><span class="todo TODO">TODO</span> Diodes/DEL</a></li>
+<li><a href="#org5a15c60"><span class="todo TODO">TODO</span> Ampoules/résistances</a></li>
+<li><a href="#org3c9178a"><span class="todo TODO">TODO</span> Ampèremètres</a></li>
+<li><a href="#org790da7c"><span class="todo TODO">TODO</span> Coudes</a></li>
+<li><a href="#org9757191"><span class="todo TODO">TODO</span> Noeuds</a></li>
+<li><a href="#org189414e"><span class="todo TODO">TODO</span> Fils de connexion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+
+<section id="outline-container-orgf2914a6" class="outline-2">
+<h2 id="orgf2914a6">Ressources</h2>
+<div class="outline-text-2" id="text-orgf2914a6">
+<p>
+Ce jeu est tiré du site de <a href="https://ww2.ac-poitiers.fr/sc_phys/spip.php?article868">l'académie de Poitiers</a>. C'est un domino composé de 30 pièces :
+</p>
+<ul class="org-ul">
+<li>13 pièces recto-verso :
+<ul class="org-ul">
+<li>1 générateur (<code>+/-</code> et <code>-/+</code>)</li>
+<li>1 pile (<code>+/-</code> et <code>-/+</code>)</li>
+<li>3 interrupteurs (recto ouvert-verso fermé)</li>
+<li>2 Diodes - DEL (recto diode - verso DEL)</li>
+<li>3 ampoules - résistances numérotées 1,2 et 3 (recto ampoule - verso résistance)</li>
+<li>1 moteur (recto connexions verticales - verso connexions horizontales)</li>
+<li>2 ampèremètres (recto connexions verticales - verso connexions horizontales)</li>
+</ul></li>
+<li>17 pièces simples :
+<ul class="org-ul">
+<li>4 coudes</li>
+<li>4 nœuds</li>
+<li>9 fils de connexion</li>
+</ul></li>
+</ul>
+</div>
+</section>
+
+<section id="outline-container-orgd299786" class="outline-2">
+<h2 id="orgd299786">Liste des pièces</h2>
+<div class="outline-text-2" id="text-orgd299786">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Pièce</th>
+<th scope="col" class="org-left">Recto</th>
+<th scope="col" class="org-left">Verso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Générateur</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Pile</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Interrupteur</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Interrupteur</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Interrupteur</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Diode/DEL</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Diode/DEL</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Ampoule/Résistance</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Ampoule/Résistance</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Ampoule/Résistance</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Moteur</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Ampèremètre</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Coude</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Coude</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Coude</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Coude</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Noeuds</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Noeuds</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Noeuds</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Noeuds</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Fils de connexion</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<section id="outline-container-orgc60370f" class="outline-2">
+<h2 id="orgc60370f">Les pièces</h2>
+<div class="outline-text-2" id="text-orgc60370f">
+</div>
+<div id="outline-container-org77824ab" class="outline-3">
+<h3 id="org77824ab">Générateur</h3>
+<div class="outline-text-3" id="text-org77824ab">
+<div class="drawer results">
+
+<figure>
+<object type="image/svg+xml" data="DE-générateur-recto.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+</div>
+
+<div class="drawer results">
+
+<figure>
+<object type="image/svg+xml" data="DE-générateur-verso.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37c44b8" class="outline-3">
+<h3 id="org37c44b8"><span class="todo TODO">TODO</span> Pile</h3>
+<div class="outline-text-3" id="text-org37c44b8">
+<div class="drawer results">
+
+<figure>
+<object type="image/svg+xml" data="DE-pileR.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2219de5" class="outline-3">
+<h3 id="org2219de5"><span class="todo TODO">TODO</span> Interrupteurs</h3>
+</div>
+<div id="outline-container-org8232bee" class="outline-3">
+<h3 id="org8232bee"><span class="todo TODO">TODO</span> Diodes/DEL</h3>
+</div>
+<div id="outline-container-org5a15c60" class="outline-3">
+<h3 id="org5a15c60"><span class="todo TODO">TODO</span> Ampoules/résistances</h3>
+</div>
+<div id="outline-container-org3c9178a" class="outline-3">
+<h3 id="org3c9178a"><span class="todo TODO">TODO</span> Ampèremètres</h3>
+</div>
+<div id="outline-container-org790da7c" class="outline-3">
+<h3 id="org790da7c"><span class="todo TODO">TODO</span> Coudes</h3>
+</div>
+<div id="outline-container-org9757191" class="outline-3">
+<h3 id="org9757191"><span class="todo TODO">TODO</span> Noeuds</h3>
+</div>
+<div id="outline-container-org189414e" class="outline-3">
+<h3 id="org189414e"><span class="todo TODO">TODO</span> Fils de connexion</h3>
+<div class="outline-text-3" id="text-org189414e">
+<div class="drawer results">
+
+<figure>
+<object type="image/svg+xml" data="DE-fils_connexion.svg" class="org-svg">
+Sorry, your browser does not support SVG.</object>
+
+</figure>
+
+</div>
+</div>
+</div>
+</section>
+</div>
+<div id="postamble" class="status">
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">Dominos-puzzle électricité</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
+</div>
+</body>
+</html>

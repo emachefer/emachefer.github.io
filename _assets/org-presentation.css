@@ -1,0 +1,486 @@
+:root {
+    --main-color: hsl(15 10% 10% / 90%);
+    --sec-color: hsl(10 100% 50%);
+    --thi-color: hsl(10 100% 60%);
+    --fou-color: hsl(10 100% 70%);
+
+    --text-color: black;
+
+    --def-color: var(--fou-color);
+    --def-bg-color: #FEC;
+    --rem-color: var(--sec-color);
+    --rem-bg-color: #FEC;
+    --exer-color: #2255DD;
+    --exer-bg-color: #66AAFF;
+
+    --width: 90vw;
+    --height: 90vh;
+
+    --postHeight: 50pt;
+
+    --titleFontSize: 5vh;
+
+    /*Counters*/
+    counter-reset: def-counter 0;
+    counter-reset: rem-counter 0;
+    counter-reset: exer-counter 0;
+    counter-reset: exam-counter 0;
+    counter-reset: doc-counter 0;
+
+    counter-reset: sec-counter 0;
+    font-size: 12pt;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: var(--sec-color) var(--main-color) ;
+    scrollbar-width: auto;
+    scrollbar-gutter: stable both-edges;
+
+    scroll-padding-block: 5em;
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: Comfortaa, Helvetica, Arial, sans-serif;
+    font-size: 20pt;
+}
+
+#content{
+    width: 95vw;
+    min-height: calc(100vh - 2*var(--postHeight));
+    margin: auto;
+}
+
+#postamble {
+    height: var(--postHeight);
+    display: grid;
+    text-align: center;
+    grid-auto-flow: column;
+    background-color: var(--main-color);
+    color: white;
+    display: grid;
+    overflow: hidden;
+}
+#postamble a {
+    color: white;
+}
+
+/* TEST SCROLL SNAP */
+:is(#table-of-contents, .outline-2, #footnotes) {
+    --margin: 5em;
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+    width: var(--width);
+    heigth: var(--height);
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    margin: var(--margin) auto;
+    gap: var(--margin);
+}
+
+#text-table-of-contents, #text-footnotes, .outline-3, .outline-text-2:only-of-type {
+    display: block;
+    padding: 0 10pt;
+    margin: auto;
+    width: var(--width);
+    height: var(--height);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    background-color: #eee;
+}
+.footdef {
+    display: flex;
+    align-content: start;
+}
+.footnum {
+    --fSize: 10pt;
+    font-size: var(--fSize);
+    position: relative;
+    top: calc(60% - var(--fSize)); /* Pour aligner numéro avec text*/
+
+}
+.footnum::after {
+    content: ":\2000";
+}
+:is(.outline-text-3, .outline-text-4) {
+    padding: 1em;
+}
+
+:is(.outline-2 h2, .outline-3 h3, .outline-4 h4):hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+/**** HEADERS ****/
+h1, h2, h3, h4 {
+    font-family: Garamond, Times, serif;
+    padding: 0.5em;
+    background-color: white;
+    /* color: var(--text-color); */
+    z-index: 100;
+    transition: font-size 200ms ease-in-out;
+    transform-origin: 0% 0%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1 {
+    margin-top:0px;
+    font-size: var(--titleFontSize);
+    position: fixed;
+    width: 100vw;
+    z-index:1000;
+    top: 0px;
+    left: 0px;
+    background-color: var(--main-color);
+    color:white;
+}
+
+h2 {
+    margin: auto;
+    height: calc(var(--height) / 3);
+    width: calc(var(--width)*0.9);
+    /* background-color: var(--sec-color); */
+    color: var(--sec-color);
+    border: solid;
+    font-size: 7vmin;
+}
+h3 {
+    font-size: 5vmin;
+    color: var(--thi-color);
+    background-color: none;
+    border-bottom: solid;
+    position: sticky;
+    top: 0pt;
+}
+
+.outline-2 h2 {
+    counter-increment: sec-counter;
+    counter-reset: subsec-counter 0;
+}
+
+.outline-2 h2:before {
+    content: counter(sec-counter)" | ";
+}
+
+.outline-3 h3 {
+    counter-increment: subsec-counter;
+    counter-reset: subsub-counter 0;
+}
+.outline-3 h3:before {
+    content: counter(sec-counter) "." counter(subsec-counter)" | ";
+}
+
+.outline-4 h4 {
+    counter-increment: subsub-counter;
+}
+.outline-4 h4:before {
+    content: counter(sec-counter) "." counter(subsec-counter)"." counter(subsub-counter) "|\2000";
+}
+
+
+
+/* To hide DIV elements */
+.hidden {
+    opacity: 0.7;
+    transition: 0.5s ease-out;
+}
+.hidden:hover {
+    opacity: 1;
+}
+
+div {
+    transition: 0.5s ease-out;
+    max-height: none;
+}
+
+.hidden :is(.outline-text-2, .outline-3, .outline-text-3,
+	    .outline-4, .outline-text-4,
+	    #text-table-of-contents, #text-footnotes, .lstToc) {
+    max-height: 0pt;
+    max-width: 0pt;
+    padding: 0pt;
+    overflow: hidden;
+    visibility: hidden;
+}
+:is(h2, h3, h4)::after{
+    content: "▾";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    float:left;
+    border-radius: 50%
+}
+.hidden :is(h2, h3, h4)::after{
+    content: "▸";
+    float:left;
+}
+
+
+/**** LINKS ****/
+a {
+    --bxcolor: var(--sec-color);
+    box-shadow: inset 0 var(--bxHeight, 0) 0 0 var(--bxcolor);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: 0.3s ease-in-out;
+    padding: 2px;
+    text-decoration: underline;
+    text-decoration-color: var(--bxcolor);
+    text-decoration-style: wavy;
+    color: var(--main-color);
+}
+a:hover, a:focus {
+    --bxHeight: -10em;
+}
+
+#org-div-home-and-up {
+    position:fixed;
+    display:  grid;
+    grid-auto-flow: column;
+    gap: 3pt;
+    bottom: 10pt;
+    right: 10pt;
+    z-index:100000;
+    font-size: 10pt;
+}
+#org-div-home-and-up a {
+    padding: 5pt;
+    background-color: var(--fou-color);
+    border: 2px solid var(--sec-color);
+}
+
+.org-src-container > pre {
+ padding: 10px;
+ overflow: auto;
+ background-color: #222;
+ color: #eee;
+}
+
+
+/**** TABLE ****/
+th {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: white;
+}
+tr:nth-child(odd) {
+    background-color: #ddd;
+}
+tr:last-child {
+    background-color: #bababa;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: hidden;
+}
+
+dt {
+  font-weight: bold;
+}
+
+
+/**** BLOCKS ****/
+div:where(.definition, .remark, .exemple, .exercice, .doc, .reponse) {
+    padding: 5px;
+    border : solid;
+    border-width: 2pt;
+    border-radius: 15px;
+    margin: 1em;
+    color: var(--txt-color, --main-color);
+    border-color: var(--border-color, --main-color);
+    background-color: var(--bg-color, tranparent);
+}
+
+div:is(.definition, .remark, .exemple, .exercice, .doc, .reponse)::before {
+    font-weight: bold;
+    font-size: larger;
+    color: var(--border-color, --main-color);
+    content: var(--txt, "")  "\2001" attr(block-title);
+}
+
+.doc {
+    counter-increment: doc-counter 1;
+    --txt: "Document " counter(doc-counter);
+}
+
+.definition {
+    counter-increment: def-counter 1;
+    --border-color: var(--def-color);
+    --bg-color: var(--def-bg-color);
+    --txt: "Définition "counter(def-counter) " \1F4D6";
+}
+.exemple {
+    counter-increment: exam-counter 1;
+    --border-color: var(--exer-color);
+    --txt: "Exemple "counter(exam-counter);
+}
+
+.exercice {
+    --border-color: var(--exer-color);
+    --txt: "Exercice";
+}
+
+.remark {
+    counter-increment: rem-counter 1;
+    --txt: "Remarque "counter(rem-counter) " \1F4DD";
+    --bg-color: var(--rem-bg-color);
+    --border-color: var(--rem-color);
+}
+
+.reponse {
+    --bg-color: hsl(100 70% 80%);
+    --border-color: var(--text-color);
+    --txt: "Réponse :";
+}
+.reponse :is(p, dl, ul) {
+    /* visibility: hidden; */
+    opacity: 0;
+    max-height: 10pt;
+    overflow: hidden;
+    /* transition: all .2s; */
+    transition: all 0.5s ease-in-out;
+}
+.reponse:hover > :is(p,dl, ul){
+    /* visibility: visible; */
+    opacity: 1;
+    max-height: 100vh;
+}
+
+/* End block */
+
+.note {
+    padding: 10px;
+}
+
+svg {
+    display:block;
+    margin:auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/**** Show TOC in index ****/
+ul.lstToc {
+    margin-top: calc(3*var(--titleFontSize));
+}
+:is(ul.lstToc, #table-of-contents ul) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 5pt;
+    list-style-type: none;
+}
+
+:is(ul.lstToc, #table-of-contents ul) li a{
+    --bgcolor: var(--fou-color);
+    --bdcolor: var(--sec-color);
+    display: block;
+    text-align: center;
+    padding: 10pt;
+    width: max(20vw, 100pt);
+    background-color: var(--bgcolor);
+    border: solid var(--bdcolor);
+    font-weight: bold;
+}
+:is(ul.lstToc, #table-of-contents ul) ul li a{
+    --bgcolor: hsl(40 80% 80%);
+    --bdcolor: var(--sec-color);
+    padding: 5pt;
+}
+
+/**** TODO et TAG ****/
+.tag {
+    float: right;
+    background-color: none;
+    color: var(--fou-color);
+    font-weight: bold;
+}
+.tag > span:before {
+    content: "#";
+}
+
+.todo {
+    float: left;
+    color: var(--fou-color);
+    font-weight: bold;
+}
+
+.physique:before {
+    content: "ϕ";
+}
+
+
+/**** FLASH CARD ****/
+.flashcard {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+}
+
+.flashcard .inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flashcard:hover .inner {
+    transform: rotateY(180deg);
+}
+.flashcard .question, .flashcard .answer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.flashcard .question {
+    background-color: hsl(300 50% 75%);
+    color: black;
+}
+.flashcard .question::before {
+    content: "Question :";
+    background-color: #eee;
+    width: 100%;
+    color: #222;
+}
+.flashcard .answer::before {
+    content: "Réponse :";
+    background-color: #eee;
+    color: #222;
+}
+
+/* Style the back side */
+.flashcard .answer {
+    background-color: hsl(200 50% 50%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+textarea {
+    margin: auto;
+    font-size: 14pt;
+    font-family: Comfortaa, Helvetica, Arial, sans-serif;
+}
