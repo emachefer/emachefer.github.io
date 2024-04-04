@@ -38,7 +38,7 @@ body {
     counter-reset: sec-counter 0;
     background-color: var(--main-color);
     background: linear-gradient(180deg,  hsla(250, 60%, 5%, 1)0%, hsla(250, 50%, 10%, 1) 72%, hsla(250, 40%, 12%, 1) 100%);
-    font-family: Comfortaa, Helvetica, Arial, sans-serif;
+    font-family: Comfortaa, Helvetica, Roboto, Arial, sans-serif;
     font-size: 1.5rem;
     /* line-height: 1.5em; */
 }
@@ -136,7 +136,13 @@ b:hover {
 
 
 /**** HEADERS ****/
+@font-face {
+  font-family: myBangers;
+  src: url(Bangers_regular.ttf);
+}
+
 h1, h2, h3, h4 {
+    font-family: myBangers, Arial;
     padding: 0.1em;
     text-align: center;
     min-height: 0;
