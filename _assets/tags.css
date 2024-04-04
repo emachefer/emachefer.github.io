@@ -1,6 +1,7 @@
 /**** TODO et TAG ****/
 .tag {
     float: right;
+    padding-right: 0.5em;
     text-shadow: 0 0 1pt hsla(120, 80%, 80%, 0.8);
     color: orange;
     border-radius: 5pt;
