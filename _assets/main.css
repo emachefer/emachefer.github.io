@@ -738,6 +738,7 @@ dl {
 	padding: 10pt;
 	scroll-snap-align: start;
 	transition: 0.5s ease-in-out;
+	overflow-wrap: break-word;
     }
 
     & > li::marker {
