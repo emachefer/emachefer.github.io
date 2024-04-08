@@ -728,17 +728,17 @@ dl {
     list-style: decimal inside none;
     padding: 1rem;
 
-    & > li { margin: 2em 0;}
+    & > li { margin: 2em 0; min-width: 80vi;}
     & > li:nth-of-type(3n)   { background-color: plum;}
     & > li:nth-of-type(3n+1) { background-color: peachpuff;}
     & > li:nth-of-type(3n+2) { background-color: paleturquoise;}
 
     & li {
-	min-width: 80vi;
-	padding: 10pt;
+	padding: 10pt 1em;
 	scroll-snap-align: start;
 	transition: 0.5s ease-in-out;
 	overflow-wrap: break-word;
+	max-width: 100%;
     }
 
     & > li::marker {
