@@ -25,7 +25,7 @@
     font-size: 12pt;
 }
 
-div:where(.definition, .remark, .exemple, .exercice, .doc, .reponse) {
+div:where(.definition, .remark, .exemple, .exercice, .doc, .reponse, .warn) {
     padding: 5px;
     border-left : 5pt solid;
     margin: 3vw;
@@ -35,12 +35,18 @@ div:where(.definition, .remark, .exemple, .exercice, .doc, .reponse) {
     background-color: var(--bg-color, tranparent);
 }
 
-div:is(.definition, .remark, .exemple, .exercice, .doc, .reponse)::before {
+div:is(.definition, .remark, .exemple, .exercice, .doc, .reponse, .warn)::before {
     font-weight: bold;
     width: 100%;
     font-size: larger;
     color: var(--border-color, --main-color);
     content: var(--txt, "")  " :\2001" attr(data-title);
+}
+
+.warn {
+    --txt: "Attention ⚠";
+    --border-color: hsla(40, 90%, 50%, 0.9);
+    --bg-color: hsla(50, 90%, 70%, 0.7);
 }
 
 .doc {
