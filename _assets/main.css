@@ -678,38 +678,38 @@ dl {
 }
 
 /***** funFacts *****/
-.funFacts {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    border-radius: 5pt;
+/* .funFacts { */
+/*     display: flex; */
+/*     flex-direction: row; */
+/*     flex-wrap: nowrap; */
+/*     overflow-x: scroll; */
+/*     scroll-snap-type: x mandatory; */
+/*     border-radius: 5pt; */
 
-    list-style: decimal inside none;
-    padding: 0;
-    min-width: 80vw;
+/*     list-style: decimal inside none; */
+/*     padding: 0; */
+/*     min-width: 80vw; */
 
-    text-align: center;
+/*     /\* text-align: center; *\/ */
 
-    & > li { margin: 0;}
-    & > li:nth-of-type(3n)   { background-color: plum;}
-    & > li:nth-of-type(3n+1) { background-color: peachpuff;}
-    & > li:nth-of-type(3n+2) { background-color: paleturquoise;}
+/*     & > li { margin: 0;} */
+/*     & > li:nth-of-type(3n)   { background-color: plum;} */
+/*     & > li:nth-of-type(3n+1) { background-color: peachpuff;} */
+/*     & > li:nth-of-type(3n+2) { background-color: paleturquoise;} */
 
-    & li {
-	min-width: inherit;
-	padding: 0 1em;
-	scroll-snap-align: start;
-    }
+/*     & li { */
+/* 	min-width: inherit; */
+/* 	padding: 0 1em; */
+/* 	scroll-snap-align: start; */
+/*     } */
 
-    & > li::marker {
-	font-size: 1.5rem;
-	color: darkcyan;
-    }
-}
+/*     & > li::marker { */
+/* 	font-size: 1.5rem; */
+/* 	color: darkcyan; */
+/*     } */
+/* } */
 
-/***** QCM ******/
+/***** QCM/Exercices/Funfacts ******/
 .qcm::after {
     content: "QCM ";
     font-weight: bold;
@@ -718,7 +718,7 @@ dl {
     right: 10pt;
 }
 
-:is(.qcm, .exo, .exercice) {
+:is(.qcm, .exo, .exercice, .funFacts) {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -763,6 +763,15 @@ dl {
     & ol { list-style: upper-latin inside none;}
 }
 
+.funFacts {
+    & p:first-of-type, > li .underline {
+	font-weight: bold;
+	display: inline;
+	font-size: 1.3em;
+	/* box-shadow: inset 0 -0.5em currentcolor; */
+    }
+    & ul { list-style: inside square;}
+}
 
 :is(.exercice, .qcm):has(> li input[type="checkbox"]) {
     & li p {
