@@ -7,3 +7,8 @@ vendor
 *.out
 *.o
 .directory
+
+# Ignore les pdf ou les fichiers générés par LaTeX
+*.pdf
+*.tex
+*.aux
