@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- 2024-04-03 mer. 13:41 -->
+<!-- 2024-04-28 dim. 09:50 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>L'énergie</title>
@@ -79,13 +79,77 @@ for the JavaScript code in this tag.
 <li><a href="#orged1ca26">Compétences</a></li>
 </ul>
 </li>
+<li><a href="#org487e01b">Qu'est-ce que l'énergie ?</a>
+<ul>
+<li><a href="#orgacceadb">Fiche scénario&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></a>
+<ul>
+<li><a href="#org3a5d94d">Attendus du bulletin officiel</a></li>
+<li><a href="#org04234a4">Compétences du socle commun</a></li>
+<li><a href="#org8a93621">Déroulé de la séance</a></li>
+</ul>
+</li>
+<li><a href="#org765a70d">Sources et formes d'énergie : quelle différence ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AD">AD</span></span></a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
 <p>
-Tu peux trouver les notions sur l'activité suivante : mot de passe 5T3C02
+<b>Marque autant de notions possibles en rapport avec l'énergie dans le temps imparti.</b>
 </p>
-<div style="width: 100%;"><div style="position: relative; padding-bottom: 56.25%; padding-top: 0; height: 0;"><iframe title="5T3C02-L'énergie" frameborder="0" width="1200"  height="675" style="position: absolute; top: 0; left: 0; width: 80%; height: 100%;" src="https://view.genial.ly/66043a627982a0001488dc29" type="text/html" allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all"></iframe> </div> </div>
+<div class="timerContainer" style="padding: 0.5em; width:fit-content; margin:auto; background-color: #eee;">
+<input type="range" id="timerRange" name="timerRange" min="1" value="3" max="20" step="1" onchange="timerUpdate()"/>
+<input type="button" value="Start" onclick="timer(this)" style="padding:0.2em; margin-left:25%; width: 50%;"/><div style="font-size: 3em; font-weight: bold; padding: 0.2em;" id="timerDisplay">3 min</div>
+<meter id="timerProgress" low="30" max="180" value="180">180 s</meter>
+</div>
+<script>
+const elem = document.getElementById('timerDisplay');
+const timerRange = document.getElementById('timerRange');
+
+const timerProgress = document.getElementById('timerProgress');
+var sec = document.getElementById('timerRange').value * 60;
+
+
+var myInterval; // variable qui va contenir le setInterval
+
+function timerUpdate() {
+    const min = timerRange.value;
+    elem.innerHTML = min + " min";
+    sec = min * 60;
+    timerProgress.setAttribute('max', sec);
+    timerProgress.setAttribute('value', sec);
+    timerProgress.innerHTML = sec + " s";
+}
+
+function timer(button){
+    button.value = "Stop";
+    timerRange.setAttribute('disabled', '');
+    myInterval = setInterval(myTimer, 1000);
+    button.setAttribute("onclick", "stopTimer(this, myInterval)");
+}
+
+function myTimer(){
+        var dMin = parseInt(sec / 60);
+        var dSec = parseInt(sec % 60);
+        elem.innerHTML = (dMin == 0 ? "" : dMin + " min ") + dSec + " s";
+        sec--;
+        timerProgress.setAttribute('value', sec);
+        timerProgress.innerHTML = sec + " s";
+        if (sec < 0) {
+            clearInterval(myInterval);
+            elem.innerHTML = "Fin";
+            timerRange.removeAttribute('disabled');
+        } else if (sec < 30) {
+            elem.style.color = 'red';
+        }
+    }
+function stopTimer(button, timer) {
+    clearInterval(timer);
+    timerRange.removeAttribute('disabled');
+    button.setAttribute("onclick", "timer(this)");
+    button.value = "Restart";
+}
+</script>
 
 
 <section id="outline-container-org83c7897" class="outline-2">
@@ -106,7 +170,277 @@ Tu peux trouver les notions sur l'activité suivante : mot de passe 5T3C02
 <h3 id="orged1ca26">Compétences</h3>
 </div>
 </section>
+
+
+
+
+<section id="outline-container-org487e01b" class="outline-2">
+<h2 id="org487e01b">Qu'est-ce que l'énergie ?</h2>
+<div class="outline-text-2" id="text-org487e01b">
 </div>
+<div id="outline-container-orgacceadb" class="outline-3">
+<h3 id="orgacceadb">Fiche scénario&#xa0;&#xa0;&#xa0;<span class="tag"><span class="prof">prof</span></span></h3>
+<div class="outline-text-3" id="text-orgacceadb">
+</div>
+<div id="outline-container-org3a5d94d" class="outline-4">
+<h4 id="org3a5d94d">Attendus du bulletin officiel</h4>
+<div class="outline-text-4" id="text-org3a5d94d">
+<ul class="org-ul">
+<li class="off"><input type='checkbox' /> Identifier les différentes formes d’énergie.</li>
+<li class="off"><input type='checkbox' /> Identifier les sources d'énergie</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org04234a4" class="outline-4">
+<h4 id="org04234a4">Compétences du socle commun</h4>
+<div class="outline-text-4" id="text-org04234a4">
+<dl class="org-dl">
+<dt>D4/1.1</dt><dd>Décrire des phénomènes</dd>
+<dt>D1.1/3.2</dt><dd>Lire et comprendre un document scientifique</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org8a93621" class="outline-4">
+<h4 id="org8a93621">Déroulé de la séance</h4>
+</div>
+</div>
+
+<div id="outline-container-org765a70d" class="outline-3">
+<h3 id="org765a70d">Sources et formes d'énergie : quelle différence ?&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AD">AD</span></span></h3>
+<div class="outline-text-3" id="text-org765a70d">
+<div class="org-center">
+<p>
+Dans le chapitre précédent, tu as vu qu'un circuit électrique a besoin d'un générateur ou d'une pile pour que le courant circule dans le circuit.
+</p>
+
+<p>
+La pile ou le générateur sont appelés <b>sources d'énergies</b>. Ces sources génèrent de l'énergie sous la forme d'<b>énergie électrique</b>.
+</p>
+
+<p>
+Quelle est la différence entre une source et une forme d'énergie ?
+</p>
+</div>
+
+
+<table class="tbComp">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">ID</th>
+<th scope="col" class="org-left">Compétence évaluée</th>
+<th scope="col" class="org-left">TB</th>
+<th scope="col" class="org-left">MS</th>
+<th scope="col" class="org-left">MF</th>
+<th scope="col" class="org-left">MI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">D4/1.1</td>
+<td class="org-left">Décrire des phénomènes</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">D1.1/3.2</td>
+<td class="org-left">Lire et comprendre un document scientifique</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+
+<div data-title="L'énergie" class="definition">
+<p>
+L'énergie est une grandeur physique qui reste constante.
+Cette grandeur permet de modifier l'état d'un système, soit :
+en le mettant en mouvement, en lui modifiant sa température, ou en lui permettant de se transformer chimiquement.
+</p>
+
+<p>
+L'unité liée à l'énergie dans le système international des unités est la <i>joule</i> (J).
+Cependant d'autres unités sont utilisées selon le domaine d'application :
+</p>
+<dl class="org-dl">
+<dt>le kilowatt-heure</dt><dd>1 kWh = 3,6 MJ (mégajoule, 3,6 million de joules), surtout pour mesurer l'énergie électrique d'une centrale ;</dd>
+<dt>le terawatt-heure</dt><dd>1 TWh = 1 milliard de kWh, surtout pour mesurer l'énergie électrique produite dans une année.</dd>
+</dl>
+
+</div>
+
+<div data-title="Production d'électricité en France" class="doc">
+<p>
+La consommation d'électricité en France est passée de 389 TWh (Terawatt heure) en 2000 à 430 TWh en 2022<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>.
+</p>
+
+<p>
+En 2022, 66 % de l'énergie électrique produite en France provient de centrales nucléaire, 14 % provient de centrales thermique, 11 % de barrages hydraulique, 9 % d'éolienne, le reste provient de panneaux photovoltaïque.
+</p>
+
+</div>
+
+<div data-title="Phénomènes utilisés par les différentes centrales" class="doc">
+<p>
+Un barrage hydraulique, converti de l'énergie potentielle en énergie électrique en stockant de l'eau en altitude. L'énergie potentielle est ensuite transformée en forçant l'eau à s'écouler dans une turbine reliée à un alternateur, cette énergie est convertie en énergie électrique.
+</p>
+
+<p>
+Une centrale thermique transforme l'énergie chimique, stockée dans un matériau, en énergie électrique en brûlant un combustible. Quand le combustible brûle, son énergie permet la vaporisation de l'eau. La vapeur d'eau met en mouvement une turbine reliée à un alternateur qui génère de l'électricité.
+</p>
+
+<p>
+Une centrale nucléaire permet de convertir de l'énergie nucléaire en énergie électrique sur le même principe qu'une centrale thermique.
+</p>
+
+<p>
+Une éolienne génère de l'énergie électrique à partir d'énergie cinétique transporté par une masse d'air en mouvement. La masse d'air met en mouvement les pales de l'éolienne ce qui fait tourner un alternateur.
+</p>
+
+<p>
+Un panneau photovoltaïque converti de l'énergie lumineuse rayonnée par le soleil en énergie électrique grâce à une interaction entre la lumière et la matière s'appelant effet photoélectrique.
+</p>
+
+</div>
+
+<ol class="org-ol">
+<li><p>
+Dans la liste suivante, relie les différentes formes d'énergie au bon phénomène physique ou chimique.
+</p>
+<table class="relateTable">
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Énergie potentielle  &bull;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&bull;  l'altitude d'un corps</td>
+</tr>
+
+<tr>
+<td class="org-left">Énergie chimique    &bull;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&bull;  la lumière</td>
+</tr>
+
+<tr>
+<td class="org-left">Énergie cinétique    &bull;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&bull;  les transformations chimiques</td>
+</tr>
+
+<tr>
+<td class="org-left">Énergie électrique   &bull;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&bull;  les transformations nucléaires</td>
+</tr>
+
+<tr>
+<td class="org-left">Énergie lumineuse   &bull;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&bull;  le mouvement</td>
+</tr>
+
+<tr>
+<td class="org-left">Énergie nucléaire    &bull;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&bull;  les changements de température</td>
+</tr>
+
+<tr>
+<td class="org-left">Énergie thermique    &bull;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&bull;  l'électricité</td>
+</tr>
+</tbody>
+</table></li>
+<li>Cite la source d'énergie la plus utilisée en France pour fournir de l'énergie électrique.</li>
+<li>Calcule le pourcentage d'énergie électrique provenant des panneaux photovoltaïque.</li>
+<li><ol class="org-ol">
+<li>Cite la quantité d'énergie consommée en France en 2022 (en TWh).</li>
+<li>Détermine la quantité d'énergie générée (en TWh) par les centrales nucléaires en France en 2022.</li>
+</ol></li>
+<li><p>
+Recopie le tableau suivant, puis complète le pour chaque type de centrale générant de l'électricité.
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type de centrale</th>
+<th scope="col" class="org-left">Source d'énergie</th>
+<th scope="col" class="org-left">Forme d'énergie</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Barrage hydraulique</td>
+<td class="org-left">Eau</td>
+<td class="org-left">énergie potentielle</td>
+</tr>
+</tbody>
+</table></li>
+<li><p>
+Complète les définitions suivantes en utilisant les termes :
+<i>classification</i>, <i>convertir</i>, <i>exploité</i>, <i>forme d'énergie</i>, <i>phénomène mesuré</i>, <i>phénomène physique ou chimique</i>.
+</p>
+<div class="definition">
+<ol class="org-ol">
+<li>Une <b>source d'énergie</b> est un  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="phénomène physique ou chimique" /> qui est  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="exploité" /> pour  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="convertir" />
+une  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="forme d'énergie" /> stockée en une forme plus utile.</li>
+<li>Une <b>forme d'énergie</b> est une  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="classification" /> qui permet de faire  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="correspondre" /> l'énergie au  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="phénomène mesuré" />.</li>
+</ol>
+
+</div></li>
+<li><b>[BONUS]</b> Explique pourquoi la joule n'est pas utilisée pour mesurer l'énergie électrique produite dans un pays.</li>
+</ol>
+</div>
+</div>
+</section>
+<div id="footnotes">
+<h2 class="footnotes">Notes de bas de page: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">Source <a href="https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/chiffres-cles-energie-2023/16-electricite">www.statistiques.developpement-durable.gouv.fr</a></p></div></div>
+
+
+</div>
+</div></div>
 <div id="postamble" class="status">
 <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><span property="dct:title">L'énergie</span>, créé par <span property="cc:attributionName">E. Machefer</span>, est sous licence <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a></p>
 </div>
