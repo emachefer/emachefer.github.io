@@ -205,7 +205,8 @@ header {
     }
     & h2:not(:has(.tag .prof)):before {
 	counter-increment: sec-counter;
-	content: counter(sec-counter, upper-roman);
+	/* content: counter(sec-counter, upper-roman); */
+	content: counter(sec-counter);
 	border-radius: 0.1em;
 	background-color: var(--sec-color);
 	color: white;
@@ -407,6 +408,15 @@ table {
 	background-color: limegreen;
     }
 }
+.relateTable {
+    & tbody td:first-child {
+	text-align: right;
+    }
+    & :is(td, th) {
+	border: none;
+    }
+}
+
 .tbComp tr {
     & td:first-child, tr td:nth-child(2) {
 	background-color: inherit;
