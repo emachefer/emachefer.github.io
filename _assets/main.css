@@ -203,7 +203,7 @@ header {
 	    top: 0;
 	}
     }
-    & h2:not(:has(.tag .prof)):before {
+    & h2:not(:has(.tag .prof, .tag .pres)):before {
 	counter-increment: sec-counter;
 	/* content: counter(sec-counter, upper-roman); */
 	content: counter(sec-counter);
