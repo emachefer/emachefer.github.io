@@ -34,14 +34,14 @@
 <text text-anchor="middle" x="457.42" y="-63.3" font-family="Times,serif" font-size="14.00">gaz</text>
 </g>
 <!-- S&#45;&gt;G -->
-<g id="edge3" class="edge">
+<g id="edge6" class="edge">
 <title>S&#45;&gt;G</title>
 <path fill="none" stroke="black" d="M81.16,-61C81.16,-61 418.54,-61 418.54,-61"/>
 <polygon fill="black" stroke="black" points="418.54,-64.5 428.54,-61 418.54,-57.5 418.54,-64.5"/>
 <text text-anchor="middle" x="256.17" y="-54.8" font-family="Times,serif" font-size="14.00">sublimation</text>
 </g>
 <!-- L&#45;&gt;S -->
-<g id="edge5" class="edge">
+<g id="edge4" class="edge">
 <title>L&#45;&gt;S</title>
 <path fill="none" stroke="black" d="M211.56,-106C152.34,-106 55.16,-106 55.16,-106 55.16,-106 55.16,-93.31 55.16,-93.31"/>
 <polygon fill="black" stroke="black" points="58.66,-93.31 55.16,-83.31 51.66,-93.31 58.66,-93.31"/>
@@ -55,14 +55,14 @@
 <text text-anchor="middle" x="366.17" y="-125.8" font-family="Times,serif" font-size="14.00">vaporisation</text>
 </g>
 <!-- G&#45;&gt;S -->
-<g id="edge6" class="edge">
+<g id="edge5" class="edge">
 <title>G&#45;&gt;S</title>
 <path fill="none" stroke="black" d="M432.3,-73C432.3,-73 85.95,-73 85.95,-73"/>
 <polygon fill="black" stroke="black" points="85.95,-69.5 75.95,-73 85.95,-76.5 85.95,-69.5"/>
 <text text-anchor="middle" x="256.17" y="-3.8" font-family="Times,serif" font-size="14.00">condensation</text>
 </g>
 <!-- G&#45;&gt;L -->
-<g id="edge4" class="edge">
+<g id="edge3" class="edge">
 <title>G&#45;&gt;L</title>
 <path fill="none" stroke="black" d="M467.16,-83.42C467.16,-98.33 467.16,-118 467.16,-118 467.16,-118 305.36,-118 305.36,-118"/>
 <polygon fill="black" stroke="black" points="305.36,-114.5 295.36,-118 305.36,-121.5 305.36,-114.5"/>
