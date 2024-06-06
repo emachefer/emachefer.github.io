@@ -205,7 +205,6 @@ header {
     }
     & h2:not(:has(.tag .prof, .tag .pres)):before {
 	counter-increment: sec-counter;
-	/* content: counter(sec-counter, upper-roman); */
 	content: counter(sec-counter);
 	border-radius: 0.1em;
 	background-color: var(--sec-color);
@@ -728,7 +727,7 @@ dl {
     right: 10pt;
 }
 
-:is(.qcm, .exo, .exercice, .funFacts) {
+:is(.qcm, .exo, ol.exercice, .funFacts) {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -828,4 +827,24 @@ input[type="text"]:valid {
     font-weight: bold;
     background-color: transparent;
     text-decoration: underline;
+}
+/* DETAILS */
+details {
+    & summary {
+	background-color: hsl(140, 80%, 40%);
+	padding: 0.2em;
+	cursor: pointer;
+    }
+    background-color: transparent;
+    transition: background-color 0.5s ease-in-out;
+}
+details[open] {
+    background-color: hsl(140, 99%, 80%);
+    & summary ~ * {
+	animation: sweep .5s ease-in-out;
+    }
+}
+@keyframes sweep {
+    0%    {opacity: 0; transform: translateY(-2em);}
+    100%  {opacity: 1; transform: translateY(0);}
 }
