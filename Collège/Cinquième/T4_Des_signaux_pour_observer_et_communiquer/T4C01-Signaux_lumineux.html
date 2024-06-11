@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- 2024-06-06 jeu. 15:07 -->
+<!-- 2024-06-10 lun. 13:43 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Propagation de la lumière</title>
@@ -61,6 +61,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -96,6 +118,7 @@ for the JavaScript code in this tag.
 <li><a href="#org763580c">Vitesse de propagation de la lumière</a>
 <ul>
 <li><a href="#orgfafaae5">Le problème de Cassini</a></li>
+<li><a href="#orgc76d389">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></a></li>
 </ul>
 </li>
 <li><a href="#org12b78af"><span class="todo TODO">TODO</span> Théâtre d'ombre</a></li>
@@ -306,9 +329,9 @@ Le calendrier prévisionnel publié à la fin de cette étude montre quelques ir
 <li>Explique ce que représente le schéma.</li>
 <li>Compare la distance parcourue par la lumière entre Io et la Terre sur le trajet <i>AC</i> et sur le trajet <i>BD</i>.</li>
 <li>Pour pouvoir expliquer ces irrégularités, Olaüs Römer avance la théorie (controversée à l'époque), que la lumière a une vitesse finie. En quoi cette hypothèse permettrait d'expliquer les irrégularité observée ?</li>
-<li>À l'époque, Cassini montre que la lumière met 16 minutes pour parcourir 211 million de kilomètres.
-Détermine la vitesse de la lumière selon les mesures de Cassini.</li>
-<li>Aujourd'hui, il est admis que la lumière se déplace à près de 300 000 km/s. Quel est le pourcentage d'erreur de Cassini ?</li>
+<li>À l'époque, Römer montre que la lumière met 16 minutes pour parcourir 211 million de kilomètres.
+Détermine la vitesse de la lumière selon les mesures de Römer.</li>
+<li>Aujourd'hui, il est admis que la lumière se déplace à près de 300 000 km/s. Quel est le pourcentage d'erreur de Römer ?</li>
 </ol>
 
 </div>
@@ -333,6 +356,79 @@ La distance parcourue par la lumière en un an est appelée  <input type="text" 
 </p>
 
 </div>
+</div>
+</div>
+<div id="outline-container-orgc76d389" class="outline-3">
+<h3 id="orgc76d389">Exercices&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></h3>
+<div class="outline-text-3" id="text-orgc76d389">
+<ol class="org-ol exercice">
+<li>La lumière se propage en environ :
+<ol class="org-ol">
+<li class="off"><input type='checkbox' /> 340 m/s</li>
+<li class="off"><input type='checkbox' /> 300 000 m/s</li>
+<li class="off"><input type='checkbox' /> 340 km/s</li>
+<li class="off"><input type='checkbox' /> <span class="underline">300 000 km/s</span></li>
+</ol></li>
+<li><p>
+En 1849, Hippolyte Fizeau, montre que la lumière parcours deux fois 8633 m en 0,05 ms. Calcule la vitesse de la lumière mesurée.
+</p>
+<div class="reponse">
+<p>
+La relation entre vitesse (v), distance (d) et durée (t) est :
+\[v = \dfrac{d}{t}\],
+soit
+\[ v = \dfrac{2 \times 8633 \mathrm{m}}{0,05 \div 1000 \mathrm{s}}\]
+</p>
+
+</div></li>
+
+<li>L'étoile la plus proche de notre système solaire est <a href="https://fr.wikipedia.org/wiki/Proxima_Centauri">Proxima du Centaure</a>, elle est située à 4,2 al (années lumière).
+<ol class="org-ol">
+<li><p>
+Sachant que 1 al = 9 500 milliard km, à combien de milliard de kilomètres se situe Proxima du Centaure du système solaire ?
+</p>
+<div class="reponse">
+<p>
+Pour déterminer la distance en milliard de kilomètres, on multiplie par 4,2 la valeur de 1 al, soit
+</p>
+
+<p>
+4,2 al = 4,2 &times; 9 500 milliard km = 39 900 milliard km
+</p>
+
+<p>
+soit <b>39 900 000 000 000 km</b>.
+</p>
+
+</div></li>
+</ol></li>
+</ol>
+
+
+<ol class="org-ol">
+<li><p>
+Si une fusée part de la Terre et voyage à 0,1% de la vitesse de la lumière, en combien de temps atteindrait-elle Proxima du Centaure ?
+</p>
+
+<div class="reponse">
+<p>
+Si une fusée voyage à 0,1% de la vitesse de la lumière, elle va 1000 fois moins vite, donc elle va mettre 1000 fois plus de temps, soit
+</p>
+
+<p>
+&Delta;t = 4,2 &times; 1000 = 4 200 ans
+</p>
+
+<p>
+Pour une fusée allant 300 km/s, il faudrait 4 200 ans pour atteindre Proxima du Centaure.
+</p>
+
+<p>
+(L'actuel record de vitesse pour une sonde spatiale est de 163 km/s).
+</p>
+
+</div></li>
+</ol>
 </div>
 </div>
 </section>
