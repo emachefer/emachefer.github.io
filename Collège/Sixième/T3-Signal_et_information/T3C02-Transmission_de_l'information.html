@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- 2024-04-03 mer. 09:32 -->
+<!-- 2024-06-13 jeu. 14:56 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Transmission de l'information</title>
@@ -79,7 +79,12 @@ for the JavaScript code in this tag.
 <li><a href="#org41e7cb7">Compétences</a></li>
 </ul>
 </li>
-<li><a href="#org5fc432a">Nom de l'activité</a></li>
+<li><a href="#org3efa57a">Les différents types de signaux</a>
+<ul>
+<li><a href="#org1948614">Brainstroming introductif&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></a></li>
+<li><a href="#org24a506e">Les signaux dans le quotidien</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </nav>
@@ -103,9 +108,167 @@ for the JavaScript code in this tag.
 </div>
 </section>
 
-<section id="outline-container-org5fc432a" class="outline-2">
-<h2 id="org5fc432a">Nom de l'activité</h2>
-<div class="outline-text-2" id="text-org5fc432a">
+
+
+<section id="outline-container-org3efa57a" class="outline-2">
+<h2 id="org3efa57a">Les différents types de signaux</h2>
+<div class="outline-text-2" id="text-org3efa57a">
+</div>
+<div id="outline-container-org1948614" class="outline-3">
+<h3 id="org1948614">Brainstroming introductif&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pres">pres</span></span></h3>
+<div class="outline-text-3" id="text-org1948614">
+<p>
+<b>Marque autant de notions possibles en rapport avec les signaux dans le temps imparti.</b>
+</p>
+<div class="timerContainer" style="text-align:center; padding: 0.5em; width:fit-content; margin:auto; background-color: #eee;">
+<input type="button" value="Start" onclick="timer(this)" style="padding:0.2em; width: 10rem;"/><br>
+<input type="range" id="timerRange" name="timerRange" min="1" value="3" max="20" step="1" onchange="timerUpdate()"/>
+<div style="font-size: 3em; font-weight: bold; padding: 0.2em;" id="timerDisplay">3 min</div>
+<meter id="timerProgress" low="30" max="180" value="180" style="margin:auto;">180 s</meter>
+</div>
+<script>
+const elem = document.getElementById('timerDisplay');
+const timerRange = document.getElementById('timerRange');
+
+const timerProgress = document.getElementById('timerProgress');
+var sec = document.getElementById('timerRange').value * 60;
+
+
+var myInterval; // variable qui va contenir le setInterval
+
+function timerUpdate() {
+    const min = timerRange.value;
+    elem.innerHTML = min + " min";
+    sec = min * 60;
+    timerProgress.setAttribute('max', sec);
+    timerProgress.setAttribute('value', sec);
+    timerProgress.innerHTML = sec + " s";
+}
+
+function timer(button){
+    button.value = "Stop";
+    timerRange.setAttribute('disabled', '');
+    myInterval = setInterval(myTimer, 1000);
+    button.setAttribute("onclick", "stopTimer(this, myInterval)");
+}
+
+function myTimer(){
+        var dMin = parseInt(sec / 60);
+        var dSec = parseInt(sec % 60);
+        elem.innerHTML = (dMin == 0 ? "" : dMin + " min ") + dSec + " s";
+        sec--;
+        timerProgress.setAttribute('value', sec);
+        timerProgress.innerHTML = sec + " s";
+        if (sec < 0) {
+            clearInterval(myInterval);
+            elem.innerHTML = "Fin";
+            timerRange.removeAttribute('disabled');
+        } else if (sec < 30) {
+            elem.style.color = 'red';
+        }
+    }
+function stopTimer(button, timer) {
+    clearInterval(timer);
+    timerRange.removeAttribute('disabled');
+    button.setAttribute("onclick", "timer(this)");
+    button.value = "Restart";
+}
+</script>
+
+<div id="btContainer">
+<ul id="brainstorm"></ul>
+<table id="tblBrainstorm"></table>
+<input type="text" id="tdIntro" placeholder="Mot clé" style="color:black; margin: 2rem;" /><input type="button" value="Ajout" onclick="newElement()" />
+</div>
+<input type="button" onclick="exportJSON()" value="Export" />
+<script>
+  var keyWords = {};
+  function newElement() {
+      var li = document.createElement("li");
+      var TR = document.createElement("tr"); // TODO
+      var TD1 = document.createElement("td"); // TODO
+      var TD2 = document.createElement("td"); // TODO
+
+      const tdIntro = document.getElementById("tdIntro");
+      var inputValue = tdIntro.value;
+      if (inputValue == "") return;
+
+      const brainstorm = document.getElementById("brainstorm");
+      const tblBrainstorm = document.getElementById("tblBrainstorm");
+
+      if (inputValue in keyWords) {
+          keyWords[inputValue] += 1;
+
+          for (let tr of tblBrainstorm.children) {
+              console.log(tr.getElementsByTagName("td")[0]);
+              if (tr.getElementsByTagName("td")[0].innerHTML == inputValue) {
+                  tr.getElementsByTagName("td")[1].innerHTML = "&times; " + keyWords[inputValue];
+              }
+          }
+      } else {
+          keyWords[inputValue] = 1;
+
+          TD1.innerHTML = inputValue;
+          TD2.innerHTML = keyWords[inputValue];
+
+          TR.appendChild(TD1);
+          TR.appendChild(TD2);
+
+          tblBrainstorm.appendChild(TR);
+      }
+
+      console.log(keyWords);
+      inputValue = "";
+      document.getElementById("tdIntro").value = "";
+  }
+
+  function exportJSON() {
+      const textData = JSON.stringify(keyWords);
+      const blobData = new Blob([textData], { type: 'text/plain' });
+      const urlToBlob = window.URL.createObjectURL(blobData);
+
+      const date = new Date();
+
+      const a = document.createElement('a');
+      document.getElementById("btContainer").appendChild(a);
+      a.href = urlToBlob;
+      a.download = date.toISOString() + ".json";
+      a.click();
+      window.URL.revokeObjectURL(urlToBlob);
+      a.remove();
+  }
+</script>
+</div>
+</div>
+<div id="outline-container-org24a506e" class="outline-3">
+<h3 id="org24a506e">Les signaux dans le quotidien</h3>
+<div class="outline-text-3" id="text-org24a506e">
+<div class="org-center">
+<p>
+Chaque jours, nous sommes exposés à des signaux pouvant prendre diverses formes.
+</p>
+
+<p>
+Quels sont les différents types de signaux ? Comment peut-on les traiter ?
+</p>
+</div>
+
+
+<div data-title="Qu'est-ce qu'un signal ?" class="definition">
+<p>
+Un  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="signal" /> est un signe qui transporte  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="une information" /> depuis un  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="émetteur" /> jusqu'à un  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="récepteur" />.
+</p>
+
+</div>
+
+<label style="text-align:center; margin:auto; font-weight:bold;" for="chaineInfo">Titre : Chaine de transmission de l'information</label>
+<div name="chaineInfo" style="width:80vw; height: 50vh; border: solid 2pt; margin: auto; background-color: white;">
+</div>
+
+<div class="remark">
+<p>
+Les signaux peuvent être de nature différente
+</p>
 <table>
 
 
@@ -113,36 +276,91 @@ for the JavaScript code in this tag.
 <col  class="org-left">
 
 <col  class="org-left">
-
-<col  class="org-left">
-
-<col  class="org-left">
-
-<col  class="org-left">
-
-<col  class="org-left">
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">ID</th>
-<th scope="col" class="org-left">Compétence travaillée</th>
-<th scope="col" class="org-left">TB</th>
-<th scope="col" class="org-left">MS</th>
-<th scope="col" class="org-left">MF</th>
-<th scope="col" class="org-left">MI</th>
+<th scope="col" class="org-left">Signal</th>
+<th scope="col" class="org-left">Ce qui transporte l'information</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">D4</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left"> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="Sonore" /></td>
+<td class="org-left">Son</td>
+</tr>
+
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="Lumineux" /></td>
+<td class="org-left">Lumière</td>
+</tr>
+
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="Électrique" /></td>
+<td class="org-left">Courant électrique</td>
+</tr>
+
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="Radio" /></td>
+<td class="org-left">Signal émis par une antenne</td>
+</tr>
+
+<tr>
+<td class="org-left"> <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="Olfactif" /></td>
+<td class="org-left">Une odeur</td>
 </tr>
 </tbody>
 </table>
+
+</div>
+
+<div class="exercice">
+<ol class="org-ol">
+<li><ol class="org-ol">
+<li>Quelle est la nature du signal envoyé par un feu tricolore ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Quelle information est transmise par un feu rouge ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+</ol></li>
+<li><ol class="org-ol">
+<li>Quelle est la nature du signal envoyé par la sonnerie du téléphone ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Quelle information est transmise par la sonnerie en fin de cours ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+</ol></li>
+<li>En cas d'incendie, il faut évacuer le bâtiment le plus rapidement possible. Un signal d'alarme sonore spécifique alerte les personnes présentes, un long bip.
+<ol class="org-ol">
+<li>Quelle est la nature du signal envoyé par l'alarme incendie ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Quelle information est transmise par ce signal ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+<li>Quelle information est transmise lorsqu'il n'y a pas ce signal ?
+ <br><textarea spellcheck="true" placeholder="Réponse..."></textarea></li>
+</ol></li>
+</ol>
+
+</div>
+
+<div data-title="Algorithme" class="doc">
+<p>
+Un algorithme est une suite finie d'instructions et d’opérations permettant de résoudre des problèmes.
+</p>
+
+<p>
+Il est possible de représenter un algorithme par un  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="organigramme" /> utilisant des symboles normalisés :
+</p>
+<dl class="org-dl">
+<dt>Test</dt><dd>représenté par un losange (une entrée et deux sortie)</dd>
+<dt>Entrée/sortie</dt><dd>représenté par un parallélogramme</dd>
+<dt>Processus</dt><dd>représenté par un rectangle</dd>
+</dl>
+
+<details><summary>exemple</summary>
+<p><a href="https://commons.wikimedia.org/wiki/File:Pstricks_exo_organigramme_simple.png#/media/Fichier:Pstricks_exo_organigramme_simple.png"><img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Pstricks_exo_organigramme_simple.png" alt="Pstricks exo organigramme simple.png" height="279" width="319"></a><br>Par <a href="//commons.wikimedia.org/wiki/User:Cdang" title="User:Cdang">Cdang</a> — <span class="int-own-work" lang="fr">Travail personnel</span>, <a href="http://creativecommons.org/licenses/by-sa/3.0/" title="Creative Commons Attribution-Share Alike 3.0">CC BY-SA 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=3114442">Lien</a></p>
+
+</details>
+
+</div>
+</div>
 </div>
 </section>
 </div>
