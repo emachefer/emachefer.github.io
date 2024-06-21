@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- 2024-04-03 mer. 09:33 -->
+<!-- 2024-06-19 mer. 14:38 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Masse volumique</title>
@@ -59,6 +59,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="org-div-home-and-up">
@@ -79,7 +101,7 @@ for the JavaScript code in this tag.
 <li><a href="#orge33caf6">Compétences</a></li>
 </ul>
 </li>
-<li><a href="#org35971ab">Nom de l'activité</a></li>
+<li><a href="#org7c4696b">Masse volumique</a></li>
 </ul>
 </div>
 </nav>
@@ -104,9 +126,11 @@ for the JavaScript code in this tag.
 </div>
 </section>
 
-<section id="outline-container-org35971ab" class="outline-2">
-<h2 id="org35971ab">Nom de l'activité</h2>
-<div class="outline-text-2" id="text-org35971ab">
+
+<section id="outline-container-org7c4696b" class="outline-2">
+<h2 id="org7c4696b">Masse volumique</h2>
+<div class="outline-text-2" id="text-org7c4696b">
+<div data-title="Quelques masses volumiques" class="doc">
 <table>
 
 
@@ -114,8 +138,139 @@ for the JavaScript code in this tag.
 <col  class="org-left">
 
 <col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Matériau</th>
+<th scope="col" class="org-left">Masse volumique (g/cm<sup>3</sup>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Aluminium</td>
+<td class="org-left">2,7</td>
+</tr>
+
+<tr>
+<td class="org-left">Fer</td>
+<td class="org-left">7,9</td>
+</tr>
+
+<tr>
+<td class="org-left">Zinc</td>
+<td class="org-left">7,1</td>
+</tr>
+
+<tr>
+<td class="org-left">Cuivre</td>
+<td class="org-left">9,0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+<div data-title="Masse volumique" class="definition">
+<p>
+La masse volumique d'une substance (notée avec la lettre grecque "rhô" &rho;) correspond à la masse d'une substance pour une unité de volume.
+Mathématiquement, on a la relation suivante :
+\[m = \rho \times V,\]
+où \(m\) est la masse de la substance (en g), \(V\) est le volume de la substance (en cm<sup>3</sup>) et &rho; est la masse volumique de la substance (en g/cm<sup>3</sup>).
+</p>
+
+</div>
+
+<div data-title="Protocole de mesure du volume d'un solide" class="doc">
+<ol class="org-ol">
+<li>Mettre 20 mL d'eau dans l'éprouvette graduée</li>
+<li>Pencher l'éprouvette et laisser glisser <b>doucement</b> le cylindre dans l'éprouvette</li>
+<li>Relever et noter le nouveau volume</li>
+<li>Calculer le volume du cylindre</li>
+</ol>
+
+</div>
+
+<div data-title="Conversions de volumes" class="remark">
+<ul class="org-ul">
+<li>1 L = 1 dm<sup>3</sup></li>
+<li>1 mL = 1 cm<sup>3</sup></li>
+<li>1000 L = 1 m<sup>3</sup></li>
+</ul>
+
+</div>
+
+
+<ol class="org-ol">
+<li><p>
+Complète le schéma suivant en rajoutant un trait rouge au volume indiqué par le liquide à l'étape 3.
+</p>
+
+<figure>
+<img src="volumeSolide.png" alt="volumeSolide.png">
+
+</figure></li>
+
+<li>Pourquoi faut-il pencher l'éprouvette à l'étape 2 ?</li>
+
+<li>Fais l'expérience et note le volume de chaque cylindre dans les tableaux <a href="#orgc5878a3">1</a> et <a href="#orgb9e2978">2</a>.</li>
+
+<li><p>
+Calcule la masse que devrait avoir les cylindres en utilisant la formule de la masse volumique.
+</p>
+
+<table id="orgc5878a3">
+<caption class="t-above"><span class="table-number">Tableau 1 :</span> volume et masse théorique de cylindres de même volume</caption>
+
+<colgroup>
+<col  class="org-left">
 
 <col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Métal</th>
+<th scope="col" class="org-left">volume du cylindre (cm<sup>3</sup>)</th>
+<th scope="col" class="org-left">masse théorique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Aluminium</td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+
+<tr>
+<td class="org-left">Cuivre</td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+
+<tr>
+<td class="org-left">Zinc</td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+
+<tr>
+<td class="org-left">Fer</td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+</tbody>
+</table></li>
+
+<li><p>
+Mesure et note les masses de chaque cylindre, en conclure le métal lié à chaque cylindre.
+</p>
+<table id="orgb9e2978">
+<caption class="t-above"><span class="table-number">Tableau 2 :</span> volume et masse des différents cylindres</caption>
+
+<colgroup>
+<col  class="org-right">
 
 <col  class="org-left">
 
@@ -125,25 +280,45 @@ for the JavaScript code in this tag.
 </colgroup>
 <thead>
 <tr>
-<th scope="col" class="org-left">ID</th>
-<th scope="col" class="org-left">Compétence travaillée</th>
-<th scope="col" class="org-left">TB</th>
-<th scope="col" class="org-left">MS</th>
-<th scope="col" class="org-left">MF</th>
-<th scope="col" class="org-left">MI</th>
+<th scope="col" class="org-right">Cylindre</th>
+<th scope="col" class="org-left">Volume (cm<sup>3</sup>)</th>
+<th scope="col" class="org-left">Masse (g)</th>
+<th scope="col" class="org-left">Métal</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">D4</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-right">1</td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
+<td class="org-left"> <input type="text" required minlength="1" pattern="" size="5" oninput="this.size = this.value.length + 1"  /></td>
 </tr>
 </tbody>
-</table>
+</table></li>
+</ol>
+
+
+<div class="savoir">
+<p>
+La  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="masse volumique" /> est une grandeur physique qui permet de faire le lien entre  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="la masse" /> et  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="le volume" />.
+Chaque  <input type="text" required minlength="1" oninput="this.size = this.value.length + 1" pattern="corps pur" /> a une masse volumique différente, il est donc possible de différencier des matériaux en la mesurant.
+</p>
+
+</div>
 </div>
 </section>
 </div>
